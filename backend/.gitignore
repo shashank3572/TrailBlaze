@@ -1,0 +1,36 @@
+# ----------------------------------------
+# Node modules (never upload)
+# ----------------------------------------
+node_modules/
+
+# Build and cache folders
+dist/
+build/
+.cache/
+.eslintcache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (secrets)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Optional: temporary files
+*.zip
+*.tmp
+*.log

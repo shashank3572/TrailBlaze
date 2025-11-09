@@ -1,0 +1,94 @@
+.roadmap-container {
+  display: flex;
+  padding: 20px;
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: white;
+  gap: 30px;
+}
+
+/* LEFT SIDE CAREER LIST */
+.career-list {
+  width: 250px;
+  background: #151515;
+  padding: 20px;
+  border-radius: 10px;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.career-btn {
+  width: 100%;
+  text-align: left;
+  background: #222;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+.career-btn:hover {
+  background: #333;
+}
+
+.career-btn.active {
+  background: #3b82f6;
+}
+
+/* RIGHT SIDE ROADMAP FLOW */
+.roadmap-view {
+  flex: 1;
+  padding: 20px;
+  background: #181818;
+  border-radius: 10px;
+}
+
+.roadmap-desc {
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+/* Flowchart */
+.flow-container {
+  margin-top: 20px;
+}
+
+.flow-section {
+  position: relative;
+  padding-left: 25px;
+}
+
+.flow-node {
+  background: #222;
+  padding: 12px;
+  border-radius: 6px;
+  width: fit-content;
+  border-left: 4px solid #3b82f6;
+  margin-bottom: 10px;
+}
+
+.flow-items {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.flow-item {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.flow-item a {
+  color: #3b82f6;
+}
+
+.flow-line {
+  width: 2px;
+  height: 40px;
+  background: #3b82f6;
+  margin-left: 12px;
+}
