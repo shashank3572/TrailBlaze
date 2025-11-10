@@ -157,10 +157,6 @@ export default function Dashboard() {
             <p className="text-gray-400">+91 83106 22817</p>
           </div>
         </div>
-
-        <p className="text-gray-500 text-sm text-center mt-10">
-          © {new Date().getFullYear()} TrailBlaze — All Rights Reserved.
-        </p>
       </div>
     </div>
   );

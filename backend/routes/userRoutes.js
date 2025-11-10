@@ -5,7 +5,7 @@ const auth = require("../middleware/authMiddleware");
 const recommendCareer = require("../utils/recommender");
 
 //
-// ✅ Get logged-in user profile
+// Get logged-in user profile
 //
 router.get("/profile", auth, async (req, res) => {
   try {
@@ -18,7 +18,7 @@ router.get("/profile", auth, async (req, res) => {
 });
 
 //
-// ✅ Add skill
+//  Add skill
 //
 router.post("/profile/add-skill", auth, async (req, res) => {
   try {
@@ -36,7 +36,7 @@ router.post("/profile/add-skill", auth, async (req, res) => {
 });
 
 //
-// ✅ Remove skill
+//  Remove skill
 //
 router.post("/profile/remove-skill", auth, async (req, res) => {
   try {
@@ -54,7 +54,7 @@ router.post("/profile/remove-skill", auth, async (req, res) => {
 });
 
 //
-// ✅ AI Career Recommendation
+// AI Career Recommendation
 //
 router.get("/recommend", auth, async (req, res) => {
   try {

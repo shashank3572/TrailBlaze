@@ -1,173 +1,452 @@
-// src/data/roadmapData.js
 const roadmapData = {
   "Full Stack Developer": {
     description:
-      "End-to-end web development: build both frontend and backend applications, manage databases, and deploy full systems.",
+      "A complete learning journey from HTML basics to full-stack deployment.",
     sections: [
       {
-        title: "Foundations",
-        items: [
-          { text: "Internet, HTTP/HTTPS, REST", link: "https://developer.mozilla.org/" },
-          { text: "Git & GitHub Basics", link: "https://try.github.io/" },
+        title: "1. Web Foundations",
+        description: "Learn how the web works and master core web technologies.",
+        resources: [
+          { text: "HTML & CSS Crash Course", link: "https://youtu.be/mU6anWqZJcc" },
+          { text: "JavaScript Basics", link: "https://javascript.info" },
         ],
       },
       {
-        title: "Frontend Development",
-        items: [
-          { text: "HTML semantics & forms", link: "https://roadmap.sh/frontend" },
-          { text: "CSS (layout, Flex/Grid)", link: "https://web.dev/learn/css/" },
-          { text: "JavaScript (ES6+)", link: "https://javascript.info/" },
-          { text: "React (Hooks, Router)", link: "https://react.dev/" },
+        title: "2. Frontend Development",
+        description: "Learn modern tools and frameworks.",
+        resources: [
+          { text: "React Official Docs", link: "https://react.dev" },
+          { text: "TailwindCSS Docs", link: "https://tailwindcss.com" },
         ],
       },
       {
-        title: "Backend Development",
-        items: [
-          { text: "Node.js & npm", link: "https://nodejs.org/en/learn" },
-          { text: "Express (routes, middleware)", link: "https://expressjs.com/en/guide/routing.html" },
-          { text: "MongoDB & Mongoose", link: "https://www.mongodb.com/docs/" },
-          { text: "Auth (JWT) & CORS", link: "https://jwt.io/introduction" },
+        title: "3. Backend Development",
+        description: "APIs, databases, and authentication.",
+        resources: [
+          { text: "Node.js Guide", link: "https://nodejs.dev" },
+          { text: "MongoDB Docs", link: "https://www.mongodb.com/docs/" },
         ],
       },
       {
-        title: "Deployment",
-        items: [
-          { text: "Build & Environment Variables", link: "https://roadmap.sh/devops" },
-          { text: "Deploy (Render / Netlify / Vercel)", link: "https://youtu.be/SmKHxAz9fhw" },
+        title: "4. DevOps & Deployment",
+        description: "Learn how to deploy your apps.",
+        resources: [
+          { text: "Git & GitHub", link: "https://docs.github.com" },
+          { text: "Render Deployment", link: "https://render.com" },
         ],
       },
     ],
   },
 
   "Data Scientist": {
-    description:
-      "Work with data, statistics, and machine learning to build actionable insights and predictive models.",
+    description: "Learn data analysis, machine learning, and real-world modelling.",
     sections: [
       {
-        title: "Foundations",
-        items: [
-          { text: "Python (NumPy, Pandas)", link: "https://pandas.pydata.org/docs/" },
-          { text: "Statistics & Probability", link: "https://seeing-theory.brown.edu/" },
+        title: "1. Python & Math Fundamentals",
+        description: "Strong foundations in Python, Maths, Statistics.",
+        resources: [
+          { text: "Python for Data Science", link: "https://youtu.be/r-uOLxNrNk8" },
+          { text: "Statistics Basics", link: "https://www.khanacademy.org/math/statistics-probability" },
         ],
       },
       {
-        title: "Visualization & EDA",
-        items: [
-          { text: "Matplotlib / Plotly", link: "https://matplotlib.org/stable/index.html" },
-          { text: "Exploratory Data Analysis (EDA)", link: "https://www.kaggle.com/learn" },
+        title: "2. Data Analysis",
+        description: "Master data manipulation tools.",
+        resources: [
+          { text: "Pandas Guide", link: "https://pandas.pydata.org/docs/" },
+          { text: "NumPy Guide", link: "https://numpy.org/doc/" },
         ],
       },
       {
-        title: "Machine Learning",
-        items: [
-          { text: "Scikit-Learn (Regression & Classification)", link: "https://scikit-learn.org/stable/" },
-          { text: "Model Evaluation & Metrics", link: "https://youtu.be/7x0-t-U8kok" },
-          { text: "Feature Engineering", link: "https://youtu.be/UkzFI9rgwfU" },
-        ],
-      },
-      {
-        title: "Practice",
-        items: [
-          { text: "Kaggle Projects", link: "https://www.kaggle.com/" },
-          { text: "Portfolio Notebooks", link: "" },
+        title: "3. Machine Learning",
+        description: "Build predictive models.",
+        resources: [
+          { text: "ML by Andrew Ng", link: "https://youtu.be/UzxYlbK2c7E" },
         ],
       },
     ],
   },
 
   "AI/ML Engineer": {
-    description:
-      "Design, train, and deploy AI models. Focus on data pipelines, neural networks, and production-grade ML systems.",
+    description: "Learn deep learning, neural networks and MLOps basics.",
     sections: [
       {
-        title: "Math & Python",
-        items: [
-          { text: "Linear Algebra & Calculus (basics)", link: "https://www.3blue1brown.com/" },
-          { text: "Python + NumPy", link: "https://numpy.org/learn/" },
+        title: "1. Python + Math",
+        description: "Linear algebra, calculus, probability.",
+        resources: [
+          { text: "Math for ML", link: "https://www.youtube.com/watch?v=Ilg3gGewQ5U" },
         ],
       },
       {
-        title: "Core Machine Learning",
-        items: [
-          { text: "Classical ML (Scikit-Learn)", link: "https://scikit-learn.org/stable/" },
-          { text: "Neural Networks (PyTorch / TensorFlow)", link: "https://pytorch.org/tutorials/" },
+        title: "2. Deep Learning",
+        description: "Neural networks, CNNs, RNNs.",
+        resources: [
+          { text: "DeepLearning.ai", link: "https://www.deeplearning.ai/" },
         ],
       },
       {
-        title: "MLOps & Deployment",
-        items: [
-          { text: "Data Versioning & Pipelines", link: "https://www.dvc.org/" },
-          { text: "Model Serving (FastAPI, Docker)", link: "https://fastapi.tiangolo.com/" },
-        ],
-      },
-      {
-        title: "LLMs & Advanced Topics",
-        items: [
-          { text: "Prompt Engineering", link: "https://youtu.be/4Bdc55j80l8" },
-          { text: "Vector Databases & RAG Basics", link: "" },
+        title: "3. Tools & Frameworks",
+        description: "TensorFlow, PyTorch, Scikit-learn.",
+        resources: [
+          { text: "PyTorch Docs", link: "https://pytorch.org" },
         ],
       },
     ],
   },
 
-  "Product/Project Manager": {
-    description:
-      "Lead cross-functional teams to plan, prioritize, and deliver successful products using agile methodologies.",
+  "UI/UX Designer": {
+    description: "A roadmap for becoming a creative designer.",
     sections: [
       {
-        title: "Core Skills",
-        items: [
-          { text: "Agile / Scrum Basics", link: "https://youtu.be/9oHY9mSCvFM" },
-          { text: "User Research & PRDs", link: "" },
+        title: "1. Design Basics",
+        description: "Color theory, typography, spacing.",
+        resources: [
+          { text: "Canva Design School", link: "https://www.canva.com/learn/design/" },
         ],
       },
       {
-        title: "Delivery & Communication",
-        items: [
-          { text: "Roadmapping & Prioritization", link: "" },
-          { text: "Stakeholder Communication", link: "" },
+        title: "2. UI Tools",
+        description: "Learn practical design tools.",
+        resources: [
+          { text: "Figma Tutorials", link: "https://help.figma.com" },
         ],
       },
       {
-        title: "Analytics & Metrics",
-        items: [
-          { text: "KPIs & Product Analytics", link: "" },
-          { text: "A/B Testing Basics", link: "" },
-        ],
-      },
-      {
-        title: "Tools",
-        items: [
-          { text: "Jira Basics", link: "https://youtu.be/A7p0tdHnISA" },
-          { text: "Project Planning Tools", link: "https://asana.com/" },
+        title: "3. UX Research",
+        description: "User personas, wireframes, flows.",
+        resources: [
+          { text: "UX Crash Course", link: "https://thegymnasium.com/courses/course-v1:GYM+015+0/about" },
         ],
       },
     ],
   },
 
-  "Digital Marketing": {
-    description:
-      "Grow audiences and revenue using SEO, content, ads, and data-driven marketing strategies.",
+  "Cybersecurity Analyst": {
+    description: "Learn how to protect systems, networks, and data.",
     sections: [
       {
-        title: "Foundations",
-        items: [
-          { text: "SEO Fundamentals", link: "https://youtu.be/1Suj8k9S0d4" },
-          { text: "Content Strategy", link: "https://youtu.be/JUWXh0tVseo" },
+        title: "1. Networking Basics",
+        description: "TCP/IP, protocols, firewalls.",
+        resources: [
+          { text: "Networking Basics", link: "https://youtu.be/qiQR5rTSshw" },
         ],
       },
       {
-        title: "Channels",
-        items: [
-          { text: "Social Media Marketing", link: "" },
-          { text: "Email Marketing & Funnels", link: "" },
+        title: "2. Ethical Hacking",
+        description: "Reconnaissance, exploitation.",
+        resources: [
+          { text: "Kali Linux", link: "https://www.kali.org/docs/" },
+        ],
+      },
+    ],
+  },
+
+  "Cloud Engineer": {
+    description: "Master AWS, Azure, and cloud fundamentals.",
+    sections: [
+      {
+       title: "1. Cloud Basics",
+        description: "Compute, storage, networking.",
+        resources: [
+          { text: "AWS Beginner Path", link: "https://aws.amazon.com/training/" },
         ],
       },
       {
-        title: "Analytics",
-        items: [
-          { text: "Google Analytics Basics", link: "" },
-          { text: "Attribution & ROI", link: "" },
+       title: "2. Virtualization & Containers",
+        description: "Docker, Kubernetes.",
+        resources: [
+          { text: "Docker Docs", link: "https://docs.docker.com/" },
+        ],
+      },
+    ],
+  },
+
+  "Product Manager": {
+    description: "Learn strategy, research, prioritization & launching products.",
+    sections: [
+      {
+        title: "1. PM Basics",
+        description: "Product thinking, market research.",
+        resources: [
+          { text: "Product Management Basics", link: "https://youtu.be/8d5xV1G7D2Q" },
+        ],
+      },
+      {
+        title: "2. Roadmapping & Strategy",
+        description: "Feature planning, prioritization.",
+        resources: [
+          { text: "PM Roadmaps", link: "https://www.productplan.com/" },
+        ],
+      },
+    ],
+  },
+
+  "Android Developer": {
+    description: "Learn how to build Android apps using modern tools like Kotlin & Jetpack.",
+    sections: [
+      {
+        title: "1. Programming Basics",
+        description: "Understand Java/Kotlin fundamentals.",
+        resources: [
+          { text: "Kotlin Docs", link: "https://kotlinlang.org/docs/home.html" },
+          { text: "Java Basics", link: "https://docs.oracle.com/javase/tutorial/" },
+        ],
+      },
+      {
+        title: "2. Android Fundamentals",
+        description: "Learn activities, layouts, intents, UI components.",
+        resources: [
+          { text: "Android Basics", link: "https://developer.android.com/courses/android-basics-kotlin/course" },
+        ],
+      },
+      {
+        title: "3. Jetpack & Architecture",
+        description: "MVVM, LiveData, Room DB.",
+        resources: [
+          { text: "Jetpack Guide", link: "https://developer.android.com/jetpack" },
+        ],
+      },
+    ],
+  },
+
+  "iOS Developer": {
+    description: "Learn app development for Apple ecosystem using Swift & SwiftUI.",
+    sections: [
+      {
+        title: "1. Swift Basics",
+        description: "Learn the fundamentals of Swift.",
+        resources: [
+          { text: "Swift Docs", link: "https://developer.apple.com/swift/" },
+        ],
+      },
+      {
+        title: "2. iOS App Development",
+        description: "UIKit or SwiftUI essentials.",
+        resources: [
+          { text: "SwiftUI Tutorial", link: "https://developer.apple.com/tutorials/swiftui" },
+        ],
+      },
+      {
+        title: "3. App Deployment",
+        description: "Learn App Store publishing.",
+        resources: [
+          { text: "App Distribution Guide", link: "https://developer.apple.com/app-store/submission/" },
+        ],
+      },
+    ],
+  },
+
+  "Blockchain Developer": {
+    description: "Learn smart contracts, decentralized apps, and Web3.",
+    sections: [
+      {
+        title: "1. Blockchain Basics",
+        description: "Crypto fundamentals & distributed systems.",
+        resources: [
+          { text: "Blockchain Basics", link: "https://www.ibm.com/topics/blockchain" },
+        ],
+      },
+      {
+        title: "2. Smart Contracts",
+        description: "Learn Solidity and EVM.",
+        resources: [
+          { text: "Solidity Docs", link: "https://docs.soliditylang.org" },
+        ],
+      },
+      {
+        title: "3. Web3 & DApps",
+        description: "Build decentralized applications.",
+        resources: [
+          { text: "Web3.js Guide", link: "https://web3js.readthedocs.io" },
+        ],
+      },
+    ],
+  },
+
+  "Game Developer": {
+    description: "Learn game design, Unity/Unreal engine, physics and rendering.",
+    sections: [
+      {
+        title: "1. Programming Fundamentals",
+        description: "C#, OOP, game loops.",
+        resources: [
+          { text: "C# Basics", link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+        ],
+      },
+      {
+        title: "2. Game Engine",
+        description: "Learn Unity or Unreal.",
+        resources: [
+          { text: "Unity Learn", link: "https://learn.unity.com/" },
+        ],
+      },
+      {
+        title: "3. Game Design",
+        description: "Mechanics, levels, audio.",
+        resources: [
+          { text: "Game Design Book", link: "https://gamedesignconcepts.wordpress.com/" },
+        ],
+      },
+    ],
+  },
+
+  "DevOps Engineer": {
+    description: "Learn CI/CD pipelines, Linux, Docker, Kubernetes & monitoring.",
+    sections: [
+      {
+        title: "1. Linux & Networking",
+        description: "Essential commands and system design basics.",
+        resources: [
+          { text: "Linux Basics", link: "https://www.youtube.com/watch?v=Roz_c9uD3fY" },
+        ],
+      },
+      {
+        title: "2. CI/CD Fundamentals",
+        description: "GitHub Actions, Jenkins pipelines.",
+        resources: [
+          { text: "GitHub Actions", link: "https://docs.github.com/en/actions" },
+        ],
+      },
+      {
+        title: "3. Containers & Orchestration",
+        description: "Docker, Kubernetes.",
+        resources: [
+          { text: "Kubernetes Docs", link: "https://kubernetes.io/docs/home/" },
+        ],
+      },
+    ],
+  },
+
+  "Digital Marketer": {
+    description: "Learn SEO, content strategy, paid ads, analytics.",
+    sections: [
+      {
+        title: "1. Marketing Basics",
+        description: "Branding, funnels, messaging.",
+        resources: [
+          { text: "HubSpot Marketing", link: "https://academy.hubspot.com/courses/marketing" },
+        ],
+      },
+      {
+        title: "2. SEO & SEM",
+        description: "Search optimization, paid ads.",
+        resources: [
+          { text: "Google SEO Guide", link: "https://developers.google.com/search/docs" },
+        ],
+      },
+      {
+        title: "3. Analytics",
+        description: "Google Analytics, metrics.",
+        resources: [
+          { text: "Analytics Academy", link: "https://analytics.google.com/analytics/academy/" },
+        ],
+      },
+    ],
+  },
+
+  "Content Writer": {
+    description: "Master writing, storytelling, brand tone & SEO writing.",
+    sections: [
+      {
+        title: "1. Writing Basics",
+        description: "Grammar, clarity, formatting.",
+        resources: [
+          { text: "Grammarly Blog", link: "https://www.grammarly.com/blog/" },
+        ],
+      },
+      {
+        title: "2. SEO Writing",
+        description: "Keyword analysis, ranking.",
+        resources: [
+          { text: "SEO Guide by Moz", link: "https://moz.com/beginners-guide-to-seo" },
+        ],
+      },
+      {
+        title: "3. Copywriting",
+        description: "Brand voice, CTA, persuasion.",
+        resources: [
+          { text: "Copywriting Crash Course", link: "https://youtu.be/K2yHFRVr2H0" },
+        ],
+      },
+    ],
+  },
+
+  "Data Engineer": {
+    description: "Learn pipelines, ETL systems, big data & cloud.",
+    sections: [
+      {
+        title: "1. SQL & Python",
+        description: "Master data processing.",
+        resources: [
+          { text: "SQL Tutorial", link: "https://www.w3schools.com/sql/" },
+        ],
+      },
+      {
+        title: "2. Big Data Tools",
+        description: "Hadoop, Spark, Kafka.",
+        resources: [
+          { text: "Apache Spark Docs", link: "https://spark.apache.org/docs/latest/" },
+        ],
+      },
+      {
+        title: "3. Cloud Data Warehousing",
+        description: "AWS, GCP, Snowflake basics.",
+        resources: [
+          { text: "AWS Data Engineer", link: "https://aws.amazon.com/big-data/datalakes-and-analytics/" },
+        ],
+      },
+    ],
+  },
+
+  "QA Automation Engineer": {
+    description: "Testing frameworks, automation, CI/CD test pipelines.",
+    sections: [
+      {
+        title: "1. Testing Basics",
+        description: "Manual testing, bug reporting.",
+        resources: [
+          { text: "Software Testing Guide", link: "https://www.guru99.com/software-testing.html" },
+        ],
+      },
+      {
+        title: "2. Automation Tools",
+        description: "Selenium, Playwright, Postman.",
+        resources: [
+          { text: "Selenium Docs", link: "https://www.selenium.dev/documentation/" },
+        ],
+      },
+      {
+        title: "3. CI/CD Integration",
+        description: "Automated pipelines for tests.",
+        resources: [
+          { text: "Jenkins Tutorials", link: "https://www.jenkins.io/doc/" },
+        ],
+      },
+    ],
+  },
+
+  "Business Analyst": {
+    description: "Learn requirements analysis, documentation, communication & diagrams.",
+    sections: [
+      {
+        title: "1. BA Fundamentals",
+        description: "Business processes, documentation.",
+        resources: [
+          { text: "BA Basics", link: "https://www.smart-ba.com/business-analyst-training/" },
+        ],
+      },
+      {
+        title: "2. Tools & Techniques",
+        description: "Excel, Tableau, UML.",
+        resources: [
+          { text: "Tableau Training", link: "https://www.tableau.com/learn/training" },
+        ],
+      },
+      {
+        title: "3. Communication & Strategy",
+        description: "Stakeholder management.",
+        resources: [
+          { text: "Effective Communication", link: "https://youtu.be/omL9Tjh2DOg" },
         ],
       },
     ],

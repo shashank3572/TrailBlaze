@@ -3,4 +3,4 @@
 @tailwind utilities;
 
 /* You can add global CSS below */
-body { @apply bg-slate-50; }
+body { @apply bg-neutral-950 text-gray-100 font-sans}

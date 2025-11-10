@@ -1,87 +1,49 @@
-import React, { useState } from "react";
-import { FiChevronDown, FiChevronRight } from "react-icons/fi";
+import React from "react";
+import { FiCheckCircle } from "react-icons/fi";
 
-
-export default function RoadmapFlow({ sections, highlight = false }) {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggle = (i) => {
-    setOpenIndex(openIndex === i ? null : i);
-  };
-
+export default function RoadmapFlow({ sections }) {
   return (
-    <div className="space-y-6">
+    <div className="relative flex flex-col items-start">
+      {sections.map((step, index) => (
+        <div key={index} className="flex items-start relative pl-10 mb-10">
 
-      {sections.map((step, index) => {
-        const isOpen = openIndex === index;
-
-        return (
-          <div
-            key={index}
-            className={`relative border border-gray-700 rounded-xl p-5 shadow-md bg-neutral-900 transition-all ${
-              highlight && index === 0 ? "border-blue-500 shadow-blue-500/50" : ""
-            }`}
-          >
-            {/* Arrow connector */}
-            {index !== sections.length - 1 && (
-              <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-1 h-6 bg-gray-700 rounded-b"></div>
-            )}
-
-            {/* Header Row */}
-            <div
-              className="flex justify-between cursor-pointer"
-              onClick={() => toggle(index)}
-            >
-              <h3 className="text-xl font-semibold text-blue-400">
-                {step.title}
-              </h3>
-
-              {isOpen ? (
-                <FiChevronDown className="text-gray-300 text-2xl" />
-              ) : (
-                <FiChevronRight className="text-gray-300 text-2xl" />
-              )}
-            </div>
-
-            {/* Collapsible Content */}
-            {isOpen && (
-              <div className="mt-4 pl-2 border-l border-gray-700 space-y-3">
-                {step.items.map((item, i) => (
-                  <div key={i} className="text-gray-300">
-                    {typeof item === "string" ? (
-                      <li>{item}</li>
-                    ) : (
-                      <li>
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-blue-400 hover:underline"
-                        >
-                          {item.text}
-                        </a>
-                      </li>
-                    )}
-                  </div>
-                ))}
-
-                {step.resource && (
-                  <div className="mt-3">
-                    <a
-                      href={step.resource}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-green-400 underline hover:text-green-300"
-                    >
-                      Recommended Resource →
-                    </a>
-                  </div>
-                )}
-              </div>
-            )}
+          {/* ✔ Circle Icon */}
+          <div className="absolute left-0 top-1">
+            <FiCheckCircle className="text-blue-400 text-2xl" />
           </div>
-        );
-      })}
+
+          {/* | Vertical Line */}
+          {index !== sections.length - 1 && (
+            <div className="absolute left-3 top-8 w-0.5 bg-gray-700 h-full"></div>
+          )}
+
+          {/* STEP BOX */}
+          <div className="bg-neutral-800 p-5 rounded-xl w-[90%] shadow hover:shadow-xl transition-all border border-neutral-700">
+            <h3 className="text-xl font-semibold text-blue-300 mb-3">
+              {step.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-300 mb-3">{step.description}</p>
+
+            {/* Resources */}
+            <ul className="space-y-2">
+              {step.resources.map((r, i) => (
+                <li key={i}>
+                  <a
+                    href={r.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    ● {r.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
