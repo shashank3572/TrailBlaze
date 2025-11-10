@@ -56,7 +56,7 @@ This project is designed as part of the Mini Project (5th Semester) and meets al
 - Tailwind CSS  
 - Axios  
 - React Router  
-- Vite / Create React App (depending on your setup)
+- Create React App 
 
 ### **Backend**
 - Node.js  
@@ -102,10 +102,6 @@ TrailBlaze/
 │ ├── api/
 │ └── App.jsx
 
-yaml
-Copy code
-
----
 
 ## ✅ **Setup Instructions**
 
