@@ -1,0 +1,110 @@
+{
+  "title": "QA / Test Engineer",
+  "description": "A QA / Test Engineer designs, develops, and executes test plans to ensure software quality, identifying bugs and verifying features through manual and automated testing approaches.",
+  "requiredSkills": [
+    { "name": "Manual Testing", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Test Automation", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "Scripting & Programming (Python, Java, JavaScript)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Test Frameworks (Selenium, JUnit, TestNG)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Bug Tracking & Reporting", "weight": 0.15, "requiredLevel": 8 }
+  ],
+  "preferredSkills": [
+    { "name": "Performance Testing", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "API Testing", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Continuous Integration (CI/CD)", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Mobile Testing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Security Testing Basics", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Agile Testing Methodologies", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "SQL & Database Testing", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "software-testing",
+    "automation",
+    "quality-assurance",
+    "bug-tracking",
+    "agile-testing"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "e-commerce",
+    "gaming"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "manual-testing-basics", "title": "Manual Testing Fundamentals", "type": "skill", "detail": "Test cases, test plans, exploratory testing.", "estimateHours": 14 },
+        { "id": "bug-reporting", "title": "Bug Tracking and Reporting", "type": "skill", "detail": "Using Jira, Bugzilla.", "estimateHours": 12 },
+        { "id": "testing-types", "title": "Types of Testing", "type": "skill", "detail": "Regression, smoke, functional testing.", "estimateHours": 10 },
+        { "id": "agile-testing-basics", "title": "Agile Testing Basics", "type": "skill", "detail": "Scrum ceremonies, QA roles.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "automation-intro", "title": "Test Automation Introduction", "type": "skill", "detail": "Basics of Selenium, basics scripting.", "estimateHours": 14 },
+        { "id": "programming-for-testers", "title": "Programming Fundamentals for QA", "type": "skill", "detail": "Python, Java, or JavaScript basics.", "estimateHours": 16 },
+        { "id": "project-1", "title": "Manual Test Plan Execution", "type": "project", "detail": "Write and execute test plans manually.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "automation-frameworks", "title": "Automation Frameworks & Tools", "type": "skill", "detail": "Selenium WebDriver, JUnit, TestNG.", "estimateHours": 14 },
+        { "id": "api-testing", "title": "API Testing", "type": "skill", "detail": "Postman, REST Assured.", "estimateHours": 12 },
+        { "id": "project-2", "title": "Automate Test Cases", "type": "project", "detail": "Automate test suites for web applications.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "performance-testing", "title": "Performance Testing Basics", "type": "skill", "detail": "Load testing, using JMeter.", "estimateHours": 12 },
+        { "id": "mobile-testing", "title": "Mobile Application Testing", "type": "skill", "detail": "Android/iOS app testing tools.", "estimateHours": 12 },
+        { "id": "continuous-integration", "title": "Continuous Integration & Delivery (CI/CD)", "type": "skill", "detail": "Jenkins, GitLab CI basics.", "estimateHours": 14 },
+        { "id": "project-3", "title": "Full CI/CD Pipeline Setup", "type": "project", "detail": "Integrate automated tests in CI pipeline.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "security-testing-basics", "title": "Security Testing Basics", "type": "skill", "detail": "Common vulnerabilities, OWASP.", "estimateHours": 12 },
+        { "id": "advanced-automation", "title": "Advanced Test Automation", "type": "skill", "detail": "Framework customization, parallel testing.", "estimateHours": 14 },
+        { "id": "project-4", "title": "Security and Automation Project", "type": "project", "detail": "Automated tests with security checks.", "estimateHours": 32 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Preparation and Networking", "type": "skill", "detail": "Portfolio, certifications, interviews.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Keep Up with Testing Trends", "type": "skill", "detail": "New tools, methodologies, best practices.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Software Testing Fundamentals",
+      "url": "https://example.com/testing-fundamentals",
+      "skillsCovered": ["Manual Testing", "Bug Tracking", "Agile Testing"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Selenium WebDriver Tutorial",
+      "url": "https://example.com/selenium-tutorial",
+      "skillsCovered": ["Test Automation", "Frameworks", "Scripting"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Performance Testing with JMeter",
+      "url": "https://example.com/performance-testing",
+      "skillsCovered": ["Load Testing", "JMeter", "Performance Optimization"]
+    }
+  ]
+}

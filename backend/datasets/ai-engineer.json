@@ -1,0 +1,112 @@
+{
+  "title": "AI Engineer / Artificial Intelligence Developer",
+  "description": "An AI Engineer develops, trains, and deploys artificial intelligence models and systems, leveraging machine learning, data science, and software engineering to build intelligent applications.",
+  "requiredSkills": [
+    { "name": "Machine Learning Fundamentals", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Programming (Python)", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Deep Learning & Neural Networks", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Data Preprocessing & Analysis", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Model Deployment & Optimization", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Natural Language Processing (NLP)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Computer Vision", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Reinforcement Learning", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Cloud Platforms (AWS, GCP, Azure)", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Big Data Technologies", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Software Engineering & DevOps", "weight": 0.1, "requiredLevel": 7 },
+    { "name": "Explainable AI & Ethics", "weight": 0.08, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "artificial-intelligence",
+    "machine-learning",
+    "deep-learning",
+    "data-science",
+    "model-deployment"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "automotive",
+    "retail"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "python-basics", "title": "Python Programming Basics", "type": "skill", "detail": "Syntax, data structures, libraries (NumPy, Pandas).", "estimateHours": 16 },
+        { "id": "math-fundamentals", "title": "Math for AI", "type": "skill", "detail": "Linear algebra, calculus, probability.", "estimateHours": 14 },
+        { "id": "ml-fundamentals", "title": "Machine Learning Basics", "type": "skill", "detail": "Supervised, unsupervised learning.", "estimateHours": 16 },
+        { "id": "data-preprocessing", "title": "Data Preprocessing & EDA", "type": "skill", "detail": "Cleaning, visualization, feature engineering.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "deep-learning-intro", "title": "Deep Learning Fundamentals", "type": "skill", "detail": "Neural networks, activation functions.", "estimateHours": 14 },
+        { "id": "model-training", "title": "Model Training & Evaluation", "type": "skill", "detail": "Loss functions, metrics, validation.", "estimateHours": 14 },
+        { "id": "nlp-basics", "title": "Natural Language Processing Basics", "type": "skill", "detail": "Text processing, embeddings.", "estimateHours": 12 },
+        { "id": "project-1", "title": "Train a Simple ML Model", "type": "project", "detail": "Complete dataset-to-model pipeline.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "computer-vision", "title": "Computer Vision Basics", "type": "skill", "detail": "Image processing, CNNs.", "estimateHours": 14 },
+        { "id": "reinforcement-learning", "title": "Reinforcement Learning Intro", "type": "skill", "detail": "Policies, rewards, environments.", "estimateHours": 12 },
+        { "id": "model-optimization", "title": "Model Optimization & Tuning", "type": "skill", "detail": "Hyperparameter tuning, pruning.", "estimateHours": 12 },
+        { "id": "project-2", "title": "Build an Image Classifier", "type": "project", "detail": "Apply CNNs on image datasets.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "cloud-ai", "title": "Cloud Platforms for AI", "type": "skill", "detail": "AWS SageMaker, GCP AI Platform.", "estimateHours": 14 },
+        { "id": "big-data", "title": "Big Data Tools", "type": "skill", "detail": "Hadoop, Spark, distributed processing.", "estimateHours": 14 },
+        { "id": "model-deployment", "title": "Model Deployment & Serving", "type": "skill", "detail": "API wrapping, containerization.", "estimateHours": 14 },
+        { "id": "project-3", "title": "Deploy an AI Model", "type": "project", "detail": "Host and serve an AI model in production.", "estimateHours": 26 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "explainable-ai", "title": "Explainable AI & Ethics", "type": "skill", "detail": "Bias mitigation, model interpretability.", "estimateHours": 10 },
+        { "id": "software-engineering", "title": "Software Engineering for AI", "type": "skill", "detail": "Testing, version control, DevOps.", "estimateHours": 14 },
+        { "id": "project-4", "title": "End-to-End AI Application", "type": "project", "detail": "From data to deployment with monitoring.", "estimateHours": 36 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Development & Networking", "type": "skill", "detail": "Portfolio, interviews, open source.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Stay Updated on AI Trends", "type": "skill", "detail": "Latest research, tools, frameworks.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Machine Learning by Andrew Ng",
+      "url": "https://example.com/ml-course",
+      "skillsCovered": ["ML fundamentals", "Supervised learning", "Unsupervised learning"]
+    },
+    {
+      "provider": "Udacity",
+      "title": "Deep Learning Nanodegree",
+      "url": "https://example.com/deep-learning-nanodegree",
+      "skillsCovered": ["Neural networks", "CNNs", "RNNs"]
+    },
+    {
+      "provider": "edX",
+      "title": "AI for Everyone",
+      "url": "https://example.com/ai-for-everyone",
+      "skillsCovered": ["AI concepts", "Applications", "Ethics"]
+    }
+  ]
+}

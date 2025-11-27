@@ -1,0 +1,231 @@
+{
+  "title": "Data Analyst",
+  "description": "A Data Analyst collects, processes, and performs statistical analyses on data sets to help organizations make informed business decisions through actionable insights and reporting.",
+  "requiredSkills": [
+    { "name": "Data Cleaning & Wrangling", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Statistical Analysis", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "Data Visualization", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "SQL & Database Querying", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Spreadsheet Tools (Excel, Google Sheets)", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Python/R for Data Analysis", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Business Intelligence Tools (Tableau, Power BI)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Data Modeling & Reporting", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Presentation & Communication Skills", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Basic Machine Learning", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "ETL & Data Pipelines", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Domain Knowledge", "weight": 0.08, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "data-analysis",
+    "analytics",
+    "reporting",
+    "visualization",
+    "sql"
+  ],
+  "industryTags": [
+    "finance",
+    "technology",
+    "marketing",
+    "healthcare",
+    "retail"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        {
+          "id": "data-cleaning",
+          "title": "Data Cleaning Fundamentals",
+          "type": "skill",
+          "detail": "Handling missing values, data types, duplicates.",
+          "estimateHours": 14
+        },
+        {
+          "id": "excel-basics",
+          "title": "Excel & Spreadsheet Basics",
+          "type": "skill",
+          "detail": "Formulas, pivot tables, charts.",
+          "estimateHours": 14
+        },
+        {
+          "id": "statistical-basics",
+          "title": "Basic Statistical Concepts",
+          "type": "skill",
+          "detail": "Mean, median, standard deviation, distributions.",
+          "estimateHours": 12
+        },
+        {
+          "id": "sql-basics",
+          "title": "SQL Basics",
+          "type": "skill",
+          "detail": "SELECT, WHERE, JOINs.",
+          "estimateHours": 14
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        {
+          "id": "data-visualization",
+          "title": "Data Visualization Basics",
+          "type": "skill",
+          "detail": "Charts, dashboards using Tableau/Power BI.",
+          "estimateHours": 14
+        },
+        {
+          "id": "python-r-intro",
+          "title": "Intro to Python/R for Analysis",
+          "type": "skill",
+          "detail": "Libraries like Pandas, ggplot2.",
+          "estimateHours": 14
+        },
+        {
+          "id": "project-1",
+          "title": "Monthly Sales Report",
+          "type": "project",
+          "detail": "Extract, analyze, and visualize sales data.",
+          "estimateHours": 20
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        {
+          "id": "advanced-sql",
+          "title": "Advanced SQL",
+          "type": "skill",
+          "detail": "Window functions, CTEs, performance tuning.",
+          "estimateHours": 12
+        },
+        {
+          "id": "data-modeling",
+          "title": "Data Modeling & ETL Basics",
+          "type": "skill",
+          "detail": "Star schema, data pipelines.",
+          "estimateHours": 12
+        },
+        {
+          "id": "communication-skills",
+          "title": "Presentation & Communication",
+          "type": "skill",
+          "detail": "Storytelling with data, report writing.",
+          "estimateHours": 10
+        },
+        {
+          "id": "project-2",
+          "title": "Customer Segmentation Analysis",
+          "type": "project",
+          "detail": "Segment customers based on behavior data.",
+          "estimateHours": 22
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        {
+          "id": "predictive-analytics",
+          "title": "Intro to Predictive Analytics",
+          "type": "skill",
+          "detail": "Simple regression, forecasting.",
+          "estimateHours": 12
+        },
+        {
+          "id": "power-bi-advanced",
+          "title": "Advanced Power BI",
+          "type": "skill",
+          "detail": "DAX, custom dashboards.",
+          "estimateHours": 12
+        },
+        {
+          "id": "automation-scripting",
+          "title": "Automation with Python",
+          "type": "skill",
+          "detail": "Scripting data workflows.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-3",
+          "title": "Sales Forecasting Model",
+          "type": "project",
+          "detail": "Build and report forecasting models.",
+          "estimateHours": 28
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        {
+          "id": "machine-learning-intro",
+          "title": "Machine Learning Basics",
+          "type": "skill",
+          "detail": "Classification, clustering.",
+          "estimateHours": 14
+        },
+        {
+          "id": "domain-knowledge",
+          "title": "Domain Knowledge & Business Context",
+          "type": "skill",
+          "detail": "Industry-specific analytics.",
+          "estimateHours": 10
+        },
+        {
+          "id": "project-4",
+          "title": "Comprehensive Analytics Project",
+          "type": "project",
+          "detail": "End-to-end data analysis & presentation.",
+          "estimateHours": 30
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        {
+          "id": "career-preparation",
+          "title": "Career Development & Networking",
+          "type": "skill",
+          "detail": "Portfolio, interviews, professional growth.",
+          "estimateHours": 8
+        },
+        {
+          "id": "industry-trends",
+          "title": "Keep Up with Industry Trends",
+          "type": "skill",
+          "detail": "New tools, techniques, analytics trends.",
+          "estimateHours": 6
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Data Analysis and Visualization",
+      "url": "https://example.com/data-analysis-course",
+      "skillsCovered": ["Data Cleaning", "Visualization", "Python"]
+    },
+    {
+      "provider": "Udemy",
+      "title": "SQL for Data Analysis",
+      "url": "https://example.com/sql-data-analysis",
+      "skillsCovered": ["SQL Queries", "Advanced SQL"]
+    },
+    {
+      "provider": "LinkedIn Learning",
+      "title": "Excel for Data Analysis",
+      "url": "https://example.com/excel-data-analysis",
+      "skillsCovered": ["Excel", "Pivot Tables", "Data Visualization"]
+    }
+  ]
+}

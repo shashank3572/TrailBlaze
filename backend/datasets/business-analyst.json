@@ -1,0 +1,114 @@
+{
+  "title": "Business Analyst",
+  "description": "A Business Analyst identifies business needs, analyzes processes and data, and facilitates communication between stakeholders to propose effective solutions that drive organizational success.",
+  "requiredSkills": [
+    { "name": "Requirements Gathering", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Business Process Modeling", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Data Analysis & Visualization", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Stakeholder Communication", "weight": 0.15, "requiredLevel": 8 },
+    { "name": "Documentation & Reporting", "weight": 0.1, "requiredLevel": 7 },
+    { "name": "Problem-Solving & Critical Thinking", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "SQL & Database Basics", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Agile & Scrum Methodologies", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Use Case & User Story Writing", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Process Improvement Techniques", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Software Tools (Jira, Confluence, MS Visio)", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Research & Competitive Analysis", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Financial Modeling Basics", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "business-analysis",
+    "data-driven-decisions",
+    "process-modeling",
+    "stakeholder-engagement",
+    "problem-solving"
+  ],
+  "industryTags": [
+    "finance",
+    "technology",
+    "consulting",
+    "healthcare",
+    "retail"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "business-analysis-basics", "title": "Business Analysis Fundamentals", "type": "skill", "detail": "Role, responsibilities, core concepts.", "estimateHours": 8 },
+        { "id": "requirements-gathering", "title": "Requirements Gathering", "type": "skill", "detail": "Techniques, interviews, workshops.", "estimateHours": 12 },
+        { "id": "stakeholder-engagement", "title": "Stakeholder Identification & Communication", "type": "skill", "detail": "Mapping, effective communication.", "estimateHours": 10 },
+        { "id": "documentation-basics", "title": "Documentation & Reporting", "type": "skill", "detail": "Use cases, BRDs, clear reporting.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Conduct a Requirements Workshop", "type": "project", "detail": "Identify and document requirements for a sample case.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "process-modeling", "title": "Business Process Modeling", "type": "skill", "detail": "BPMN, flowcharts, process mapping.", "estimateHours": 12 },
+        { "id": "data-analysis", "title": "Data Analysis & Visualization", "type": "skill", "detail": "Excel, Power BI, Tableau basics.", "estimateHours": 14 },
+        { "id": "sql-basics", "title": "SQL & Database Fundamentals", "type": "skill", "detail": "Basic querying, data extraction.", "estimateHours": 10 },
+        { "id": "project-2", "title": "Model a Business Process", "type": "project", "detail": "Map and optimize a simple business process.", "estimateHours": 16 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "agile-scrum", "title": "Agile & Scrum Methodologies", "type": "skill", "detail": "Roles, ceremonies, sprint planning.", "estimateHours": 12 },
+        { "id": "user-stories", "title": "Use Case & User Story Writing", "type": "skill", "detail": "Creating effective user stories and acceptance criteria.", "estimateHours": 10 },
+        { "id": "problem-solving", "title": "Problem Solving & Critical Thinking", "type": "skill", "detail": "Root cause analysis, decision making.", "estimateHours": 10 },
+        { "id": "project-3", "title": "Sprint Planning & User Story Workshop", "type": "project", "detail": "Create user stories and plan sprints.", "estimateHours": 18 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "process-improvement", "title": "Process Improvement Techniques", "type": "skill", "detail": "Lean, Six Sigma basics.", "estimateHours": 12 },
+        { "id": "tooling", "title": "Business Analysis Software Tools", "type": "skill", "detail": "Jira, Confluence, MS Visio.", "estimateHours": 12 },
+        { "id": "financial-modeling", "title": "Financial Modeling Basics", "type": "skill", "detail": "Budgets, forecasts, cost-benefit analysis.", "estimateHours": 10 },
+        { "id": "project-4", "title": "Process Improvement Plan", "type": "project", "detail": "Develop and present a process improvement.", "estimateHours": 22 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "research-analysis", "title": "Research & Competitive Analysis", "type": "skill", "detail": "Market research, SWOT analysis.", "estimateHours": 12 },
+        { "id": "advanced-analytics", "title": "Advanced Data Analytics", "type": "skill", "detail": "Data modeling, predictive analytics basics.", "estimateHours": 12 },
+        { "id": "project-5", "title": "Comprehensive Business Analysis", "type": "project", "detail": "Complete full analysis and recommendations.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-development", "title": "Career Development & Networking", "type": "skill", "detail": "Personal branding, professional growth.", "estimateHours": 8 },
+        { "id": "industry-updates", "title": "Keeping Up with Industry Trends", "type": "skill", "detail": "Business trends, new tools.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Business Analysis Fundamentals",
+      "url": "https://example.com/business-analysis-course",
+      "skillsCovered": ["Requirements Gathering", "Process Modeling", "Stakeholder Management"]
+    },
+    {
+      "provider": "Udemy",
+      "title": "SQL for Business Analysts",
+      "url": "https://example.com/sql-for-ba",
+      "skillsCovered": ["SQL Basics", "Data Analysis", "Reporting"]
+    },
+    {
+      "provider": "LinkedIn Learning",
+      "title": "Agile Business Analysis",
+      "url": "https://example.com/agile-ba",
+      "skillsCovered": ["Agile", "User Stories", "Scrum"]
+    }
+  ]
+}

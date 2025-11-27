@@ -1,0 +1,111 @@
+{
+  "title": "Graphic Designer",
+  "description": "A Graphic Designer creates visual content for digital and print media, collaborating with teams to deliver engaging, effective designs that communicate messages and enhance brand identity.",
+  "requiredSkills": [
+    { "name": "Adobe Photoshop", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Adobe Illustrator", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Typography", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Color Theory", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Layout & Composition", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Adobe InDesign", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Digital Illustration", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Motion Graphics", "weight": 0.15, "requiredLevel": 5 },
+    { "name": "UI Design", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Branding", "weight": 0.15, "requiredLevel": 5 },
+    { "name": "Photography Basics", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Print Production", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "graphic-design",
+    "visual-communication",
+    "digital-media",
+    "branding",
+    "illustration"
+  ],
+  "industryTags": [
+    "media",
+    "marketing",
+    "advertising",
+    "technology",
+    "publishing"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "design-basics", "title": "Design Principles", "type": "skill", "detail": "Balance, hierarchy, contrast, unity.", "estimateHours": 8 },
+        { "id": "drawing-fundamentals", "title": "Drawing Fundamentals", "type": "skill", "detail": "Shapes, forms, shading, perspective.", "estimateHours": 10 },
+        { "id": "color-basics", "title": "Color Theory", "type": "skill", "detail": "Color wheel, harmonies, temperature.", "estimateHours": 8 },
+        { "id": "typography-basics", "title": "Typography Basics", "type": "skill", "detail": "Type families, hierarchy, pairing.", "estimateHours": 8 },
+        { "id": "software-intro", "title": "Graphic Design Software Introduction", "type": "skill", "detail": "Photoshop, Illustrator basics.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "image-editing", "title": "Image Editing (Photoshop)", "type": "skill", "detail": "Layers, masks, retouching.", "estimateHours": 12 },
+        { "id": "vector-art", "title": "Vector Art (Illustrator)", "type": "skill", "detail": "Paths, shapes, pen tool.", "estimateHours": 12 },
+        { "id": "layout-design", "title": "Layout & Composition", "type": "skill", "detail": "Grids, spacing, alignment.", "estimateHours": 10 },
+        { "id": "branding-basics", "title": "Branding Fundamentals", "type": "skill", "detail": "Logo, brand colors, mission.", "estimateHours": 8 },
+        { "id": "print-media", "title": "Print Design Basics", "type": "skill", "detail": "Bleed, CMYK, print formats.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "typography-advanced", "title": "Typography in Practice", "type": "skill", "detail": "Advanced pairing, legibility, expressive type.", "estimateHours": 8 },
+        { "id": "composition-advanced", "title": "Advanced Composition", "type": "skill", "detail": "Asymmetry, repetition, flow.", "estimateHours": 8 },
+        { "id": "ui-basics", "title": "UI Design Basics", "type": "skill", "detail": "Wireframes, UI elements, design systems.", "estimateHours": 10 },
+        { "id": "motion-basics", "title": "Intro to Motion Graphics", "type": "skill", "detail": "Animation principles, storyboarding.", "estimateHours": 12 },
+        { "id": "portfolio-start", "title": "Portfolio Project 1", "type": "project", "detail": "Design and present a real-world client project.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "digital-illustration", "title": "Digital Illustration", "type": "skill", "detail": "Brushes, tablet basics, stylization.", "estimateHours": 8 },
+        { "id": "photography-basics", "title": "Photography for Designers", "type": "skill", "detail": "Shooting, photo selection, editing.", "estimateHours": 8 },
+        { "id": "brand-guidelines", "title": "Creating Brand Guidelines", "type": "skill", "detail": "Style guides, consistency, hand-off documents.", "estimateHours": 8 },
+        { "id": "mockups", "title": "Creating Mockups", "type": "skill", "detail": "Presenting design using mockups.", "estimateHours": 8 },
+        { "id": "portfolio-advanced", "title": "Portfolio Project 2", "type": "project", "detail": "Design for multi-platform branding.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "ux-foundations", "title": "UX Foundations", "type": "skill", "detail": "User research, personas, usability basics.", "estimateHours": 10 },
+        { "id": "web-assets", "title": "Web Graphics & Assets", "type": "skill", "detail": "SVGs, PNG/JPEG, optimization.", "estimateHours": 10 },
+        { "id": "presentation-design", "title": "Presentation Design", "type": "skill", "detail": "Slides, infographics, charts.", "estimateHours": 8 },
+        { "id": "motion-advanced", "title": "Motion Graphics Advanced", "type": "skill", "detail": "After Effects basics, transitions.", "estimateHours": 14 },
+        { "id": "final-project", "title": "Final Portfolio Project", "type": "project", "detail": "Develop a multi-format professional portfolio.", "estimateHours": 18 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Adobe Photoshop Tutorial for Beginners",
+      "url": "https://example.com/photoshop-course",
+      "skillsCovered": ["Adobe Photoshop", "Image Editing", "Retouching"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Adobe Illustrator Masterclass",
+      "url": "https://example.com/illustrator-course",
+      "skillsCovered": ["Adobe Illustrator", "Vector Art", "Branding"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Color Theory & Typography",
+      "url": "https://example.com/color-typography-course",
+      "skillsCovered": ["Color Theory", "Typography", "Layout"]
+    }
+  ]
+}

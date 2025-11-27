@@ -1,0 +1,231 @@
+{
+  "title": "Machine Learning Engineer",
+  "description": "A Machine Learning Engineer develops, tests, and maintains machine learning models and pipelines, focusing on scalable systems and applying algorithmic solutions to real-world problems.",
+  "requiredSkills": [
+    { "name": "Machine Learning Algorithms", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Programming (Python, R)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Data Processing & Feature Engineering", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Model Evaluation & Tuning", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Software Engineering Practices", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Deep Learning & Neural Networks", "weight": 0.18, "requiredLevel": 6 },
+    { "name": "Distributed Computing & Big Data", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Cloud Services (AWS, GCP, Azure)", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Model Deployment & Monitoring", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "NLP & Computer Vision", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Experimentation & A/B Testing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Explainability & Ethics", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "machine-learning",
+    "data-science",
+    "model-development",
+    "big-data",
+    "cloud-computing"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "retail",
+    "automotive"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        {
+          "id": "programming-basics",
+          "title": "Programming Foundations",
+          "type": "skill",
+          "detail": "Python or R basics, data structures.",
+          "estimateHours": 16
+        },
+        {
+          "id": "math-foundations",
+          "title": "Mathematics for ML",
+          "type": "skill",
+          "detail": "Linear algebra, calculus, probability.",
+          "estimateHours": 14
+        },
+        {
+          "id": "ml-intro",
+          "title": "Introduction to Machine Learning",
+          "type": "skill",
+          "detail": "Algorithms, types of learning.",
+          "estimateHours": 16
+        },
+        {
+          "id": "data-preprocessing",
+          "title": "Data Processing & Feature Engineering",
+          "type": "skill",
+          "detail": "Cleaning, transformation, selection.",
+          "estimateHours": 14
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        {
+          "id": "model-training",
+          "title": "Model Training & Evaluation",
+          "type": "skill",
+          "detail": "Cross-validation, metrics, bias-variance.",
+          "estimateHours": 16
+        },
+        {
+          "id": "software-development",
+          "title": "Software Engineering for ML",
+          "type": "skill",
+          "detail": "Version control, testing, modularity.",
+          "estimateHours": 14
+        },
+        {
+          "id": "project-1",
+          "title": "End-to-End ML Pipeline",
+          "type": "project",
+          "detail": "Build a full ML pipeline on a dataset.",
+          "estimateHours": 24
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        {
+          "id": "deep-learning",
+          "title": "Deep Learning Fundamentals",
+          "type": "skill",
+          "detail": "Neural networks, backpropagation.",
+          "estimateHours": 14
+        },
+        {
+          "id": "nlp-cv-intro",
+          "title": "NLP & Computer Vision Basics",
+          "type": "skill",
+          "detail": "Text embeddings, image recognition.",
+          "estimateHours": 14
+        },
+        {
+          "id": "model-tuning",
+          "title": "Hyperparameter Tuning & Optimization",
+          "type": "skill",
+          "detail": "Grid search, random search, Bayesian methods.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-2",
+          "title": "Build a Neural Network Model",
+          "type": "project",
+          "detail": "Train and evaluate a deep model.",
+          "estimateHours": 26
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        {
+          "id": "big-data",
+          "title": "Distributed Computing & Big Data",
+          "type": "skill",
+          "detail": "Spark, Hadoop, scalable ML.",
+          "estimateHours": 14
+        },
+        {
+          "id": "cloud-ml",
+          "title": "Cloud Platforms for ML",
+          "type": "skill",
+          "detail": "AWS SageMaker, GCP AI Platform.",
+          "estimateHours": 14
+        },
+        {
+          "id": "model-deployment",
+          "title": "Deployment & Monitoring",
+          "type": "skill",
+          "detail": "Containers, APIs, logging.",
+          "estimateHours": 14
+        },
+        {
+          "id": "project-3",
+          "title": "Deploy a Machine Learning Model",
+          "type": "project",
+          "detail": "Host and monitor a ML model in production.",
+          "estimateHours": 28
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        {
+          "id": "ethics-ai",
+          "title": "Explainability & Ethics in AI",
+          "type": "skill",
+          "detail": "Bias detection, fairness, transparency.",
+          "estimateHours": 10
+        },
+        {
+          "id": "experiment-design",
+          "title": "Experimentation & A/B Testing",
+          "type": "skill",
+          "detail": "Test design, statistical significance.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-4",
+          "title": "Advanced Machine Learning System",
+          "type": "project",
+          "detail": "Develop an end-to-end system with monitoring.",
+          "estimateHours": 36
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        {
+          "id": "career-prep",
+          "title": "Career Development & Networking",
+          "type": "skill",
+          "detail": "Portfolio, interviews, community involvement.",
+          "estimateHours": 8
+        },
+        {
+          "id": "industry-trends",
+          "title": "Stay Updated on ML Trends",
+          "type": "skill",
+          "detail": "Latest algorithms, tools, research papers.",
+          "estimateHours": 6
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Machine Learning by Andrew Ng",
+      "url": "https://example.com/ml-course",
+      "skillsCovered": ["Supervised learning", "Unsupervised learning", "Model evaluation"]
+    },
+    {
+      "provider": "Udacity",
+      "title": "Deep Learning Nanodegree",
+      "url": "https://example.com/deep-learning-nanodegree",
+      "skillsCovered": ["Neural networks", "CNNs", "RNNs"]
+    },
+    {
+      "provider": "edX",
+      "title": "Big Data Analysis with Spark",
+      "url": "https://example.com/big-data-spark",
+      "skillsCovered": ["Spark", "Data pipelines", "Distributed computing"]
+    }
+  ]
+}

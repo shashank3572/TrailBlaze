@@ -1,0 +1,115 @@
+{
+  "title": "SEO Specialist",
+  "description": "An SEO Specialist optimizes websites and content to improve search engine rankings and drive organic traffic, using technical, on-page, and off-page SEO strategies informed by analytics and industry trends.",
+  "requiredSkills": [
+    { "name": "Keyword Research", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "On-Page SEO", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Technical SEO", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Link Building", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "SEO Analytics & Reporting", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Content Marketing", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Local SEO", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Mobile SEO", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "SEO Tools (Ahrefs, SEMrush)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "HTML/CSS Basics", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "UX Optimization", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Voice Search Optimization", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "seo",
+    "digital-marketing",
+    "analytics",
+    "content-marketing",
+    "search-engines"
+  ],
+  "industryTags": [
+    "e-commerce",
+    "media",
+    "technology",
+    "marketing",
+    "advertising"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "seo-basics", "title": "SEO Fundamentals", "type": "skill", "detail": "Search engines, ranking factors.", "estimateHours": 8 },
+        { "id": "keyword-research", "title": "Keyword Research Basics", "type": "skill", "detail": "Tools, intent, competition.", "estimateHours": 10 },
+        { "id": "onpage-seo", "title": "On-Page SEO", "type": "skill", "detail": "Meta tags, headings, content optimization.", "estimateHours": 10 },
+        { "id": "seo-tools-intro", "title": "SEO Tools Introduction", "type": "skill", "detail": "Google Analytics, Search Console basics.", "estimateHours": 8 },
+        { "id": "content-basics", "title": "Content Marketing Basics", "type": "skill", "detail": "Content creation, SEO friendly writing.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "technical-seo", "title": "Technical SEO", "type": "skill", "detail": "Site speed, mobile-friendliness, sitemaps.", "estimateHours": 12 },
+        { "id": "link-building", "title": "Link Building & Outreach", "type": "skill", "detail": "Strategies, guest posting, relations.", "estimateHours": 12 },
+        { "id": "local-seo", "title": "Local SEO Basics", "type": "skill", "detail": "Google My Business, citations.", "estimateHours": 10 },
+        { "id": "seo-audits", "title": "SEO Audits", "type": "skill", "detail": "Site assessments, fixes.", "estimateHours": 12 },
+        { "id": "project-1", "title": "SEO Audit Project", "type": "project", "detail": "Conduct and report an SEO audit.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "mobile-seo", "title": "Mobile SEO & AMP", "type": "skill", "detail": "Responsive design, AMP pages.", "estimateHours": 10 },
+        { "id": "advanced-keyword", "title": "Advanced Keyword Targeting", "type": "skill", "detail": "Long-tail, semantic SEO.", "estimateHours": 10 },
+        { "id": "seo-reporting", "title": "SEO Analytics & Reporting", "type": "skill", "detail": "KPI tracking, dashboards.", "estimateHours": 12 },
+        { "id": "project-2", "title": "SEO Campaign Optimization", "type": "project", "detail": "Analyze & improve a live SEO campaign.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "voice-search", "title": "Voice Search Optimization", "type": "skill", "detail": "Conversational queries, schemas.", "estimateHours": 8 },
+        { "id": "schema-markup", "title": "Schema Markup & Structured Data", "type": "skill", "detail": "Rich snippets, JSON-LD.", "estimateHours": 8 },
+        { "id": "ux-optimization", "title": "User Experience Optimization", "type": "skill", "detail": "Site usability, engagement.", "estimateHours": 10 },
+        { "id": "project-3", "title": "Advanced SEO Strategy Plan", "type": "project", "detail": "Develop a comprehensive SEO strategy.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "content-seo", "title": "Content Strategy & SEO", "type": "skill", "detail": "Planning, execution, analytics.", "estimateHours": 12 },
+        { "id": "international-seo", "title": "International SEO", "type": "skill", "detail": "Multi-language, geo-targeting.", "estimateHours": 10 },
+        { "id": "seo-automation", "title": "SEO Automation Tools", "type": "skill", "detail": "Scripts, reporting automation.", "estimateHours": 10 },
+        { "id": "project-4", "title": "Global SEO Campaign", "type": "project", "detail": "Plan and execute international SEO.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Preparation", "type": "skill", "detail": "Portfolio, interviews, networking.", "estimateHours": 8 },
+        { "id": "seo-trends", "title": "Staying Updated & Trends", "type": "skill", "detail": "Algorithm updates, best practices.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "SEO Training Course",
+      "url": "https://example.com/seo-training",
+      "skillsCovered": ["On-Page SEO", "Keyword Research", "Technical SEO"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Advanced SEO Strategies",
+      "url": "https://example.com/advanced-seo",
+      "skillsCovered": ["Link Building", "Analytics", "Automation"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Content Marketing for SEO",
+      "url": "https://example.com/content-marketing-seo",
+      "skillsCovered": ["Content Strategy", "SEO Writing", "User Engagement"]
+    }
+  ]
+}

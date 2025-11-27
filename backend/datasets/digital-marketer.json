@@ -1,0 +1,114 @@
+{
+  "title": "Digital Marketer",
+  "description": "A Digital Marketer creates, implements, and optimizes online marketing campaigns across multiple channels such as social media, search engines, email, and display advertising to drive brand growth and conversions.",
+  "requiredSkills": [
+    { "name": "Paid Advertising (Google Ads, Facebook Ads)", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "SEO Fundamentals", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Content Marketing", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Email Marketing", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Analytics & Reporting", "weight": 0.2, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Social Media Marketing", "weight": 0.18, "requiredLevel": 6 },
+    { "name": "Marketing Automation", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Copywriting", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Conversion Rate Optimization (CRO)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "UX/UI Principles", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Video Marketing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "CRM Tools", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "digital-marketing",
+    "content-strategy",
+    "online-advertising",
+    "analytics",
+    "branding"
+  ],
+  "industryTags": [
+    "marketing",
+    "advertising",
+    "e-commerce",
+    "media",
+    "technology"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "marketing-basics", "title": "Digital Marketing Fundamentals", "type": "skill", "detail": "Overview of digital channels and concepts.", "estimateHours": 8 },
+        { "id": "content-marketing", "title": "Content Marketing Basics", "type": "skill", "detail": "Creating engaging content strategies.", "estimateHours": 10 },
+        { "id": "seo-basics", "title": "SEO for Beginners", "type": "skill", "detail": "Keyword research, on-page SEO.", "estimateHours": 10 },
+        { "id": "google-ads-intro", "title": "Google Ads Basics", "type": "skill", "detail": "Campaign setup, keyword targeting.", "estimateHours": 12 },
+        { "id": "email-marketing", "title": "Email Marketing Basics", "type": "skill", "detail": "Lists, templates, automation.", "estimateHours": 10 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "social-media-marketing", "title": "Social Media Marketing", "type": "skill", "detail": "Platform strategies, engagement.", "estimateHours": 12 },
+        { "id": "facebook-ads", "title": "Facebook Ads", "type": "skill", "detail": "Audience targeting, bidding.", "estimateHours": 12 },
+        { "id": "analytics", "title": "Google Analytics & Reporting", "type": "skill", "detail": "Tracking, KPIs, dashboards.", "estimateHours": 15 },
+        { "id": "copywriting", "title": "Copywriting Skills", "type": "skill", "detail": "Persuasive writing, CTAs.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Create a Multi-Channel Campaign", "type": "project", "detail": "Launch and monitor a campaign.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "marketing-automation", "title": "Marketing Automation Tools", "type": "skill", "detail": "HubSpot, Mailchimp, workflows.", "estimateHours": 12 },
+        { "id": "conversion-rate-optimization", "title": "CRO Techniques", "type": "skill", "detail": "A/B testing, landing pages.", "estimateHours": 12 },
+        { "id": "video-marketing", "title": "Video Marketing Basics", "type": "skill", "detail": "Scripts, production, promotion.", "estimateHours": 10 },
+        { "id": "project-2", "title": "Optimize Existing Campaign", "type": "project", "detail": "Improve conversion and reach.", "estimateHours": 18 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "advanced-seo", "title": "Advanced SEO Strategies", "type": "skill", "detail": "Technical SEO, link building.", "estimateHours": 14 },
+        { "id": "ux-ui-principles", "title": "UX/UI for Marketers", "type": "skill", "detail": "User journey and design basics.", "estimateHours": 10 },
+        { "id": "crm-tools", "title": "Using CRM Tools", "type": "skill", "detail": "Lead management and scoring.", "estimateHours": 10 },
+        { "id": "project-3", "title": "Develop a Brand Awareness Strategy", "type": "project", "detail": "Plan and execute for brand growth.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "global-marketing", "title": "Global and Multi-Channel Marketing", "type": "skill", "detail": "Localization, cross-channel integration.", "estimateHours": 14 },
+        { "id": "data-analysis", "title": "Data Analysis & Insights", "type": "skill", "detail": "Customer segmentation, reporting.", "estimateHours": 12 },
+        { "id": "project-4", "title": "Design an End-to-End Marketing Funnel", "type": "project", "detail": "From awareness to conversion.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Preparation", "type": "skill", "detail": "Portfolio, interviews, networking.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Keeping Up with Industry Trends", "type": "skill", "detail": "New tools, platforms, compliance.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Digital Marketing Course for Beginners",
+      "url": "https://example.com/digital-marketing-course",
+      "skillsCovered": ["SEO", "Paid Ads", "Content Marketing"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Google Ads & Facebook Ads Masterclass",
+      "url": "https://example.com/paid-ads-course",
+      "skillsCovered": ["Google Ads", "Facebook Ads", "Campaign Management"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Marketing Analytics and Optimization",
+      "url": "https://example.com/analytics-course",
+      "skillsCovered": ["Google Analytics", "Reporting", "Optimization"]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "title": "AR/VR Developer",
+  "description": "An AR/VR Developer designs and implements immersive augmented and virtual reality experiences, integrating 3D content, spatial computing, and interactive user interfaces across hardware platforms.",
+  "requiredSkills": [
+    { "name": "3D Programming (C#/Unity or C++/Unreal)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Computer Graphics Fundamentals", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "AR/VR Hardware Understanding", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Interaction Design & UX for AR/VR", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Math for AR/VR (Linear Algebra, Vectors)", "weight": 0.1, "requiredLevel": 7 },
+    { "name": "Debugging & Optimization", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Shaders & Rendering Pipelines", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "3D Modeling & Animation", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Networking & Multiplayer", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Spatial Audio", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Cloud Services & Backend", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "XR SDKs (ARKit, ARCore, Magic Leap)", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "UX Research & Testing", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "augmented-reality",
+    "virtual-reality",
+    "immersive-tech",
+    "spatial-computing",
+    "interactive-experience"
+  ],
+  "industryTags": [
+    "gaming",
+    "education",
+    "healthcare",
+    "retail",
+    "entertainment"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        {
+          "id": "programming-basics",
+          "title": "Programming Fundamentals",
+          "type": "skill",
+          "detail": "C# or C++ basics, syntax, control structures.",
+          "estimateHours": 15
+        },
+        {
+          "id": "math-for-arvr",
+          "title": "Math Fundamentals for AR/VR",
+          "type": "skill",
+          "detail": "Vectors, matrices, transformations.",
+          "estimateHours": 14
+        },
+        {
+          "id": "computer-graphics-basics",
+          "title": "Computer Graphics Essentials",
+          "type": "skill",
+          "detail": "Rendering, textures, lighting.",
+          "estimateHours": 14
+        },
+        {
+          "id": "arvr-intro",
+          "title": "Introduction to AR/VR",
+          "type": "skill",
+          "detail": "Overview of technologies and platforms.",
+          "estimateHours": 8
+        },
+        {
+          "id": "unity-basics",
+          "title": "Unity Engine Basics",
+          "type": "skill",
+          "detail": "Scene setup, assets, scripting.",
+          "estimateHours": 16
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        {
+          "id": "interaction-design",
+          "title": "Interaction Design for AR/VR",
+          "type": "skill",
+          "detail": "User input, gestures, spatial UI.",
+          "estimateHours": 12
+        },
+        {
+          "id": "shader-fundamentals",
+          "title": "Shader Programming Basics",
+          "type": "skill",
+          "detail": "HLSL/GLSL basics, materials.",
+          "estimateHours": 12
+        },
+        {
+          "id": "ar-sdk-intro",
+          "title": "AR SDKs Introduction",
+          "type": "skill",
+          "detail": "Using ARKit, ARCore, Vuforia.",
+          "estimateHours": 12
+        },
+        {
+          "id": "vr-hardware",
+          "title": "VR Hardware & Tracking",
+          "type": "skill",
+          "detail": "Headsets, controllers, sensors.",
+          "estimateHours": 10
+        },
+        {
+          "id": "project-1",
+          "title": "Simple AR/VR Scene",
+          "type": "project",
+          "detail": "Build an interactive AR or VR scene.",
+          "estimateHours": 16
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        {
+          "id": "3d-modeling-animation",
+          "title": "3D Modeling & Animation",
+          "type": "skill",
+          "detail": "Blender, asset creation, rigging.",
+          "estimateHours": 14
+        },
+        {
+          "id": "networking-basics",
+          "title": "Networking & Multiplayer Basics",
+          "type": "skill",
+          "detail": "Client-server architecture, syncing.",
+          "estimateHours": 12
+        },
+        {
+          "id": "spatial-audio",
+          "title": "Spatial Audio Concepts",
+          "type": "skill",
+          "detail": "3D sound positioning, ambisonics.",
+          "estimateHours": 10
+        },
+        {
+          "id": "performance-optimization",
+          "title": "Performance Optimization",
+          "type": "skill",
+          "detail": "Level of detail, frame rate tuning.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-2",
+          "title": "Multi-Scene AR/VR Project",
+          "type": "project",
+          "detail": "Create a complex multi-scene experience.",
+          "estimateHours": 20
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        {
+          "id": "cloud-backend",
+          "title": "Cloud Services & Backend",
+          "type": "skill",
+          "detail": "Data syncing, cloud anchors, realtime DB.",
+          "estimateHours": 12
+        },
+        {
+          "id": "advanced-shaders",
+          "title": "Advanced Shader Techniques",
+          "type": "skill",
+          "detail": "PBR, post-processing, particle effects.",
+          "estimateHours": 14
+        },
+        {
+          "id": "xr-sdk-advanced",
+          "title": "Advanced XR SDK Usage",
+          "type": "skill",
+          "detail": "Mixed reality, gestures, spatial mapping.",
+          "estimateHours": 14
+        },
+        {
+          "id": "ux-testing",
+          "title": "UX Research & Testing",
+          "type": "skill",
+          "detail": "User studies, feedback integration.",
+          "estimateHours": 10
+        },
+        {
+          "id": "project-3",
+          "title": "User-Centered AR/VR Experience",
+          "type": "project",
+          "detail": "Design with real user feedback.",
+          "estimateHours": 20
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        {
+          "id": "virtual-production",
+          "title": "Virtual Production Basics",
+          "type": "skill",
+          "detail": "Real-time cameras, LED walls.",
+          "estimateHours": 12
+        },
+        {
+          "id": "ai-ml-arvr",
+          "title": "AI/ML in AR/VR",
+          "type": "skill",
+          "detail": "Gesture recognition, environment understanding.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-4",
+          "title": "Capstone AR/VR Project",
+          "type": "project",
+          "detail": "End-to-end immersive application.",
+          "estimateHours": 30
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        {
+          "id": "industry-practices",
+          "title": "Industry Standards & Collaboration",
+          "type": "skill",
+          "detail": "XR development pipelines, team workflows.",
+          "estimateHours": 12
+        },
+        {
+          "id": "career-prep",
+          "title": "Career Preparation",
+          "type": "skill",
+          "detail": "Portfolio, interviews, freelancing tips.",
+          "estimateHours": 8
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Unity for AR/VR Developers",
+      "url": "https://example.com/unity-arvr-course",
+      "skillsCovered": ["Unity", "C#", "AR/VR Fundamentals"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Shader Programming Basics",
+      "url": "https://example.com/shader-course",
+      "skillsCovered": ["Shaders", "Graphics", "Rendering"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "XR SDKs & Spatial Computing",
+      "url": "https://example.com/xr-sdk-course",
+      "skillsCovered": ["ARKit", "ARCore", "Spatial Mapping"]
+    }
+  ]
+}

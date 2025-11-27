@@ -1,30 +1,31 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
-const Career = require('./models/Career');
+const mongoose = require("mongoose");
+const fs = require("fs");
+const path = require("path");
+require("dotenv").config();
+const Career = require("./models/Career");
 
-const data = [
-  {
-    title: "Frontend Developer",
-    description: "Build UIs with HTML/CSS/JS and modern frameworks.",
-    sections: [
-      { name: "Basics", items: [{ id: "f-html", title: "HTML" }, { id: "f-css", title: "CSS" }, { id: "f-js", title: "JavaScript" }] },
-      { name: "Frameworks", items: [{ id: "f-react", title: "React" }, { id: "f-vue", title: "Vue" }] }
-    ]
-  },
-  {
-    title: "AI Engineer",
-    description: "Learn ML, DL and build AI systems.",
-    sections: [
-      { name: "Foundations", items: [{ id: "a-python", title: "Python" }, { id: "a-prob", title: "Probability" }] },
-      { name: "ML", items: [{ id: "a-ml", title: "Machine Learning" }, { id: "a-dl", title: "Deep Learning" }] }
-    ]
-  }
-];
+const filePath = path.join(__dirname, "datasets", "careers.json");
 
 (async () => {
-  await mongoose.connect(process.env.MONGO_URI);
-  await Career.deleteMany({});
-  await Career.insertMany(data);
-  console.log('Seeded careers');
-  process.exit(0);
+  try {
+    console.log("📡 Connecting to MongoDB...");
+    await mongoose.connect(process.env.MONGO_URI);
+
+    console.log("📁 Reading careers.json...");
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const careers = JSON.parse(fileContent);
+
+    console.log(`🗑 Clearing old Career collection...`);
+    await Career.deleteMany({});
+
+    console.log(`📥 Inserting ${careers.length} careers...`);
+    await Career.insertMany(careers);
+
+    console.log(`✅ SUCCESS: Seeded ${careers.length} careers into database.`);
+    process.exit(0);
+
+  } catch (err) {
+    console.error("❌ ERROR seeding careers:", err);
+    process.exit(1);
+  }
 })();

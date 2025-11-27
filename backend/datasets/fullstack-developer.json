@@ -1,0 +1,109 @@
+{
+  "title": "Full-Stack Developer",
+  "description": "A Full-Stack Developer designs, develops, and maintains both client-side and server-side applications, integrating databases, APIs, and UI/UX to deliver complete, scalable software solutions.",
+  "requiredSkills": [
+    { "name": "HTML, CSS, JavaScript", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Front-End Frameworks (React, Angular, Vue)", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Server-Side Programming (Node.js, Python, Java, etc.)", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Databases (SQL & NoSQL)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "APIs & Microservices", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "DevOps & CI/CD", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Containerization (Docker, Kubernetes)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Cloud Platforms (AWS, Azure, GCP)", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Testing & Debugging", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "UI/UX Design Principles", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Security Best Practices", "weight": 0.15, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "full-stack",
+    "web-development",
+    "microservices",
+    "API",
+    "cloud"
+  ],
+  "industryTags": [
+    "software",
+    "e-commerce",
+    "fintech",
+    "healthcare",
+    "media"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "html-css-js", "title": "HTML, CSS, JavaScript Fundamentals", "type": "skill", "detail": "Core web technologies.", "estimateHours": 14 },
+        { "id": "front-end", "title": "Frontend Frameworks Basics", "type": "skill", "detail": "React, Angular, or Vue.", "estimateHours": 16 },
+        { "id": "backend-servers", "title": "Backend Server Basics", "type": "skill", "detail": "Node.js, Express, API basics.", "estimateHours": 14 },
+        { "id": "git-version", "title": "Version Control (Git)", "type": "skill", "detail": "Rebasing, branching workflows.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "databases", "title": "Databases (SQL/NoSQL)", "type": "skill", "detail": "Design, querying, indexing.", "estimateHours": 14 },
+        { "id": "full-stack-project", "title": "Basic Full-Stack App", "type": "project", "detail": "Build a CRUD web app.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "rest-apis", "title": "REST & Microservices", "type": "skill", "detail": "API design, versioning.", "estimateHours": 12 },
+        { "id": "authentication", "title": "Authentication & Security", "type": "skill", "detail": "OAuth, JWT, secure coding.", "estimateHours": 14 },
+        { "id": "testing", "title": "Testing & Debugging", "type": "skill", "detail": "Unit tests, integration tests.", "estimateHours": 12 },
+        { "id": "full-stack-project-2", "title": "User Authentication System", "type": "project", "detail": "Secure login, user roles.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "devops", "title": "DevOps & CI/CD", "type": "skill", "detail": "Pipeline setup, automation.", "estimateHours": 14 },
+        { "id": "docker-k8s", "title": "Containerization & Orchestration", "type": "skill", "detail": "Docker, Kubernetes deployment.", "estimateHours": 16 },
+        { "id": "cloud-integration", "title": "Cloud Deployment", "type": "skill", "detail": "AWS, Azure, GCP.", "estimateHours": 14 },
+        { "id": "full-stack-project-3", "title": "Deploy a Cloud-Ready App", "type": "project", "detail": "Full deployment pipeline.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "performance-security", "title": "Performance & Security Optimization", "type": "skill", "detail": "Load testing, security best practices.", "estimateHours": 14 },
+        { "id": "advanced-api", "title": "Advanced API & Microservice Design", "type": "skill", "detail": "GraphQL, gRPC.", "estimateHours": 14 },
+        { "id": "full-stack-project-4", "title": "Real-World Full-Stack Application", "type": "project", "detail": "Complete app with full CI/CD.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career & Portfolio Building", "type": "skill", "detail": "Showcasing projects, interviews.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Stay Updated on Trends", "type": "skill", "detail": "New frameworks, cloud features.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Udemy",
+      "title": "The Complete Full-Stack Web Developer in 2025",
+      "url": "https://example.com/full-stack-course",
+      "skillsCovered": ["HTML", "CSS", "JavaScript", "React", "Node.js"]
+    },
+    {
+      "provider": "Coursera",
+      "title": "Full Stack Web Development with React and Node",
+      "url": "https://example.com/react-node",
+      "skillsCovered": ["React", "Node.js", "API", "Database"]
+    },
+    {
+      "provider": "Pluralsight",
+      "title": "DevOps for Developers",
+      "url": "https://example.com/devops-developers",
+      "skillsCovered": ["CI/CD", "Docker", "Kubernetes"]
+    }
+  ]
+}

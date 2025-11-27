@@ -1,0 +1,102 @@
+{
+  "title": "Interior Designer",
+  "description": "An Interior Designer plans and creates functional, aesthetically pleasing indoor spaces for homes, offices, and public environments, balancing creativity, client needs, and technical requirements from concept to completion.",
+  "requiredSkills": [
+    { "name": "Design Principles", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Space Planning", "weight": 0.18, "requiredLevel": 7 },
+    { "name": "Color Theory", "weight": 0.17, "requiredLevel": 7 },
+    { "name": "Material Selection", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Technical Drawing", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Client Communication", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "CAD for Interiors (AutoCAD, SketchUp)", "weight": 0.14, "requiredLevel": 6 },
+    { "name": "Lighting Design", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Sustainable Design", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Furniture Design", "weight": 0.11, "requiredLevel": 5 },
+    { "name": "Project Management", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Portfolio Development", "weight": 0.09, "requiredLevel": 5 },
+    { "name": "3D Visualization", "weight": 0.13, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "interior-design",
+    "architecture",
+    "sustainability",
+    "creativity",
+    "3d-visualization"
+  ],
+  "industryTags": [
+    "architecture",
+    "construction",
+    "real-estate",
+    "hospitality",
+    "retail"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "design-fundamentals", "title": "Design Fundamentals", "type": "skill", "detail": "Elements, principles, visual balance.", "estimateHours": 10 },
+        { "id": "sketching-basics", "title": "Sketching & Drafting Basics", "type": "skill", "detail": "Freehand, measured drawings, tools.", "estimateHours": 8 },
+        { "id": "color-theory-interiors", "title": "Color Theory", "type": "skill", "detail": "Schemes, psychology, application.", "estimateHours": 8 },
+        { "id": "material-basics", "title": "Material Selection Basics", "type": "skill", "detail": "Surfaces, textiles, finishes.", "estimateHours": 8 },
+        { "id": "space-planning", "title": "Intro to Space Planning", "type": "skill", "detail": "Flow, zones, circulation.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "technical-drawing", "title": "Technical Drawing", "type": "skill", "detail": "Plans, elevations, section views.", "estimateHours": 10 },
+        { "id": "cad-software", "title": "CAD Software for Interiors", "type": "skill", "detail": "AutoCAD, SketchUp fundamentals.", "estimateHours": 12 },
+        { "id": "lighting-basics", "title": "Lighting Design Basics", "type": "skill", "detail": "Types, placement, effects.", "estimateHours": 8 },
+        { "id": "furniture-design", "title": "Furniture Design Basics", "type": "skill", "detail": "Ergonomics, materials, custom pieces.", "estimateHours": 10 },
+        { "id": "portfolio-project-1", "title": "Portfolio Project 1", "type": "project", "detail": "Small residential room design.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "sustainable-design", "title": "Sustainable Interior Design", "type": "skill", "detail": "Eco-materials, energy efficiency.", "estimateHours": 8 },
+        { "id": "client-communication", "title": "Client Communication", "type": "skill", "detail": "Interviews, presenting concepts.", "estimateHours": 8 },
+        { "id": "project-management", "title": "Project Management", "type": "skill", "detail": "Budgeting, timelines, contractors.", "estimateHours": 8 },
+        { "id": "3d-visualization", "title": "3D Visualization", "type": "skill", "detail": "Renderings, walkthroughs.", "estimateHours": 10 },
+        { "id": "portfolio-project-2", "title": "Portfolio Project 2", "type": "project", "detail": "Commercial office design.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "hospitality-retail", "title": "Hospitality & Retail Interiors", "type": "skill", "detail": "Hotels, restaurants, stores.", "estimateHours": 12 },
+        { "id": "specialty-materials", "title": "Specialty Materials", "type": "skill", "detail": "Innovative surfaces, acoustics.", "estimateHours": 8 },
+        { "id": "regulations-codes", "title": "Building Codes & Regulations", "type": "skill", "detail": "Safety, accessibility, compliance.", "estimateHours": 8 },
+        { "id": "portfolio-development", "title": "Portfolio Development", "type": "skill", "detail": "Showcasing work, presentation.", "estimateHours": 10 },
+        { "id": "final-project", "title": "Final Portfolio Project", "type": "project", "detail": "Full multi-room space design.", "estimateHours": 18 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Interior Design for Beginners",
+      "url": "https://example.com/interior-design-course",
+      "skillsCovered": ["Design Principles", "Space Planning", "Color Theory"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "SketchUp Essentials for Interiors",
+      "url": "https://example.com/sketchup-course",
+      "skillsCovered": ["SketchUp", "CAD", "Technical Drawing"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Lighting & Materials for Interior Design",
+      "url": "https://example.com/lighting-materials-course",
+      "skillsCovered": ["Lighting Design", "Materials", "Furniture"]
+    }
+  ]
+}

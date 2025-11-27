@@ -1,29 +1,11 @@
 const express = require("express");
-const Career = require("../models/Career");
 const router = express.Router();
+const auth = require("../middleware/authMiddleware");
+const { getRecommendations } = require("../controllers/aiController");
 
-router.post("/recommend", async (req, res) => {
-  const { skills } = req.body;
-  if (!skills || skills.length === 0)
-    return res.status(400).json({ message: "No skills provided" });
+router.get("/test", (req, res) => res.send("AI OK"));
 
-  const careers = await Career.find();
-
-  const scored = careers.map((c) => {
-    const items = c.sections.flatMap((s) => s.items.map((i) => i.title.toLowerCase()));
-
-    const matches = items.filter((x) =>
-      skills.some((s) => x.includes(s.toLowerCase()))
-    );
-
-    const score = Math.round((matches.length / items.length) * 100);
-
-    return { title: c.title, score };
-  });
-
-  const sorted = scored.sort((a, b) => b.score - a.score);
-
-  res.json(sorted.slice(0, 3));
-});
+// now require auth
+router.get("/recommend", auth, getRecommendations);
 
 module.exports = router;

@@ -1,0 +1,113 @@
+{
+  "title": "Cloud Engineer",
+  "description": "A Cloud Engineer designs, implements, and manages cloud-based infrastructure and services, ensuring high availability, scalability, and security for applications and data across cloud platforms.",
+  "requiredSkills": [
+    { "name": "Cloud Platforms (AWS, Azure, GCP)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Infrastructure as Code (IaC)", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "Networking & Security", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Scripting & Automation", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Monitoring & Performance Tuning", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Containers & Orchestration (Docker, Kubernetes)", "weight": 0.18, "requiredLevel": 6 },
+    { "name": "CI/CD Pipelines", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Database & Storage Management", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Cloud Security & Compliance", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Backup & Disaster Recovery", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Cost Management & Optimization", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Collaboration & Communication", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "cloud-computing",
+    "infrastructure",
+    "automation",
+    "security",
+    "devops"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "retail",
+    "media"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "cloud-basics", "title": "Cloud Computing Fundamentals", "type": "skill", "detail": "Cloud models, deployment types.", "estimateHours": 14 },
+        { "id": "aws-azure-gcp-intro", "title": "Introduction to AWS, Azure, GCP", "type": "skill", "detail": "Core services overview.", "estimateHours": 14 },
+        { "id": "linux-fundamentals", "title": "Linux Basics", "type": "skill", "detail": "Commands, shell scripting.", "estimateHours": 12 },
+        { "id": "networking-basics", "title": "Networking Basics", "type": "skill", "detail": "IP, DNS, VPNs, firewalls.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "iac-terraform", "title": "Infrastructure as Code with Terraform", "type": "skill", "detail": "Write, plan, apply infrastructure.", "estimateHours": 14 },
+        { "id": "scripting-python-bash", "title": "Scripting with Python and Bash", "type": "skill", "detail": "Automation scripts.", "estimateHours": 14 },
+        { "id": "cloud-storage-db", "title": "Cloud Storage & Databases", "type": "skill", "detail": "S3, Blob storage, RDS.", "estimateHours": 14 },
+        { "id": "project-1", "title": "Build Infrastructure with IaC", "type": "project", "detail": "Create and deploy cloud resources.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "container-docker", "title": "Containerization with Docker", "type": "skill", "detail": "Images, containers, Dockerfile.", "estimateHours": 14 },
+        { "id": "kubernetes-fundamentals", "title": "Kubernetes Fundamentals", "type": "skill", "detail": "Pods, services, deployments.", "estimateHours": 16 },
+        { "id": "cloud-security", "title": "Cloud Security Fundamentals", "type": "skill", "detail": "IAM, encryption, policies.", "estimateHours": 14 },
+        { "id": "project-2", "title": "Deploy Containerized App", "type": "project", "detail": "Use Kubernetes and secure cloud resources.", "estimateHours": 26 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "ci-cd", "title": "CI/CD Pipelines", "type": "skill", "detail": "Jenkins, GitHub Actions.", "estimateHours": 14 },
+        { "id": "monitoring-logging", "title": "Monitoring & Logging", "type": "skill", "detail": "Prometheus, Grafana, CloudWatch.", "estimateHours": 12 },
+        { "id": "cost-optimization", "title": "Cloud Cost Management", "type": "skill", "detail": "Billing, budgeting, optimization.", "estimateHours": 12 },
+        { "id": "project-3", "title": "Set Up CI/CD and Monitoring", "type": "project", "detail": "Automate build, deploy, and monitoring.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "disaster-recovery", "title": "Backup & Disaster Recovery", "type": "skill", "detail": "Strategies and tools.", "estimateHours": 12 },
+        { "id": "advanced-networking", "title": "Advanced Networking", "type": "skill", "detail": "VPC, peering, load balancing.", "estimateHours": 12 },
+        { "id": "collaboration", "title": "Collaboration & Communication", "type": "skill", "detail": "Work with teams, documentation.", "estimateHours": 10 },
+        { "id": "project-4", "title": "Design Cloud Infrastructure", "type": "project", "detail": "Design and document cloud infrastructure for a use case.", "estimateHours": 32 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-development", "title": "Career Development & Networking", "type": "skill", "detail": "Certifications, interviews, growth.", "estimateHours": 8 },
+        { "id": "industry-updates", "title": "Stay Updated on Cloud Trends", "type": "skill", "detail": "New services, compliance, tools.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "AWS Certified Solutions Architect - Associate",
+      "url": "https://example.com/aws-solutions-architect",
+      "skillsCovered": ["AWS", "Cloud Architecture", "Security"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Terraform and Infrastructure as Code",
+      "url": "https://example.com/terraform-iac",
+      "skillsCovered": ["Terraform", "Infrastructure Automation"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Kubernetes for Beginners",
+      "url": "https://example.com/kubernetes-beginners",
+      "skillsCovered": ["Kubernetes", "Container Orchestration"]
+    }
+  ]
+}

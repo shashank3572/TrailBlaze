@@ -1,0 +1,117 @@
+{
+  "title": "Social Media Manager",
+  "description": "A Social Media Manager develops, implements, and manages social media strategies to increase brand awareness, engagement, and conversions across platforms such as Facebook, Instagram, Twitter, and LinkedIn.",
+  "requiredSkills": [
+    { "name": "Content Creation", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Social Media Strategy", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Analytics & Reporting", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Community Management", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Paid Advertising", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "SEO Basics", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Graphic Design (Canva, Photoshop)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Video Editing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Email Marketing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Influencer Collaboration", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Crisis Management", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Copywriting", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "social-media",
+    "digital-marketing",
+    "content-strategy",
+    "branding",
+    "community-engagement"
+  ],
+  "industryTags": [
+    "marketing",
+    "advertising",
+    "media",
+    "e-commerce",
+    "tech"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "social-media-overview", "title": "Social Media Basics", "type": "skill", "detail": "Platform features, audience types.", "estimateHours": 8 },
+        { "id": "content-creation", "title": "Content Creation Basics", "type": "skill", "detail": "Posts, stories, video clips.", "estimateHours": 10 },
+        { "id": "copywriting-fundamentals", "title": "Copywriting Basics", "type": "skill", "detail": "Engaging, concise messaging.", "estimateHours": 8 },
+        { "id": "community-building", "title": "Community Building", "type": "skill", "detail": "Engagement, moderation, feedback.", "estimateHours": 8 },
+        { "id": "platform-tools", "title": "Social Media Tools Introduction", "type": "skill", "detail": "Scheduling, analytics, management tools.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "analytics-basics", "title": "Analytics & Reporting", "type": "skill", "detail": "Metrics, insights, KPI tracking.", "estimateHours": 12 },
+        { "id": "paid-ads", "title": "Paid Advertising Basics", "type": "skill", "detail": "Ad campaigns, targeting, budgeting.", "estimateHours": 12 },
+        { "id": "seo-basics", "title": "SEO and Social Media", "type": "skill", "detail": "Search rankings, keywords.", "estimateHours": 10 },
+        { "id": "graphic-design-basics", "title": "Graphic Design Basics", "type": "skill", "detail": "Using Canva, basic Photoshop.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Manage a Social Media Campaign", "type": "project", "detail": "Plan and execute a multi-platform campaign.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "video-editing", "title": "Video Editing for Social Media", "type": "skill", "detail": "Short videos, reels, editing apps.", "estimateHours": 12 },
+        { "id": "influencer-marketing", "title": "Influencer Collaboration", "type": "skill", "detail": "Partnerships, contracts, outreach.", "estimateHours": 10 },
+        { "id": "email-marketing", "title": "Email Marketing Integration", "type": "skill", "detail": "Campaign creation, lists, automation.", "estimateHours": 8 },
+        { "id": "crisis-management", "title": "Crisis and Reputation Management", "type": "skill", "detail": "Handling negative feedback, brand safeguarding.", "estimateHours": 8 },
+        { "id": "project-2", "title": "Analyze & Optimize Campaign", "type": "project", "detail": "Use analytics to improve performance.", "estimateHours": 16 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "advanced-strategy", "title": "Advanced Social Media Strategy", "type": "skill", "detail": "Growth hacking, viral campaigns.", "estimateHours": 12 },
+        { "id": "branding-essentials", "title": "Branding and Messaging", "type": "skill", "detail": "Consistent voice and style guide.", "estimateHours": 10 },
+        { "id": "legal-ethical", "title": "Legal and Ethical Issues", "type": "skill", "detail": "Copyrights, privacy, disclosures.", "estimateHours": 8 },
+        { "id": "team-collaboration", "title": "Team and Stakeholder Collaboration", "type": "skill", "detail": "Coordinating with marketing and sales.", "estimateHours": 8 },
+        { "id": "project-3", "title": "Lead a Brand Launch", "type": "project", "detail": "Plan and execute social launch for a brand.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "automation-tools", "title": "Social Media Automation & AI Tools", "type": "skill", "detail": "Bots, scheduling, analytics automation.", "estimateHours": 10 },
+        { "id": "global-campaigns", "title": "Managing Global Campaigns", "type": "skill", "detail": "Localization, multi-language strategies.", "estimateHours": 12 },
+        { "id": "advanced-analytics", "title": "Advanced Analytics & Reporting", "type": "skill", "detail": "Sentiment analysis, ROI measurement.", "estimateHours": 12 },
+        { "id": "project-4", "title": "Comprehensive Social Media Plan", "type": "project", "detail": "Create a detailed strategy for a large brand.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-preparation", "title": "Career Preparation", "type": "skill", "detail": "Portfolio, interviews, personal branding.", "estimateHours": 8 },
+        { "id": "staying-updated", "title": "Staying Updated and Continuous Learning", "type": "skill", "detail": "Industry trends, emerging platforms.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Social Media Marketing for Beginners",
+      "url": "https://example.com/social-media-marketing-course",
+      "skillsCovered": ["Social Media Strategy", "Content Creation", "Analytics"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Creating Engaging Social Media Content",
+      "url": "https://example.com/content-creation-course",
+      "skillsCovered": ["Graphic Design", "Video Editing", "Copywriting"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Advanced Social Media Analytics",
+      "url": "https://example.com/analytics-course",
+      "skillsCovered": ["Analytics", "Reporting", "Optimization"]
+    }
+  ]
+}

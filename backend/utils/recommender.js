@@ -1,61 +1,63 @@
-export function recommendCareer(skills = []) {
-  if (!skills || skills.length === 0) 
-    return "Add skills to get recommendations";
+const Career = require("../models/Career");
+const User = require("../models/User");
 
-  const s = skills.map((x) => x.toLowerCase());
+// Normalize value 1–10 to 0–1
+const normalize = (num, max = 10) => num / max;
 
-  // AI/ML Engineer
-  if (
-    s.includes("ai") ||
-    s.includes("ml") ||
-    s.includes("machine learning") ||
-    s.includes("deep learning") ||
-    s.includes("neural network")
-  ) {
-    return "AI/ML Engineer";
-  }
+async function generateRecommendations(userId) {
+  const user = await User.findById(userId);
+  if (!user) throw new Error("User not found");
 
-  // Data Scientist
-  if (
-    (s.includes("python") && s.includes("data")) ||
-    s.includes("pandas") ||
-    s.includes("statistics") ||
-    s.includes("data analysis")
-  ) {
-    return "Data Scientist";
-  }
+  const careers = await Career.find();
 
-  // Full Stack Developer
-  if (
-    (s.includes("javascript") && s.includes("node")) ||
-    s.includes("full stack") ||
-    (s.includes("frontend") && s.includes("backend"))
-  ) {
-    return "Full Stack Developer";
-  }
+  const userSkills = user.skills || [];
+  const userInterests = user.interests || [];
 
-  // Product/Project Manager
-  if (
-    s.includes("management") ||
-    s.includes("product") ||
-    s.includes("scrum") ||
-    s.includes("agile") ||
-    s.includes("project")
-  ) {
-    return "Product/Project Manager";
-  }
+  const scoredCareers = careers.map((career) => {
 
-  // Digital Marketing
-  if (
-    s.includes("marketing") ||
-    s.includes("seo") ||
-    s.includes("social media") ||
-    s.includes("ads") ||
-    s.includes("content")
-  ) {
-    return "Digital Marketing";
-  }
+    // --- Skill Match Scoring ---
+    let skillScore = 0;
+    let maxPossibleSkillScore = 0;
 
-  // Default fallback
-  return "Full Stack Developer";
+    (career.requiredSkills || []).forEach((req) => {
+      maxPossibleSkillScore += req.weight;
+
+      if (userSkills.includes(req.name.toLowerCase())) {
+        skillScore += req.weight;
+      }
+    });
+
+    const skillMatchScore = maxPossibleSkillScore > 0
+      ? (skillScore / maxPossibleSkillScore) * 100
+      : 0;
+
+    // --- Interest Match Scoring ---
+    let matchedInterests = (career.interestTags || []).filter(tag =>
+      userInterests.includes(tag)
+    ).length;
+
+    const interestMatchScore = career.interestTags?.length
+      ? (matchedInterests / career.interestTags.length) * 100
+      : 0;
+
+    // --- Industry Score Weight (Normalize 1–10 to %)
+    const industryScore = normalize(career.industryScore || 5) * 100;
+
+    // --- Final Weighted Score ---
+    const finalScore = (skillMatchScore * 0.6) + (interestMatchScore * 0.3) + (industryScore * 0.1);
+
+    return {
+      careerId: career._id,
+      title: career.title,
+      score: Math.round(finalScore),
+      reason: `Skill Alignment: ${skillMatchScore.toFixed(1)}%, Interest Match: ${interestMatchScore.toFixed(1)}%`
+    };
+  });
+
+  // Sort by best match
+  const sorted = scoredCareers.sort((a, b) => b.score - a.score);
+
+  return sorted.slice(0, 5); // return top 5
 }
+
+module.exports = { generateRecommendations };

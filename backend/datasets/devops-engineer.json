@@ -1,0 +1,113 @@
+{
+  "title": "DevOps Engineer",
+  "description": "A DevOps Engineer streamlines software development and deployment processes through automation, infrastructure as code, continuous integration/delivery, and system monitoring to ensure scalable and reliable applications.",
+  "requiredSkills": [
+    { "name": "Continuous Integration/Continuous Deployment (CI/CD)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Cloud Platforms (AWS, Azure, GCP)", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Infrastructure as Code (Terraform, Ansible)", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "Containerization & Orchestration (Docker, Kubernetes)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Monitoring & Logging", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Scripting & Automation (Python, Bash)", "weight": 0.18, "requiredLevel": 7 },
+    { "name": "Security & Compliance", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Networking & Load Balancing", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Git & Version Control", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Database Management & Backup", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Collaboration & Communication", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Performance Optimization", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "devops",
+    "automation",
+    "cloud-computing",
+    "ci-cd",
+    "infrastructure"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "media",
+    "retail"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "linux-fundamentals", "title": "Linux Fundamentals", "type": "skill", "detail": "Commands, file system, permissions.", "estimateHours": 14 },
+        { "id": "version-control", "title": "Git & Version Control", "type": "skill", "detail": "Branching, merging, workflows.", "estimateHours": 12 },
+        { "id": "scripting-basics", "title": "Scripting Basics", "type": "skill", "detail": "Bash, basic Python scripts.", "estimateHours": 12 },
+        { "id": "cloud-intro", "title": "Cloud Computing Basics", "type": "skill", "detail": "AWS, Azure, or Google Cloud intro.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "ci-cd-basics", "title": "CI/CD Fundamentals", "type": "skill", "detail": "Pipeline creation, automation.", "estimateHours": 14 },
+        { "id": "container-basics", "title": "Containerization with Docker", "type": "skill", "detail": "Images, containers, Dockerfiles.", "estimateHours": 14 },
+        { "id": "infrastructure-as-code", "title": "Infrastructure as Code Basics", "type": "skill", "detail": "Terraform, Ansible basics.", "estimateHours": 14 },
+        { "id": "project-1", "title": "Set Up a CI/CD Pipeline", "type": "project", "detail": "Automate build and deployment.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "orchestration-kubernetes", "title": "Kubernetes Orchestration", "type": "skill", "detail": "Pods, services, deployments.", "estimateHours": 16 },
+        { "id": "cloud-services", "title": "Advanced Cloud Services", "type": "skill", "detail": "Load balancers, storage, DNS.", "estimateHours": 14 },
+        { "id": "monitoring-logging", "title": "Monitoring & Logging", "type": "skill", "detail": "Prometheus, Grafana, ELK stack.", "estimateHours": 14 },
+        { "id": "project-2", "title": "Deploy a Containerized Application", "type": "project", "detail": "Using Kubernetes and monitoring.", "estimateHours": 26 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "security-compliance", "title": "Security & Compliance", "type": "skill", "detail": "IAM, encryption, audits.", "estimateHours": 14 },
+        { "id": "networking-devops", "title": "Networking & Load Balancing", "type": "skill", "detail": "VPNs, proxies, traffic management.", "estimateHours": 12 },
+        { "id": "automation-advanced", "title": "Advanced Automation & Scripting", "type": "skill", "detail": "Complex Bash, Python automation.", "estimateHours": 14 },
+        { "id": "project-3", "title": "Implement Security Controls", "type": "project", "detail": "Secure CI/CD environment setup.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "database-operations", "title": "Database Management & Backup", "type": "skill", "detail": "Replication, backup strategies.", "estimateHours": 12 },
+        { "id": "performance-optimization", "title": "Performance & Scalability", "type": "skill", "detail": "Resource management, scaling.", "estimateHours": 12 },
+        { "id": "collaboration", "title": "Collaboration & Communication", "type": "skill", "detail": "Working with Dev, QA, Ops teams.", "estimateHours": 10 },
+        { "id": "project-4", "title": "End-to-End DevOps Project", "type": "project", "detail": "Complete CI/CD with monitoring and scaling.", "estimateHours": 35 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Development & Networking", "type": "skill", "detail": "Resume, interviewing, certification preparation.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Continuous Learning & Industry Trends", "type": "skill", "detail": "New tools, cloud innovations, best practices.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "DevOps Full Course for Beginners",
+      "url": "https://example.com/devops-beginners",
+      "skillsCovered": ["CI/CD", "Docker", "Kubernetes"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Terraform and Infrastructure as Code",
+      "url": "https://example.com/terraform-course",
+      "skillsCovered": ["Terraform", "IaC", "Cloud Infrastructure"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Kubernetes Hands-On",
+      "url": "https://example.com/kubernetes-hands-on",
+      "skillsCovered": ["Kubernetes", "Container Orchestration", "Cluster Management"]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "title": "Mobile App Developer",
+  "description": "A Mobile App Developer designs, develops, tests, and maintains applications for mobile devices on platforms such as iOS and Android, ensuring usability, performance, and responsiveness.",
+  "requiredSkills": [
+    { "name": "Programming (Swift for iOS, Kotlin/Java for Android)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "UI/UX Design Principles", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "Mobile Frameworks & SDKs", "weight": 0.2, "requiredLevel": 7 },
+    { "name": "API Integration & Networking", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Testing & Debugging", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Cross-Platform Development (React Native, Flutter)", "weight": 0.2, "requiredLevel": 6 },
+    { "name": "App Store Deployment & Guidelines", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Performance Optimization", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Push Notifications & Background Tasks", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Mobile Security Best Practices", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Version Control (Git)", "weight": 0.13, "requiredLevel": 7 },
+    { "name": "Continuous Integration (CI/CD)", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "mobile-development",
+    "ios",
+    "android",
+    "cross-platform",
+    "ui-ux"
+  ],
+  "industryTags": [
+    "technology",
+    "gaming",
+    "e-commerce",
+    "media",
+    "healthcare"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "programming-basics", "title": "Mobile Programming Basics", "type": "skill", "detail": "Swift for iOS or Kotlin/Java for Android.", "estimateHours": 16 },
+        { "id": "ui-ux-fundamentals", "title": "UI/UX Fundamentals", "type": "skill", "detail": "Design principles, navigation, accessibility.", "estimateHours": 14 },
+        { "id": "mobile-frameworks", "title": "Mobile SDKs & Frameworks", "type": "skill", "detail": "Xcode, Android Studio basics.", "estimateHours": 12 },
+        { "id": "version-control", "title": "Version Control (Git)", "type": "skill", "detail": "Branching, commits, collaboration.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "api-integration", "title": "API Integration & Networking", "type": "skill", "detail": "REST, GraphQL, JSON parsing.", "estimateHours": 14 },
+        { "id": "local-storage", "title": "Local Storage & Databases", "type": "skill", "detail": "SQLite, Core Data, Realm.", "estimateHours": 12 },
+        { "id": "project-1", "title": "Basic Mobile App", "type": "project", "detail": "Build a CRUD app with API connectivity.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "cross-platform", "title": "Cross-Platform Frameworks", "type": "skill", "detail": "React Native, Flutter fundamentals.", "estimateHours": 16 },
+        { "id": "push-notifications", "title": "Push Notifications & Background Tasks", "type": "skill", "detail": "Firebase, background fetch.", "estimateHours": 12 },
+        { "id": "testing-debugging", "title": "Testing & Debugging", "type": "skill", "detail": "Unit tests, UI tests, crash reporting.", "estimateHours": 14 },
+        { "id": "project-2", "title": "Cross-Platform App", "type": "project", "detail": "Develop a multi-platform mobile app.", "estimateHours": 26 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "app-store-guidelines", "title": "App Store Deployment & Guidelines", "type": "skill", "detail": "Submission, reviews, monetization.", "estimateHours": 12 },
+        { "id": "performance-optimization", "title": "Performance Optimization", "type": "skill", "detail": "Memory, battery, network optimization.", "estimateHours": 12 },
+        { "id": "security-best-practices", "title": "Mobile Security Best Practices", "type": "skill", "detail": "Encryption, secure storage.", "estimateHours": 12 },
+        { "id": "project-3", "title": "Deploy & Optimize App", "type": "project", "detail": "Launch app and monitor performance.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "ci-cd", "title": "CI/CD for Mobile Apps", "type": "skill", "detail": "Fastlane, GitHub Actions.", "estimateHours": 12 },
+        { "id": "advanced-ui-ux", "title": "Advanced UI/UX Design", "type": "skill", "detail": "Animation, gestures, custom controls.", "estimateHours": 14 },
+        { "id": "project-4", "title": "Full-Featured Mobile App", "type": "project", "detail": "Build complex app with CI/CD workflow.", "estimateHours": 35 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-prep", "title": "Career Preparation", "type": "skill", "detail": "Portfolio, interview skills.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Stay Updated on Mobile Trends", "type": "skill", "detail": "New devices, OS features, development tools.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "iOS Development for Beginners",
+      "url": "https://example.com/ios-course",
+      "skillsCovered": ["Swift", "UI Design", "Xcode"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Android Development Essentials",
+      "url": "https://example.com/android-course",
+      "skillsCovered": ["Kotlin", "Material Design", "Android Studio"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "React Native Crash Course",
+      "url": "https://example.com/react-native-course",
+      "skillsCovered": ["React Native", "Cross-Platform", "Mobile APIs"]
+    }
+  ]
+}

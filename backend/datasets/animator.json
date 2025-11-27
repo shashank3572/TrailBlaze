@@ -1,0 +1,102 @@
+{
+  "title": "Animator",
+  "description": "An Animator creates motion graphics, character animations, and visual effects for film, games, advertising, and digital platforms, combining technical skills and creative storytelling from concept to final render.",
+  "requiredSkills": [
+    { "name": "Animation Principles", "weight": 0.22, "requiredLevel": 8 },
+    { "name": "Drawing Fundamentals", "weight": 0.18, "requiredLevel": 7 },
+    { "name": "2D Animation (Toon Boom/Adobe Animate)", "weight": 0.18, "requiredLevel": 8 },
+    { "name": "Timing & Spacing", "weight": 0.14, "requiredLevel": 7 },
+    { "name": "Storyboarding", "weight": 0.14, "requiredLevel": 7 },
+    { "name": "Digital Painting", "weight": 0.14, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "3D Animation (Blender/Maya)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Rigging", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Visual Effects (VFX)", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Sound Design Basics", "weight": 0.08, "requiredLevel": 4 },
+    { "name": "Motion Graphics", "weight": 0.14, "requiredLevel": 5 },
+    { "name": "Compositing", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Portfolio Development", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "animation",
+    "motion-graphics",
+    "storytelling",
+    "games",
+    "film"
+  ],
+  "industryTags": [
+    "film",
+    "gaming",
+    "advertising",
+    "media",
+    "education"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "animation-basics", "title": "Animation Principles", "type": "skill", "detail": "Squash/stretch, anticipation, timing.", "estimateHours": 12 },
+        { "id": "drawing-skills", "title": "Drawing Fundamentals", "type": "skill", "detail": "Shapes, anatomy, dynamic poses.", "estimateHours": 10 },
+        { "id": "storyboarding-basics", "title": "Storyboarding Basics", "type": "skill", "detail": "Panels, scene planning, narrative flow.", "estimateHours": 8 },
+        { "id": "digital-painting", "title": "Digital Painting Basics", "type": "skill", "detail": "Brushwork, layers, color use.", "estimateHours": 10 },
+        { "id": "portfolio-project-1", "title": "Short Animation Project", "type": "project", "detail": "Create a short animated scene.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "2d-animation", "title": "2D Animation Tools", "type": "skill", "detail": "Toon Boom, Animate, timeline basics.", "estimateHours": 12 },
+        { "id": "timing-spacing", "title": "Timing & Spacing", "type": "skill", "detail": "Frames, speed, arc of movement.", "estimateHours": 8 },
+        { "id": "character-animation", "title": "Character Animation", "type": "skill", "detail": "Walk cycles, facial animation.", "estimateHours": 12 },
+        { "id": "basic-rigging", "title": "Intro to Rigging", "type": "skill", "detail": "Bone setups, movement controls.", "estimateHours": 8 },
+        { "id": "portfolio-project-2", "title": "Animated Character Project", "type": "project", "detail": "Design and animate a character scene.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "3d-basics", "title": "3D Animation Basics", "type": "skill", "detail": "Blender/Maya intro, keyframes, rendering.", "estimateHours": 12 },
+        { "id": "motion-graphics-basics", "title": "Motion Graphics Basics", "type": "skill", "detail": "After Effects, kinetic type basics.", "estimateHours": 8 },
+        { "id": "compositing-intro", "title": "Compositing", "type": "skill", "detail": "Layering scenes, color grading.", "estimateHours": 10 },
+        { "id": "sound-design-intro", "title": "Sound Design Basics", "type": "skill", "detail": "Syncing, effects, ambience.", "estimateHours": 8 },
+        { "id": "portfolio-project-3", "title": "Motion Graphics Project", "type": "project", "detail": "Create an animated ad or explainer.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "vfx-fundamentals", "title": "Visual Effects (VFX)", "type": "skill", "detail": "Particles, simulations, green screen.", "estimateHours": 10 },
+        { "id": "advanced-rigging", "title": "Advanced Rigging", "type": "skill", "detail": "Complex bone structures, face rigs.", "estimateHours": 10 },
+        { "id": "advanced-character", "title": "Advanced Character Animation", "type": "skill", "detail": "Emotion, lip sync, action scenes.", "estimateHours": 10 },
+        { "id": "industry-pipeline", "title": "Industry Pipeline & Collaboration", "type": "skill", "detail": "Studio workflows, asset sharing.", "estimateHours": 8 },
+        { "id": "portfolio-final", "title": "Final Animation Portfolio", "type": "project", "detail": "Assemble and present original work.", "estimateHours": 18 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Animation Principles Explained",
+      "url": "https://example.com/animation-principles-course",
+      "skillsCovered": ["Animation Principles", "Timing & Spacing", "Squash & Stretch"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "2D Character Animation Crash Course",
+      "url": "https://example.com/2d-character-course",
+      "skillsCovered": ["2D Animation", "Character Animation", "Storyboarding"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Blender 3D Animation Basics",
+      "url": "https://example.com/blender-course",
+      "skillsCovered": ["3D Animation", "Rigging", "Rendering"]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "title": "AI Prompt Engineer",
+  "description": "An AI Prompt Engineer specializes in designing, testing, and optimizing prompts for AI language models and generative systems to generate accurate, relevant, and effective outputs tailored to diverse applications.",
+  "requiredSkills": [
+    { "name": "Natural Language Processing (NLP) Basics", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Prompt Design & Engineering", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Understanding of AI/ML Models", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Data Analysis & Evaluation", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Programming (Python)", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Fine-Tuning Language Models", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Experiment Design & A/B Testing", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "API Integration (OpenAI, Huggingface)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Ethics & Bias Mitigation", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Domain-Specific Prompting", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Documentation & Collaboration", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Knowledge of Large Language Models (LLMs)", "weight": 0.11, "requiredLevel": 7 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "artificial-intelligence",
+    "nlp",
+    "prompt-engineering",
+    "language-models",
+    "machine-learning"
+  ],
+  "industryTags": [
+    "technology",
+    "ai-research",
+    "software",
+    "automation",
+    "customer-service"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "nlp-basics", "title": "Natural Language Processing Basics", "type": "skill", "detail": "Tokenization, embeddings, language models.", "estimateHours": 12 },
+        { "id": "python-fundamentals", "title": "Python Programming Basics", "type": "skill", "detail": "Syntax, libraries (Numpy, Pandas).", "estimateHours": 14 },
+        { "id": "ai-models-intro", "title": "Introduction to AI/ML Models", "type": "skill", "detail": "Supervised learning, language model types.", "estimateHours": 12 },
+        { "id": "prompt-basics", "title": "Prompt Design Fundamentals", "type": "skill", "detail": "Writing effective prompts, zero-shot, few-shot.", "estimateHours": 10 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "prompt-testing", "title": "Prompt Testing & Iteration", "type": "skill", "detail": "Experimenting with prompt variations.", "estimateHours": 10 },
+        { "id": "api-usage", "title": "Using AI APIs", "type": "skill", "detail": "OpenAI, Huggingface API basics.", "estimateHours": 12 },
+        { "id": "evaluation-metrics", "title": "Output Evaluation Metrics", "type": "skill", "detail": "Accuracy, relevance, diversity.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Develop & Test Prompts", "type": "project", "detail": "Create prompts for specific tasks.", "estimateHours": 16 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "fine-tuning", "title": "Fine-Tuning Language Models", "type": "skill", "detail": "Transfer learning, dataset prep.", "estimateHours": 14 },
+        { "id": "experiment-design", "title": "Experiment Design & A/B Testing", "type": "skill", "detail": "Testing hypotheses, tracking results.", "estimateHours": 12 },
+        { "id": "domain-prompting", "title": "Domain-Specific Prompt Engineering", "type": "skill", "detail": "Customization for fields like legal, medical.", "estimateHours": 12 },
+        { "id": "project-2", "title": "Custom Prompt Pipeline", "type": "project", "detail": "Build a modular prompt system for an application.", "estimateHours": 22 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "bias-ethics", "title": "Ethics & Bias Mitigation", "type": "skill", "detail": "Fairness, transparency, data ethics.", "estimateHours": 10 },
+        { "id": "collaboration-docs", "title": "Documentation & Collaboration", "type": "skill", "detail": "Writing clear guidelines and reports.", "estimateHours": 8 },
+        { "id": "project-3", "title": "Ethical Prompting Framework", "type": "project", "detail": "Develop ethical guidelines and testing strategies.", "estimateHours": 18 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "advanced-llms", "title": "Advanced Language Models", "type": "skill", "detail": "Transformer architectures, scaling laws.", "estimateHours": 14 },
+        { "id": "integration", "title": "Integration & Deployment", "type": "skill", "detail": "Embedding prompts in products, APIs.", "estimateHours": 12 },
+        { "id": "project-4", "title": "Deploy Prompt-Driven Application", "type": "project", "detail": "Build and deploy a real-world prompt system.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-preparation", "title": "Career Preparation & Networking", "type": "skill", "detail": "Portfolio building, community engagement.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Stay Updated on AI Trends", "type": "skill", "detail": "Latest research, tools, applications.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Introduction to Prompt Engineering",
+      "url": "https://example.com/prompt-engineering-intro",
+      "skillsCovered": ["Prompt Design", "NLP Basics", "AI APIs"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Fine-Tuning Transformers",
+      "url": "https://example.com/fine-tuning-course",
+      "skillsCovered": ["Fine-Tuning", "Model Training", "Transfer Learning"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Ethics in AI",
+      "url": "https://example.com/ai-ethics",
+      "skillsCovered": ["Bias Mitigation", "Fairness", "Transparency"]
+    }
+  ]
+}

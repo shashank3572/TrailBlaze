@@ -1,0 +1,231 @@
+{
+  "title": "Data Scientist",
+  "description": "A Data Scientist analyzes large datasets to extract insights, build predictive models, and support data-driven decision-making, combining skills in statistics, programming, and domain knowledge.",
+  "requiredSkills": [
+    { "name": "Statistics & Probability", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Data Wrangling & Cleaning", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Programming (Python, R)", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Machine Learning", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Data Visualization", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Big Data Tools (Spark, Hadoop)", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Deep Learning", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "SQL & NoSQL Databases", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Cloud Platforms (AWS, GCP)", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Data Engineering Basics", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Experimentation & A/B Testing", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Domain Knowledge & Communication", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "data-science",
+    "machine-learning",
+    "statistics",
+    "big-data",
+    "visualization"
+  ],
+  "industryTags": [
+    "technology",
+    "finance",
+    "healthcare",
+    "retail",
+    "manufacturing"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        {
+          "id": "statistics-basics",
+          "title": "Statistics & Probability Basics",
+          "type": "skill",
+          "detail": "Descriptive stats, distributions, hypothesis testing.",
+          "estimateHours": 14
+        },
+        {
+          "id": "python-data",
+          "title": "Python for Data Science",
+          "type": "skill",
+          "detail": "Libraries like Pandas, NumPy.",
+          "estimateHours": 16
+        },
+        {
+          "id": "data-wrangling",
+          "title": "Data Wrangling & Cleaning",
+          "type": "skill",
+          "detail": "Handling missing data, filtering, transformations.",
+          "estimateHours": 14
+        },
+        {
+          "id": "data-visualization",
+          "title": "Data Visualization",
+          "type": "skill",
+          "detail": "Matplotlib, Seaborn, exploratory visualization.",
+          "estimateHours": 12
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        {
+          "id": "ml-fundamentals",
+          "title": "Machine Learning Fundamentals",
+          "type": "skill",
+          "detail": "Linear regression, classification, clustering.",
+          "estimateHours": 16
+        },
+        {
+          "id": "sql-intro",
+          "title": "SQL for Data Analysts",
+          "type": "skill",
+          "detail": "Querying databases, joins, aggregations.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-1",
+          "title": "Build ML Model Pipeline",
+          "type": "project",
+          "detail": "End-to-end model development and evaluation.",
+          "estimateHours": 20
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        {
+          "id": "big-data-tools",
+          "title": "Big Data Tools Intro",
+          "type": "skill",
+          "detail": "Spark, Hadoop, processing large datasets.",
+          "estimateHours": 14
+        },
+        {
+          "id": "nlp-intro",
+          "title": "Introduction to NLP",
+          "type": "skill",
+          "detail": "Text preprocessing, embeddings.",
+          "estimateHours": 12
+        },
+        {
+          "id": "model-tuning",
+          "title": "Model Tuning & Validation",
+          "type": "skill",
+          "detail": "Cross-validation, hyperparameters.",
+          "estimateHours": 14
+        },
+        {
+          "id": "project-2",
+          "title": "Text Classification Model",
+          "type": "project",
+          "detail": "Build and evaluate NLP model.",
+          "estimateHours": 24
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        {
+          "id": "deep-learning",
+          "title": "Deep Learning Foundations",
+          "type": "skill",
+          "detail": "Neural nets, CNNs, RNNs.",
+          "estimateHours": 14
+        },
+        {
+          "id": "cloud-data-science",
+          "title": "Cloud Platforms for Data Science",
+          "type": "skill",
+          "detail": "AWS, GCP data science tools.",
+          "estimateHours": 14
+        },
+        {
+          "id": "data-engineering",
+          "title": "Data Engineering Basics",
+          "type": "skill",
+          "detail": "ETL pipelines, data lakes.",
+          "estimateHours": 12
+        },
+        {
+          "id": "project-3",
+          "title": "Deep Learning Project",
+          "type": "project",
+          "detail": "Image or sequence modeling project.",
+          "estimateHours": 28
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        {
+          "id": "ab-testing",
+          "title": "Experimentation & A/B Testing",
+          "type": "skill",
+          "detail": "Design, analyze, and report tests.",
+          "estimateHours": 12
+        },
+        {
+          "id": "communication-skills",
+          "title": "Data Storytelling & Communication",
+          "type": "skill",
+          "detail": "Visual and verbal data communication.",
+          "estimateHours": 10
+        },
+        {
+          "id": "project-4",
+          "title": "Comprehensive Data Science Project",
+          "type": "project",
+          "detail": "End-to-end analysis, modeling, and reporting.",
+          "estimateHours": 32
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        {
+          "id": "career-prep",
+          "title": "Career Preparation",
+          "type": "skill",
+          "detail": "Portfolio, interviews, networking.",
+          "estimateHours": 8
+        },
+        {
+          "id": "industry-updates",
+          "title": "Keeping Up with Industry Trends",
+          "type": "skill",
+          "detail": "Continuous learning and tool updates.",
+          "estimateHours": 6
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Data Science Specialization",
+      "url": "https://example.com/data-science-specialization",
+      "skillsCovered": ["Data Wrangling", "Statistics", "Machine Learning"]
+    },
+    {
+      "provider": "Udacity",
+      "title": "Data Scientist Nanodegree",
+      "url": "https://example.com/data-scientist-nanodegree",
+      "skillsCovered": ["ML", "Python", "Data Visualization"]
+    },
+    {
+      "provider": "edX",
+      "title": "Big Data Analytics",
+      "url": "https://example.com/big-data-analytics",
+      "skillsCovered": ["Spark", "Hadoop", "Data Pipelines"]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "title": "Blockchain Developer",
+  "description": "A Blockchain Developer designs, develops, and maintains blockchain-based systems, including cryptocurrencies, smart contracts, decentralized applications (dApps), and distributed ledgers for various industries.",
+  "requiredSkills": [
+    { "name": "Blockchain Fundamentals", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Smart Contract Programming (Solidity, Vyper)", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Distributed Systems & Consensus Algorithms", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Cryptography Basics", "weight": 0.1, "requiredLevel": 7 },
+    { "name": "Web3.js/Ethers.js", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Node.js & REST API", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "preferredSkills": [
+    { "name": "DeFi Protocols", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Layer-2 Scaling Solutions", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Token Standards (ERC20, ERC721, ERC1155)", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Blockchain Data Structures", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Cryptocurrency Wallets & Key Management", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Audit & Security Best Practices", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Decentralized Identity & Oracles", "weight": 0.13, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "blockchain",
+    "cryptography",
+    "decentralization",
+    "smart-contracts",
+    "DeFi"
+  ],
+  "industryTags": [
+    "finance",
+    "security",
+    "supply-chain",
+    "healthcare",
+    "gaming"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "blockchain-intro", "title": "Blockchain Basics", "type": "skill", "detail": "Decentralization, ledgers, cryptography concepts.", "estimateHours": 10 },
+        { "id": "cryptography", "title": "Cryptography Fundamentals", "type": "skill", "detail": "Hash functions, public/private key cryptography.", "estimateHours": 10 },
+        { "id": "distributed-systems", "title": "Distributed System Architecture", "type": "skill", "detail": "Consensus mechanisms, network architecture.", "estimateHours": 12 },
+        { "id": "programming-by-example", "title": "Basic Blockchain Programming", "type": "skill", "detail": "Understanding transaction flow, wallets.", "estimateHours": 8 },
+        { "id": "blockchain-platforms", "title": "Intro to Blockchain Platforms", "type": "skill", "detail": "Ethereum, Binance Smart Chain, others.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "smart-contracts", "title": "Smart Contract Development", "type": "skill", "detail": "Solidity, Vyper, contract structure.", "estimateHours": 15 },
+        { "id": "dApp-Development", "title": "Decentralized App (dApp) Building", "type": "skill", "detail": "Frontend integration, Web3.js, Ethers.js.", "estimateHours": 12 },
+        { "id": "token-standards", "title": "Token Standards & ICOs", "type": "skill", "detail": "ERC20, ERC721, token launches.", "estimateHours": 10 },
+        { "id": "blockchain-testing", "title": "Testing & Debugging", "type": "skill", "detail": "Truffle, Hardhat, security testing.", "estimateHours": 12 },
+        { "id": "project-1", "title": "Smart Contract Project", "type": "project", "detail": "Deploy a token or DeFi contract.", "estimateHours": 16 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "security-audits", "title": "Smart Contract Security & Audits", "type": "skill", "detail": "Vulnerability assessment, best practices.", "estimateHours": 14 },
+        { "id": "layer-2-scaling", "title": "Layer-2 Solutions", "type": "skill", "detail": "Rollups, Plasma, State Channels.", "estimateHours": 12 },
+        { "id": "governance", "title": "Blockchain Governance Models", "type": "skill", "detail": "Voting, DAO frameworks.", "estimateHours": 10 },
+        { "id": "oracles", "title": "Oracle Integration", "type": "skill", "detail": "Chainlink, API data feeds.", "estimateHours": 8 },
+        { "id": "project-2", "title": "DeFi dApp", "type": "project", "detail": "Create a lending or staking platform.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "blockchain-architecture", "title": "Advanced Blockchain Architecture", "type": "skill", "detail": "Sharding, interoperability, cross-chain.", "estimateHours": 16 },
+        { "id": "private-public-blockchains", "title": "Private & Consortium Blockchains", "type": "skill", "detail": "Use cases and setup.", "estimateHours": 12 },
+        { "id": "token-economics", "title": "Tokenomics & Incentives", "type": "skill", "detail": "Designing economic models, staking, rewards.", "estimateHours": 10 },
+        { "id": "blockchain-integration", "title": "Enterprise Blockchain Integration", "type": "skill", "detail": "APIs, enterprise platforms.", "estimateHours": 14 },
+        { "id": "project-3", "title": "Full-Scale Blockchain Application", "type": "project", "detail": "Build and deploy a complete blockchain system.", "estimateHours": 22 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "blockchain-regulations", "title": "Legal & Regulatory Aspects", "type": "skill", "detail": "Compliance, KYC/AML.", "estimateHours": 8 },
+        { "id": "advanced-security", "title": "Advanced Security & Auditing", "type": "skill", "detail": "Formal verification, threat modeling.", "estimateHours": 14 },
+        { "id": "interoperability", "title": "Cross-Chain Interoperability", "type": "skill", "detail": "Bridges, interoperability protocols.", "estimateHours": 12 },
+        { "id": "blockchain-deployment", "title": "Deployment & Scaling", "type": "skill", "detail": "Mainnet launch, scaling strategies.", "estimateHours": 14 },
+        { "id": "final-project", "title": "Capstone Blockchain Project", "type": "project", "detail": "Design, develop, and deploy a full blockchain solution.", "estimateHours": 30 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Blockchain Explained & Development",
+      "url": "https://example.com/blockchain-course",
+      "skillsCovered": ["Blockchain basics", "Smart contracts", "DApp development"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Solidity & Smart Contract Coding",
+      "url": "https://example.com/solidity-course",
+      "skillsCovered": ["Solidity", "Smart contracts", "Security"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Decentralized Applications with Web3.js",
+      "url": "https://example.com/web3js-course",
+      "skillsCovered": ["Web3.js", "dApps", "Ethereum"]
+    }
+  ]
+}

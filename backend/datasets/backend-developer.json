@@ -1,0 +1,341 @@
+{
+  "title": "Backend Developer",
+  "description": "A Backend Developer designs, builds, and maintains the server-side logic, APIs, databases, and infrastructure that power web and mobile applications, focusing on reliability, performance, and security.",
+  "requiredSkills": [
+    { "name": "JavaScript/TypeScript (Node.js)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Relational Databases & SQL", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "API Design (REST)", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "Git", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Basic Linux/CLI", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "preferredSkills": [
+    { "name": "Node.js Frameworks (Express/NestJS)", "weight": 0.2, "requiredLevel": 6 },
+    { "name": "NoSQL Databases", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Message Queues & Event-Driven Systems", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Docker & Containers", "weight": 0.15, "requiredLevel": 5 },
+    { "name": "Cloud Platforms (AWS/GCP/Azure)", "weight": 0.15, "requiredLevel": 5 },
+    { "name": "Authentication & Authorization", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Monitoring & Logging", "weight": 0.1, "requiredLevel": 4 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "backend-engineering",
+    "apis",
+    "databases",
+    "distributed-systems",
+    "server-side-development"
+  ],
+  "industryTags": [
+    "software",
+    "technology",
+    "fintech",
+    "saas",
+    "e-commerce"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        {
+          "id": "programming-basics",
+          "title": "Programming Fundamentals",
+          "type": "skill",
+          "detail": "Variables, data types, conditionals, loops, functions.",
+          "estimateHours": 12
+        },
+        {
+          "id": "js-basics-backend",
+          "title": "JavaScript/TypeScript Basics",
+          "type": "skill",
+          "detail": "Syntax, modules, async basics, tooling.",
+          "estimateHours": 12
+        },
+        {
+          "id": "git-basics-backend",
+          "title": "Git & Version Control",
+          "type": "skill",
+          "detail": "Branches, merges, pull requests, GitHub workflow.",
+          "estimateHours": 6
+        },
+        {
+          "id": "linux-cli",
+          "title": "Linux & Command Line",
+          "type": "skill",
+          "detail": "Filesystem, basic commands, SSH, environment variables.",
+          "estimateHours": 8
+        },
+        {
+          "id": "http-fundamentals",
+          "title": "HTTP & Web Fundamentals",
+          "type": "skill",
+          "detail": "Requests, responses, methods, status codes, headers.",
+          "estimateHours": 6
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        {
+          "id": "node-runtime",
+          "title": "Node.js Runtime",
+          "type": "skill",
+          "detail": "Event loop, modules, npm, basics of Node apps.",
+          "estimateHours": 10
+        },
+        {
+          "id": "express-basics",
+          "title": "Building REST APIs with Express",
+          "type": "skill",
+          "detail": "Routing, middleware, controllers.",
+          "estimateHours": 14
+        },
+        {
+          "id": "error-handling",
+          "title": "Error & Input Handling",
+          "type": "skill",
+          "detail": "Validation, error middleware, status codes.",
+          "estimateHours": 8
+        },
+        {
+          "id": "postman-api-testing",
+          "title": "API Testing with Tools",
+          "type": "skill",
+          "detail": "Using Postman/Insomnia to design and debug APIs.",
+          "estimateHours": 6
+        },
+        {
+          "id": "api-design-basics",
+          "title": "API Design Basics",
+          "type": "skill",
+          "detail": "Resources, endpoints, versioning, pagination.",
+          "estimateHours": 8
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        {
+          "id": "sql-fundamentals",
+          "title": "SQL & Relational Databases",
+          "type": "skill",
+          "detail": "SELECT, INSERT, UPDATE, DELETE, joins, indexes.",
+          "estimateHours": 14
+        },
+        {
+          "id": "db-modeling",
+          "title": "Database Modeling & Normalization",
+          "type": "skill",
+          "detail": "Tables, relationships, normalization, constraints.",
+          "estimateHours": 10
+        },
+        {
+          "id": "orm-basics",
+          "title": "ORM / Query Builders",
+          "type": "skill",
+          "detail": "Prisma, TypeORM, Sequelize or similar.",
+          "estimateHours": 10
+        },
+        {
+          "id": "migrations",
+          "title": "Database Migrations",
+          "type": "skill",
+          "detail": "Schema changes, migration tools, rollback.",
+          "estimateHours": 8
+        },
+        {
+          "id": "transactions",
+          "title": "Transactions & Concurrency",
+          "type": "skill",
+          "detail": "ACID, isolation levels, locking basics.",
+          "estimateHours": 8
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        {
+          "id": "auth-basics",
+          "title": "Authentication & Authorization",
+          "type": "skill",
+          "detail": "Sessions, JWT, OAuth basics, password hashing.",
+          "estimateHours": 12
+        },
+        {
+          "id": "security-backend",
+          "title": "Backend Security",
+          "type": "skill",
+          "detail": "OWASP Top 10, input sanitization, secure headers.",
+          "estimateHours": 12
+        },
+        {
+          "id": "caching-basics",
+          "title": "Caching & Performance",
+          "type": "skill",
+          "detail": "In-memory cache, Redis, HTTP caching.",
+          "estimateHours": 10
+        },
+        {
+          "id": "logging-monitoring",
+          "title": "Logging & Monitoring",
+          "type": "skill",
+          "detail": "Structured logs, metrics, alerting basics.",
+          "estimateHours": 8
+        },
+        {
+          "id": "testing-backend",
+          "title": "Backend Testing",
+          "type": "skill",
+          "detail": "Unit tests, integration tests, test doubles.",
+          "estimateHours": 10
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        {
+          "id": "nosql-basics",
+          "title": "NoSQL Databases",
+          "type": "skill",
+          "detail": "Document stores (e.g., MongoDB), basic modeling.",
+          "estimateHours": 10
+        },
+        {
+          "id": "message-queues",
+          "title": "Message Queues & Events",
+          "type": "skill",
+          "detail": "RabbitMQ, Kafka basics, async processing.",
+          "estimateHours": 12
+        },
+        {
+          "id": "background-jobs",
+          "title": "Background Jobs & Workers",
+          "type": "skill",
+          "detail": "Job queues, retries, scheduling.",
+          "estimateHours": 10
+        },
+        {
+          "id": "file-storage",
+          "title": "File Storage & Uploads",
+          "type": "skill",
+          "detail": "Object storage (S3), presigned URLs, CDN basics.",
+          "estimateHours": 8
+        },
+        {
+          "id": "design-patterns-backend",
+          "title": "Backend Design Patterns",
+          "type": "skill",
+          "detail": "Layered architecture, repository pattern, dependency injection.",
+          "estimateHours": 10
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        {
+          "id": "docker-basics",
+          "title": "Docker & Containerization",
+          "type": "skill",
+          "detail": "Dockerfiles, images, containers, networking.",
+          "estimateHours": 10
+        },
+        {
+          "id": "env-config",
+          "title": "Configuration & Environments",
+          "type": "skill",
+          "detail": "Env files, secrets, staging vs production.",
+          "estimateHours": 8
+        },
+        {
+          "id": "cloud-deployment",
+          "title": "Deploying to the Cloud",
+          "type": "skill",
+          "detail": "Deploy to services like Render, Railway, AWS, or similar.",
+          "estimateHours": 10
+        },
+        {
+          "id": "ci-cd-backend",
+          "title": "CI/CD for Backend",
+          "type": "skill",
+          "detail": "GitHub Actions, pipelines, tests on push.",
+          "estimateHours": 8
+        },
+        {
+          "id": "observability",
+          "title": "Production Observability",
+          "type": "skill",
+          "detail": "Logs, metrics, traces, dashboards.",
+          "estimateHours": 10
+        }
+      ]
+    },
+    {
+      "phase": 7,
+      "steps": [
+        {
+          "id": "scaling-apis",
+          "title": "Scaling APIs",
+          "type": "skill",
+          "detail": "Horizontal scaling, load balancing, rate limiting.",
+          "estimateHours": 12
+        },
+        {
+          "id": "microservices-basics",
+          "title": "Microservices Fundamentals",
+          "type": "skill",
+          "detail": "Service boundaries, communication, service discovery.",
+          "estimateHours": 12
+        },
+        {
+          "id": "advanced-db-topics",
+          "title": "Advanced Database Topics",
+          "type": "skill",
+          "detail": "Sharding, replication, read replicas.",
+          "estimateHours": 10
+        },
+        {
+          "id": "api-contracts",
+          "title": "API Contracts & Documentation",
+          "type": "skill",
+          "detail": "OpenAPI/Swagger, API versioning, SDK generation.",
+          "estimateHours": 8
+        },
+        {
+          "id": "backend-final-project",
+          "title": "Build a Production-Ready API",
+          "type": "skill",
+          "detail": "Design, build, test, and deploy a real backend for a web or mobile app.",
+          "estimateHours": 30
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Node.js & Express Full Course",
+      "url": "https://example.com/node-express-course",
+      "skillsCovered": ["Node.js", "Express", "REST APIs"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "SQL & Databases for Developers",
+      "url": "https://example.com/sql-course",
+      "skillsCovered": ["SQL", "Database Design", "Indexes"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Docker & Deployment for Backend Developers",
+      "url": "https://example.com/docker-backend-course",
+      "skillsCovered": ["Docker", "Deployment", "CI/CD"]
+    }
+  ]
+}

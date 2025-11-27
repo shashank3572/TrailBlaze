@@ -1,0 +1,128 @@
+{
+  "title": "Frontend Developer",
+  "description": "A Frontend Developer builds the visual and interactive parts of websites and web applications, focusing on usability, accessibility, and performance.",
+  "requiredSkills": [
+    { "name": "HTML", "weight": 0.3, "requiredLevel": 7 },
+    { "name": "CSS", "weight": 0.25, "requiredLevel": 7 },
+    { "name": "JavaScript", "weight": 0.35, "requiredLevel": 8 },
+    { "name": "Git", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "preferredSkills": [
+    { "name": "React", "weight": 0.2, "requiredLevel": 5 },
+    { "name": "TypeScript", "weight": 0.15, "requiredLevel": 4 },
+    { "name": "CSS Frameworks", "weight": 0.1, "requiredLevel": 4 },
+    { "name": "Testing Tools", "weight": 0.1, "requiredLevel": 4 },
+    { "name": "Performance Optimization", "weight": 0.1, "requiredLevel": 4 }
+  ],
+  "experienceReq": { 
+    "minYears": 0, 
+    "typicalYears": 1 
+  },
+  "interestTags": [
+    "web",
+    "ui-development",
+    "responsive-design",
+    "interactive-ui",
+    "frontend-engineering"
+  ],
+  "industryTags": [
+    "software",
+    "technology",
+    "e-commerce",
+    "media"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "internet-basics", "title": "How the Internet Works", "type": "skill", "detail": "HTTP, DNS, servers, clients.", "estimateHours": 6 },
+        { "id": "html-basics", "title": "HTML Fundamentals", "type": "skill", "detail": "Semantic tags, structure, forms.", "estimateHours": 8 },
+        { "id": "css-basics", "title": "CSS Basics", "type": "skill", "detail": "Selectors, cascade, units, colors.", "estimateHours": 10 },
+        { "id": "box-model", "title": "CSS Box Model", "type": "skill", "detail": "Margin, border, padding, layout rules.", "estimateHours": 5 },
+        { "id": "flexbox-grid", "title": "Flexbox & Grid", "type": "skill", "detail": "Modern layout systems.", "estimateHours": 10 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "responsive-design", "title": "Responsive Web Design", "type": "skill", "detail": "Media queries, breakpoints, mobile-first.", "estimateHours": 6 },
+        { "id": "devtools", "title": "Browser Developer Tools", "type": "skill", "detail": "Inspecting DOM, debugging, performance.", "estimateHours": 5 },
+        { "id": "js-basics", "title": "JavaScript Basics", "type": "skill", "detail": "Variables, functions, loops.", "estimateHours": 12 },
+        { "id": "dom-manipulation", "title": "DOM Manipulation", "type": "skill", "detail": "Selecting nodes, updating elements.", "estimateHours": 8 },
+        { "id": "events", "title": "Event Handling", "type": "skill", "detail": "Event listeners, bubbling, delegation.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "es6-features", "title": "Modern JavaScript (ES6+)", "type": "skill", "detail": "Let/const, arrow functions, classes.", "estimateHours": 10 },
+        { "id": "fetch-api", "title": "Async JavaScript", "type": "skill", "detail": "Promises, async/await, fetch.", "estimateHours": 10 },
+        { "id": "git-basics", "title": "Git & Version Control", "type": "skill", "detail": "Branches, merges, GitHub workflow.", "estimateHours": 5 },
+        { "id": "npm-basics", "title": "Package Managers", "type": "skill", "detail": "NPM, Yarn, pnpm basics.", "estimateHours": 4 },
+        { "id": "css-architecture", "title": "CSS Architecture", "type": "skill", "detail": "BEM, utility classes, naming conventions.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "sass", "title": "CSS Preprocessors", "type": "skill", "detail": "Sass/SCSS, variables, nesting.", "estimateHours": 6 },
+        { "id": "build-tools", "title": "Build Tools", "type": "skill", "detail": "Webpack, Vite, Parcel basics.", "estimateHours": 12 },
+        { "id": "linting", "title": "Linting & Formatting", "type": "skill", "detail": "ESLint, Prettier configuration.", "estimateHours": 5 },
+        { "id": "ts-basics", "title": "TypeScript Basics", "type": "skill", "detail": "Types, interfaces, generics.", "estimateHours": 10 },
+        { "id": "api-consumption", "title": "Consuming APIs", "type": "skill", "detail": "RESTful APIs, error handling.", "estimateHours": 7 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "react-basics", "title": "React Basics", "type": "skill", "detail": "Components, props, state, JSX.", "estimateHours": 20 },
+        { "id": "react-hooks", "title": "React Hooks", "type": "skill", "detail": "useState, useEffect, custom hooks.", "estimateHours": 14 },
+        { "id": "routing", "title": "Client-side Routing", "type": "skill", "detail": "React Router or equivalent.", "estimateHours": 6 },
+        { "id": "state-management", "title": "State Management", "type": "skill", "detail": "Context API, Redux, Zustand.", "estimateHours": 12 },
+        { "id": "ui-libraries", "title": "UI Libraries", "type": "skill", "detail": "Material UI, Tailwind, Bootstrap.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "testing-basics", "title": "Frontend Testing", "type": "skill", "detail": "Jest, React Testing Library.", "estimateHours": 10 },
+        { "id": "e2e", "title": "End-to-End Testing", "type": "skill", "detail": "Cypress or Playwright.", "estimateHours": 8 },
+        { "id": "performance", "title": "Performance Optimization", "type": "skill", "detail": "Lighthouse, code splitting.", "estimateHours": 10 },
+        { "id": "accessibility", "title": "Accessibility (A11y)", "type": "skill", "detail": "ARIA, screen readers, semantics.", "estimateHours": 8 },
+        { "id": "security", "title": "Frontend Security", "type": "skill", "detail": "XSS, CSRF, sanitization.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 7,
+      "steps": [
+        { "id": "pwa", "title": "Progressive Web Apps", "type": "skill", "detail": "Service workers, caching, offline apps.", "estimateHours": 10 },
+        { "id": "ssr", "title": "SSR & SSG", "type": "skill", "detail": "Next.js, Astro, server components.", "estimateHours": 14 },
+        { "id": "graph-apis", "title": "GraphQL", "type": "skill", "detail": "Queries, mutations, Apollo.", "estimateHours": 10 },
+        { "id": "ci-cd", "title": "CI/CD Basics", "type": "skill", "detail": "GitHub Actions, Vercel pipelines.", "estimateHours": 8 },
+        { "id": "final-project", "title": "Build a Production App", "type": "skill", "detail": "A complete, deployed web application.", "estimateHours": 30 }
+      ]
+    }
+  ],
+  "courses": [
+    { 
+      "provider": "YouTube", 
+      "title": "HTML & CSS Full Course", 
+      "url": "https://example.com/html-css-course", 
+      "skillsCovered": ["HTML", "CSS", "Responsive Design"] 
+    },
+    { 
+      "provider": "YouTube", 
+      "title": "JavaScript Mastery for Beginners", 
+      "url": "https://example.com/js-course", 
+      "skillsCovered": ["JavaScript", "DOM", "Async"] 
+    },
+    { 
+      "provider": "YouTube", 
+      "title": "React Crash Course", 
+      "url": "https://example.com/react-course", 
+      "skillsCovered": ["React", "Hooks", "State"] 
+    }
+  ]
+}
+

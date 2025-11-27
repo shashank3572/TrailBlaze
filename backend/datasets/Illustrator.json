@@ -1,0 +1,102 @@
+{
+  "title": "Illustrator / Concept Artist",
+  "description": "An Illustrator or Concept Artist creates imaginative visual concepts for games, movies, animation, and publishing, designing characters, environments, and assets from initial sketch to polished art.",
+  "requiredSkills": [
+    { "name": "Drawing Fundamentals", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Digital Painting (Photoshop/Procreate)", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "Human Anatomy", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Perspective", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Composition", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Color Theory", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Character Design", "weight": 0.18, "requiredLevel": 6 },
+    { "name": "Environment Design", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Storyboarding", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "3D Basics (Blender/ZBrush)", "weight": 0.1, "requiredLevel": 4 },
+    { "name": "Photo Manipulation", "weight": 0.08, "requiredLevel": 4 },
+    { "name": "Visual Storytelling", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Portfolio Organization", "weight": 0.1, "requiredLevel": 4 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "concept-art",
+    "illustration",
+    "games",
+    "animation",
+    "visual-storytelling"
+  ],
+  "industryTags": [
+    "gaming",
+    "film",
+    "publishing",
+    "animation",
+    "media"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "drawing-basics", "title": "Drawing Fundamentals", "type": "skill", "detail": "Line, shape, form, shading.", "estimateHours": 14 },
+        { "id": "anatomy-basics", "title": "Human Anatomy Basics", "type": "skill", "detail": "Proportion, gesture, reference.", "estimateHours": 10 },
+        { "id": "perspective-basics", "title": "Perspective Drawing", "type": "skill", "detail": "1/2/3 point perspective, grids.", "estimateHours": 10 },
+        { "id": "composition-basics", "title": "Principles of Composition", "type": "skill", "detail": "Balance, focal point, visual flow.", "estimateHours": 8 },
+        { "id": "color-theory-basics", "title": "Color Theory", "type": "skill", "detail": "Palette creation, harmony, temperature.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "digital-tools-intro", "title": "Digital Painting Tools", "type": "skill", "detail": "Photoshop, Procreate, brushes, layers.", "estimateHours": 14 },
+        { "id": "character-design-intro", "title": "Intro to Character Design", "type": "skill", "detail": "Silhouettes, expressions, outfits.", "estimateHours": 12 },
+        { "id": "env-design-intro", "title": "Intro to Environment Design", "type": "skill", "detail": "Landscapes, interiors, lighting.", "estimateHours": 10 },
+        { "id": "photo-manipulation-basics", "title": "Photo Manipulation Basics", "type": "skill", "detail": "Overpainting, collage, textures.", "estimateHours": 7 },
+        { "id": "portfolio-project-1", "title": "Portfolio Project 1", "type": "project", "detail": "Create a character and environment concept.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "storyboarding-basics", "title": "Storyboarding", "type": "skill", "detail": "Camera angles, paneling, timing.", "estimateHours": 10 },
+        { "id": "visual-storytelling", "title": "Visual Storytelling Principles", "type": "skill", "detail": "Narrative, emotion, readability.", "estimateHours": 8 },
+        { "id": "3d-intro", "title": "3D Basics for Artists", "type": "skill", "detail": "Blender interface, sculpting basics, rendering.", "estimateHours": 8 },
+        { "id": "portfolio-organization", "title": "Portfolio Organization", "type": "skill", "detail": "Selecting, arranging, presenting work.", "estimateHours": 8 },
+        { "id": "portfolio-project-2", "title": "Portfolio Project 2", "type": "project", "detail": "Full concept scene for a game or film.", "estimateHours": 14 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "advanced-painting", "title": "Advanced Digital Painting", "type": "skill", "detail": "Detailing, finishing techniques, photo use.", "estimateHours": 14 },
+        { "id": "character-design-advanced", "title": "Advanced Character Design", "type": "skill", "detail": "Turnarounds, props, style adaptation.", "estimateHours": 10 },
+        { "id": "env-design-advanced", "title": "Advanced Environment Design", "type": "skill", "detail": "Mood, lighting, architecture.", "estimateHours": 10 },
+        { "id": "industry-requirements", "title": "Industry Requirements", "type": "skill", "detail": "Client briefs, deadlines, feedback.", "estimateHours": 7 },
+        { "id": "final-portfolio", "title": "Final Portfolio Project", "type": "project", "detail": "Professional presentation and case study.", "estimateHours": 18 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Digital Painting for Beginners",
+      "url": "https://example.com/digital-painting-course",
+      "skillsCovered": ["Digital Painting", "Photoshop", "Procreate"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Character Design Crash Course",
+      "url": "https://example.com/character-design-course",
+      "skillsCovered": ["Character Design", "Anatomy", "Styling"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Environment Design Essentials",
+      "url": "https://example.com/environment-design-course",
+      "skillsCovered": ["Environment Design", "Composition", "Color Theory"]
+    }
+  ]
+}

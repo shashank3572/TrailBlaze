@@ -1,0 +1,103 @@
+{
+  "title": "Fashion Designer",
+  "description": "A Fashion Designer creates original clothing, accessories, and footwear designs, blending creativity with material knowledge to deliver collections for brands or clients, from concept sketches to final production.",
+  "requiredSkills": [
+    { "name": "Fashion Illustration", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Textile Knowledge", "weight": 0.18, "requiredLevel": 7 },
+    { "name": "Garment Construction", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Pattern Making", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Sewing Techniques", "weight": 0.12, "requiredLevel": 7 },
+    { "name": "Color Theory", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "CAD for Fashion (Clo3D, Illustrator)", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Trend Research", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "3D Draping", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Fashion Photography", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Branding & Merchandising", "weight": 0.13, "requiredLevel": 5 },
+    { "name": "Portfolio Development", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Sustainable Design", "weight": 0.1, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "fashion-design",
+    "apparel",
+    "textiles",
+    "creativity",
+    "sustainable-fashion"
+  ],
+  "industryTags": [
+    "fashion",
+    "retail",
+    "luxury",
+    "apparel",
+    "e-commerce"
+  ],
+  "industryScore": 8,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "design-principles", "title": "Design Principles", "type": "skill", "detail": "Shape, proportion, silhouette, balance.", "estimateHours": 8 },
+        { "id": "fashion-sketching", "title": "Fashion Illustration", "type": "skill", "detail": "Basic sketching, human figure, poses.", "estimateHours": 10 },
+        { "id": "color-theory-basics", "title": "Color Theory", "type": "skill", "detail": "Palettes, harmony, application to textiles.", "estimateHours": 8 },
+        { "id": "fabrics-textiles", "title": "Textiles & Fabrics", "type": "skill", "detail": "Types, properties, fabric selection.", "estimateHours": 12 },
+        { "id": "sewing-basics", "title": "Sewing Techniques", "type": "skill", "detail": "Hand and machine sewing, seams, finishing.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "patternmaking", "title": "Pattern Making Basics", "type": "skill", "detail": "Blocks, grading, pattern creation.", "estimateHours": 12 },
+        { "id": "garment-construction", "title": "Garment Construction", "type": "skill", "detail": "Assembly, fittings, alterations.", "estimateHours": 14 },
+        { "id": "cad-fashion", "title": "CAD for Fashion", "type": "skill", "detail": "Clo3D, Adobe Illustrator basics.", "estimateHours": 10 },
+        { "id": "trend-research", "title": "Trend Research", "type": "skill", "detail": "Trend forecasting, mood boards.", "estimateHours": 7 },
+        { "id": "collection-project", "title": "Collection Mini Project", "type": "project", "detail": "Design & illustrate a small apparel collection.", "estimateHours": 12 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "3d-draping", "title": "3D Draping", "type": "skill", "detail": "Mannequin draping in real/virtual environments.", "estimateHours": 10 },
+        { "id": "fashion-photography", "title": "Fashion Photography Basics", "type": "skill", "detail": "Photoshoots, lighting, styling.", "estimateHours": 8 },
+        { "id": "branding-merch", "title": "Branding & Merchandising", "type": "skill", "detail": "Market positioning, collection launch.", "estimateHours": 8 },
+        { "id": "portfolio-dev", "title": "Portfolio Development", "type": "skill", "detail": "Curating and presenting work.", "estimateHours": 8 },
+        { "id": "final-project", "title": "Final Collection Project", "type": "project", "detail": "Full process: concept to runway.",
+          "estimateHours": 18 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "sustainable-design", "title": "Sustainable Fashion", "type": "skill", "detail": "Eco-materials, circular design, upcycling.", "estimateHours": 8 },
+        { "id": "industry-basics", "title": "Industry Basics", "type": "skill", "detail": "Fashion calendar, sourcing, supply chain.", "estimateHours": 8 },
+        { "id": "networking", "title": "Networking & Careers", "type": "skill", "detail": "Building relationships, internships.", "estimateHours": 6 },
+        { "id": "professional-skills", "title": "Professional Skills", "type": "skill", "detail": "Time management, presentation.", "estimateHours": 6 },
+        { "id": "career-prep", "title": "Career Prep", "type": "skill", "detail": "Resume, interviews, job search.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Fashion Design Sketching Tutorial",
+      "url": "https://example.com/fashion-sketch-course",
+      "skillsCovered": ["Fashion Illustration", "Sketching", "Silhouettes"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Pattern Making Basics",
+      "url": "https://example.com/patternmaking-course",
+      "skillsCovered": ["Pattern Making", "Garment Construction", "CAD for Fashion"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Textiles for Beginners",
+      "url": "https://example.com/textiles-course",
+      "skillsCovered": ["Textiles", "Fabric Types", "Material Selection"]
+    }
+  ]
+}

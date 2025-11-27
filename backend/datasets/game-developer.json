@@ -1,0 +1,112 @@
+{
+  "title": "Game Developer",
+  "description": "A Game Developer designs and builds interactive games for platforms including PC, consoles, mobile, and VR, combining programming, design, and storytelling skills throughout the game development lifecycle.",
+  "requiredSkills": [
+    { "name": "Programming (C++, C#, or Java)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Game Engines (Unity, Unreal)", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Game Physics & Math", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Gameplay Mechanics Design", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Debugging & Optimization", "weight": 0.1, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Shader Programming", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "AI & NPC Programming", "weight": 0.13, "requiredLevel": 6 },
+    { "name": "Networking & Multiplayer", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "UI/UX for Games", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Sound Design Basics", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Version Control (Git)", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "game-development",
+    "game-design",
+    "interactive-media",
+    "game-programming",
+    "storytelling"
+  ],
+  "industryTags": [
+    "gaming",
+    "entertainment",
+    "simulation",
+    "education",
+    "vr/ar"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "programming-basics", "title": "Programming Fundamentals", "type": "skill", "detail": "C++, C#, Java basics, syntax, logic.", "estimateHours": 18 },
+        { "id": "game-engine-intro", "title": "Intro to Game Engines", "type": "skill", "detail": "Unity or Unreal basics, scene management.", "estimateHours": 16 },
+        { "id": "math-physics", "title": "Math & Physics for Games", "type": "skill", "detail": "Vectors, matrices, collision detection.", "estimateHours": 14 },
+        { "id": "git-version-control", "title": "Version Control and Git", "type": "skill", "detail": "Branching, merging, collaboration.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "gameplay-programming", "title": "Gameplay Programming", "type": "skill", "detail": "Player controls, input handling, scripting.", "estimateHours": 16 },
+        { "id": "level-design-basics", "title": "Level Design Basics", "type": "skill", "detail": "Environment building, pacing.", "estimateHours": 12 },
+        { "id": "ui-development", "title": "UI and UX in Games", "type": "skill", "detail": "Menus, HUD, user feedback.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Simple 2D Game", "type": "project", "detail": "Build a playable 2D game.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "shader-basics", "title": "Shader Programming Basics", "type": "skill", "detail": "Materials, lighting, effects.", "estimateHours": 12 },
+        { "id": "ai-npc", "title": "AI and NPC Behavior", "type": "skill", "detail": "Pathfinding, state machines.", "estimateHours": 14 },
+        { "id": "networking-basics", "title": "Networking & Multiplayer Basics", "type": "skill", "detail": "Client-server models, sync.", "estimateHours": 14 },
+        { "id": "project-2", "title": "3D Game Prototype", "type": "project", "detail": "Develop a simple 3D game prototype.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "advanced-game-tech", "title": "Advanced Game Technologies", "type": "skill", "detail": "Physics engines, animation blending.", "estimateHours": 14 },
+        { "id": "performance-optimization", "title": "Performance Optimization", "type": "skill", "detail": "Profiling, reducing draw calls.", "estimateHours": 12 },
+        { "id": "sound-design", "title": "Sound Design for Games", "type": "skill", "detail": "Audio effects, music integration.", "estimateHours": 10 },
+        { "id": "project-3", "title": "Multiplayer Game", "type": "project", "detail": "Build a basic multiplayer game.", "estimateHours": 28 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "vr-ar-development", "title": "VR/AR Game Development", "type": "skill", "detail": "Immersive interactions, spatial design.", "estimateHours": 16 },
+        { "id": "game-studio-practices", "title": "Studio Development Practices", "type": "skill", "detail": "Agile, build pipelines, collaboration.", "estimateHours": 12 },
+        { "id": "project-4", "title": "Full Game Project", "type": "project", "detail": "Develop a complete game ready for release.", "estimateHours": 40 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-preparation", "title": "Career Preparation", "type": "skill", "detail": "Portfolio, job interviews, networking.", "estimateHours": 8 },
+        { "id": "industry-trends", "title": "Industry Trends & Innovations", "type": "skill", "detail": "Cloud gaming, procedural content, AI.", "estimateHours": 8 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Game Development with Unity",
+      "url": "https://example.com/unity-game-dev",
+      "skillsCovered": ["Unity", "C#", "Gameplay Programming"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Unreal Engine Beginner Course",
+      "url": "https://example.com/unreal-beginner",
+      "skillsCovered": ["Unreal Engine", "Blueprints", "3D Game Development"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "AI for Games",
+      "url": "https://example.com/game-ai-course",
+      "skillsCovered": ["AI", "NPC Behavior", "Pathfinding"]
+    }
+  ]
+}
+

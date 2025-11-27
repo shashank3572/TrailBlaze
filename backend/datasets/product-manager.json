@@ -1,0 +1,115 @@
+{
+  "title": "Product Manager",
+  "description": "A Product Manager leads product development from conception to launch, aligning business goals with customer needs, managing cross-functional teams, and ensuring the product's success in the market.",
+  "requiredSkills": [
+    { "name": "Product Strategy & Roadmap Planning", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Agile & Scrum Methodologies", "weight": 0.2, "requiredLevel": 8 },
+    { "name": "Market & Customer Research", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Data Analysis & KPIs", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Stakeholder Management", "weight": 0.1, "requiredLevel": 7 },
+    { "name": "Leadership & Communication", "weight": 0.1, "requiredLevel": 8 }
+  ],
+  "preferredSkills": [
+    { "name": "UX/UI Basics", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Financial & Budgeting Skills", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Technical Understanding (APIs, System Architecture)", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Go-to-Market Strategy", "weight": 0.15, "requiredLevel": 6 },
+    { "name": "Product Lifecycle Management", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Customer Support & Feedback Loops", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Competitor Analysis", "weight": 0.11, "requiredLevel": 5 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "product-management",
+    "strategy",
+    "agile",
+    "leadership",
+    "user-experience"
+  ],
+  "industryTags": [
+    "software",
+    "technology",
+    "fintech",
+    "healthtech",
+    "e-commerce"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "product-basics", "title": "Fundamentals of Product Management", "type": "skill", "detail": "Role, lifecycle, key principles.", "estimateHours": 8 },
+        { "id": "market-research", "title": "Market & Customer Research", "type": "skill", "detail": "Needs analysis, personas.", "estimateHours": 10 },
+        { "id": "agile-and-scrum", "title": "Agile & Scrum Basics", "type": "skill", "detail": "Iterations, ceremonies, roles.", "estimateHours": 10 },
+        { "id": "roadmapping", "title": "Product Roadmapping", "type": "skill", "detail": "Vision, backlog, prioritization.", "estimateHours": 8 },
+        { "id": "communication", "title": "Effective Communication", "type": "skill", "detail": "Stakeholder and team communication.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "data-driven-decisions", "title": "Data & KPI Analysis", "type": "skill", "detail": "Metrics, analytics tools.", "estimateHours": 12 },
+        { "id": "user-experience", "title": "Introduction to UX/UI", "type": "skill", "detail": "Basic design principles, wireframes." , "estimateHours": 10 },
+        { "id": "stakeholder-management", "title": "Stakeholder & Cross-Functional Management", "type": "skill", "detail": "Aligning priorities, reporting.", "estimateHours": 10 },
+        { "id": "project-1", "title": "Product Development Plan", "type": "project", "detail": "Create a full product strategy and roadmap document.", "estimateHours": 20 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "market-entry", "title": "Go-to-Market Strategy", "type": "skill", "detail": "Launch planning, marketing channels.", "estimateHours": 14 },
+        { "id": "pricing-strategies", "title": "Pricing & Monetization", "type": "skill", "detail": "Models, market fit, revenue streams.", "estimateHours": 10 },
+        { "id": "user-feedback", "title": "User Feedback & Iteration", "type": "skill", "detail": "Implementing feedback, feature revisions.", "estimateHours": 12 },
+        { "id": "project-2", "title": "Launch & Feedback Campaign", "type": "project", "detail": "Execute a product launch and analyze results.", "estimateHours": 24 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "advanced-analytics", "title": "Advanced Data & Analytics", "type": "skill", "detail": "User segmentation, predictive analytics.", "estimateHours": 12 },
+        { "id": "scaling-strategies", "title": "Scaling & Growth Strategies", "type": "skill", "detail": "Growth hacking, A/B testing.", "estimateHours": 10 },
+        { "id": "financial-models", "title": "Budgets & Financial Planning", "type": "skill", "detail": "ROI, forecasting, resource allocation.", "estimateHours": 10 },
+        { "id": "project-3", "title": "Growth & Expansion Plan", "type": "project", "detail": "Develop a plan for scaling a product in a new market.", "estimateHours": 30 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "team-leadership", "title": "Team & Stakeholder Leadership", "type": "skill", "detail": "Leading cross-functional teams.", "estimateHours": 10 },
+        { "id": "product-integration", "title": "Product Integration & Ecosystems", "type": "skill", "detail": "APIs, partnerships.", "estimateHours": 12 },
+        { "id": "ethical-product-management", "title": "Ethics & Privacy in Product", "type": "skill", "detail": "Data privacy, regulations.", "estimateHours": 8 },
+        { "id": "project-4", "title": "End-to-End Product Launch", "type": "project", "detail": "Lead a product from concept to launch.", "estimateHours": 40 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "career-advancement", "title": "Career Path & Networking", "type": "skill", "detail": "Building a personal brand, mentorship." , "estimateHours": 8 },
+        { "id": "industry-updates", "title": "Stay Updated on Trends", "type": "skill", "detail": "Emerging tools, market shifts.", "estimateHours": 6 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "Coursera",
+      "title": "Product Management Fundamentals",
+      "url": "https://example.com/product-management",
+      "skillsCovered": ["Strategy", "Roadmapping", "Agile"]
+    },
+    {
+      "provider": "Udemy",
+      "title": "Agile & Scrum Master Certification",
+      "url": "https://example.com/scrum-agile",
+      "skillsCovered": ["Scrum", "Leadership", "Team Management"]
+    },
+    {
+      "provider": "LinkedIn Learning",
+      "title": "Data-Driven Product Decisions",
+      "url": "https://example.com/data-decisions",
+      "skillsCovered": ["Analytics", "KPIs", "User Feedback"]
+    }
+  ]
+}

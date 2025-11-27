@@ -1,0 +1,115 @@
+{
+  "title": "Embedded Systems Engineer",
+  "description": "An Embedded Systems Engineer designs, develops, and maintains hardware and software integrated systems used in devices like automotive controls, IoT devices, robotics, and consumer electronics.",
+  "requiredSkills": [
+    { "name": "C/C++ Programming", "weight": 0.3, "requiredLevel": 8 },
+    { "name": "Microcontroller Architectures", "weight": 0.25, "requiredLevel": 8 },
+    { "name": "RTOS Concepts", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Hardware Interfacing", "weight": 0.15, "requiredLevel": 7 },
+    { "name": "Debugging & Testing", "weight": 0.15, "requiredLevel": 7 }
+  ],
+  "preferredSkills": [
+    { "name": "Embedded Linux", "weight": 0.18, "requiredLevel": 6 },
+    { "name": "FPGA Basics", "weight": 0.12, "requiredLevel": 5 },
+    { "name": "Communication Protocols (SPI, I2C, UART)", "weight": 0.18, "requiredLevel": 7 },
+    { "name": "Low Power Design", "weight": 0.12, "requiredLevel": 6 },
+    { "name": "Bootloaders & Firmware Updates", "weight": 0.1, "requiredLevel": 5 },
+    { "name": "Version Control (Git)", "weight": 0.1, "requiredLevel": 6 },
+    { "name": "Scripting Languages (Python, Bash)", "weight": 0.1, "requiredLevel": 6 }
+  ],
+  "experienceReq": {
+    "minYears": 0,
+    "typicalYears": 1
+  },
+  "interestTags": [
+    "embedded-systems",
+    "microcontrollers",
+    "firmware",
+    "real-time-systems",
+    "hardware-software-integration"
+  ],
+  "industryTags": [
+    "automotive",
+    "consumer-electronics",
+    "robotics",
+    "aerospace",
+    "industrial-automation"
+  ],
+  "industryScore": 9,
+  "roadmap": [
+    {
+      "phase": 1,
+      "steps": [
+        { "id": "c-programming-basics", "title": "C Programming Basics", "type": "skill", "detail": "Syntax, control flow, pointers, memory.", "estimateHours": 18 },
+        { "id": "microcontroller-intro", "title": "Microcontroller Basics", "type": "skill", "detail": "Architecture, GPIO, timers.", "estimateHours": 14 },
+        { "id": "digital-electronics", "title": "Digital Electronics Fundamentals", "type": "skill", "detail": "Logic gates, flip-flops, ADC/DAC.", "estimateHours": 12 },
+        { "id": "basic-schematics", "title": "Schematics & PCB Basics", "type": "skill", "detail": "Reading and interpreting schematics.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 2,
+      "steps": [
+        { "id": "embedded-c", "title": "Embedded C Programming", "type": "skill", "detail": "Bitwise operations, interrupts, inline assembly.", "estimateHours": 18 },
+        { "id": "communication-protocols", "title": "Communication Protocols", "type": "skill", "detail": "SPI, I2C, UART basics and implementation.", "estimateHours": 16 },
+        { "id": "hardware-debugging", "title": "Hardware Debugging and Testing", "type": "skill", "detail": "Oscilloscopes, logic analyzers, JTAG.", "estimateHours": 12 },
+        { "id": "version-control", "title": "Version Control with Git", "type": "skill", "detail": "Branching, commits, collaboration.", "estimateHours": 6 }
+      ]
+    },
+    {
+      "phase": 3,
+      "steps": [
+        { "id": "rtos-intro", "title": "Real-Time Operating Systems (RTOS)", "type": "skill", "detail": "Task scheduling, semaphores, queues.", "estimateHours": 14 },
+        { "id": "firmware-design", "title": "Firmware Architecture & Design", "type": "skill", "detail": "Modular design, state machines.", "estimateHours": 12 },
+        { "id": "power-management", "title": "Low Power Design Techniques", "type": "skill", "detail": "Sleep modes, power profiling.", "estimateHours": 10 },
+        { "id": "scripting-for-embedded", "title": "Scripting with Python & Bash", "type": "skill", "detail": "Automation, testing, build scripts.", "estimateHours": 8 }
+      ]
+    },
+    {
+      "phase": 4,
+      "steps": [
+        { "id": "embedded-linux", "title": "Embedded Linux Basics", "type": "skill", "detail": "Kernel, device drivers, boot process.", "estimateHours": 16 },
+        { "id": "bootloaders", "title": "Bootloaders & Firmware Updates", "type": "skill", "detail": "Over-the-air updates, secure boot.", "estimateHours": 12 },
+        { "id": "fpga-fundamentals", "title": "FPGA Basics", "type": "skill", "detail": "Verilog, hardware description languages.", "estimateHours": 12 },
+        { "id": "project-integration", "title": "Hardware-Software Integration Project", "type": "project", "detail": "Develop a sensor interface with firmware.", "estimateHours": 18 }
+      ]
+    },
+    {
+      "phase": 5,
+      "steps": [
+        { "id": "advanced-rtos", "title": "Advanced RTOS Concepts", "type": "skill", "detail": "Inter-task communication, timers.", "estimateHours": 12 },
+        { "id": "security-embedded", "title": "Embedded System Security", "type": "skill", "detail": "Cryptography, secure boot, threat modeling.", "estimateHours": 12 },
+        { "id": "performance-optimization", "title": "Performance Optimization", "type": "skill", "detail": "Code profiling, memory optimization.", "estimateHours": 10 },
+        { "id": "project-optimization", "title": "Optimization Project", "type": "project", "detail": "Optimize an existing embedded system.", "estimateHours": 16 }
+      ]
+    },
+    {
+      "phase": 6,
+      "steps": [
+        { "id": "industry-practices", "title": "Industry Standards & Practices", "type": "skill", "detail": "MISRA, ISO 26262, safety certification.", "estimateHours": 14 },
+        { "id": "continuous-integration", "title": "CI/CD in Embedded Systems", "type": "skill", "detail": "Automated testing, deployments.", "estimateHours": 12 },
+        { "id": "advanced-hw-design", "title": "Advanced Hardware Design", "type": "skill", "detail": "Multi-layer PCB design, signal integrity.", "estimateHours": 12 },
+        { "id": "final-project", "title": "Capstone Project", "type": "project", "detail": "Complete embedded system from concept to prototype.", "estimateHours": 30 }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "provider": "YouTube",
+      "title": "Embedded C Programming Basics",
+      "url": "https://example.com/embedded-c-course",
+      "skillsCovered": ["C Programming", "Microcontrollers", "Hardware Interfacing"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "RTOS Fundamentals",
+      "url": "https://example.com/rtos-course",
+      "skillsCovered": ["RTOS", "Task Scheduling", "Semaphores"]
+    },
+    {
+      "provider": "YouTube",
+      "title": "Embedded Linux for Beginners",
+      "url": "https://example.com/embedded-linux-course",
+      "skillsCovered": ["Embedded Linux", "Device Drivers", "Kernel Basics"]
+    }
+  ]
+}
