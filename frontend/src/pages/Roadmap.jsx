@@ -1,56 +1,86 @@
-import React, { useState, useEffect } from "react";
-import roadmapData from "../data/roadmapData";
-import RoadmapFlow from "../components/RoadmapFlow";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import api from "../api/client";
 
 export default function Roadmap() {
-  const [selected, setSelected] = useState("Full Stack Developer");
-  const [recommended, setRecommended] = useState(null);
+  const { careerId } = useParams();
+
+  // 🔵 LOG #1 — Check if careerId comes from URL
+  console.log("Career ID from URL:", careerId);
+
+  const [loading, setLoading] = useState(true);
+  const [roadmapData, setRoadmapData] = useState(null);
 
   useEffect(() => {
-    const rec = localStorage.getItem("recommendedCareer");
-    if (rec) setRecommended(rec);
-  }, []);
+    async function fetchRoadmap() {
+      try {
+        const res = await api.get(`/ai/roadmap/${careerId}`);
 
-  const careers = Object.keys(roadmapData);
-  const current = roadmapData[selected];
+        // 🔵 LOG #2 — See what backend returns
+        console.log("Roadmap API response:", res.data);
+
+        setRoadmapData(res.data);
+      } catch (err) {
+        console.error("Roadmap fetch error:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchRoadmap();
+  }, [careerId]);
+
+  if (loading)
+    return (
+      <div className="text-white p-6">
+        ⚙️ Generating Your Personalized Roadmap...
+      </div>
+    );
+
+  if (!roadmapData)
+    return (
+      <div className="text-white p-6">
+        ❌ Roadmap not available.
+      </div>
+    );
 
   return (
-    <div className="text-white min-h-screen p-8 bg-neutral-950">
-      <h1 className="text-3xl font-bold mb-6">Career Roadmaps</h1>
+    <div className="p-6 text-white min-h-screen bg-neutral-900">
+      <h1 className="text-3xl font-bold text-blue-400">
+        {roadmapData.career} Roadmap
+      </h1>
 
-      {/* Recommended Badge */}
-      {recommended && (
-        <p className="mb-4 text-green-400 text-lg">
-          ✅ Based on your Affinity Quiz, we recommend:  
-          <span className="font-bold">{recommended}</span>
-        </p>
-      )}
-
-      {/* Selector Buttons */}
-      <div className="mb-6 flex gap-4 flex-wrap">
-        {careers.map((c) => (
-          <button
-            key={c}
-            onClick={() => setSelected(c)}
-            className={`px-4 py-2 rounded-lg ${
-              selected === c
-                ? "bg-blue-600 text-white"
-                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-            }`}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-
-      <p className="text-gray-400 mb-8 max-w-3xl">
-        {current.description}
+      <p className="text-gray-400 mt-1">
+        Customized based on your skills and experience 🚀
       </p>
 
-      <RoadmapFlow
-        sections={current.sections}
-        highlight={recommended && recommended.includes(selected)}
-      />
+      <div className="mt-6 space-y-6">
+        {roadmapData.roadmap.map((phase, index) => (
+          <div key={index} className="bg-neutral-800 p-6 rounded-xl shadow-lg">
+            <h2 className="text-2xl font-semibold mb-3">
+              {phase.title || `Phase ${phase.phase}`}
+            </h2>
+
+            {phase.steps.map((step, idx) => (
+              <div
+                key={idx}
+                className={`p-3 rounded-lg border mt-2 ${
+                  step.status === "completed"
+                    ? "border-green-400 bg-green-900/20"
+                    : step.status === "in-progress"
+                    ? "border-yellow-400 bg-yellow-900/20"
+                    : "border-red-400 bg-red-900/20"
+                }`}
+              >
+                <p className="text-lg">{step.name}</p>
+                <p className="text-xs text-gray-400 capitalize">
+                  Status: {step.status}
+                </p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

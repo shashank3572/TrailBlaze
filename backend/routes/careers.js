@@ -59,4 +59,14 @@ router.get("/:careerTitle/suggest", async (req, res) => {
   });
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const careers = await Career.find({}, "title _id");
+    res.json(careers);
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch careers" });
+  }
+});
+
+
 module.exports = router;

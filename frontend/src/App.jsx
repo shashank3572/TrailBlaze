@@ -40,13 +40,14 @@ function App() {
 
 
         <Route
-          path="/roadmap"
-          element={
-            <ProtectedRoute>
-              <Roadmap />
-            </ProtectedRoute>
-          }
-        />
+        path="/roadmap/:careerId"
+         element={
+        <ProtectedRoute>
+           <Roadmap />
+         </ProtectedRoute>
+         }
+/>
+
 
         <Route
           path="/trends"

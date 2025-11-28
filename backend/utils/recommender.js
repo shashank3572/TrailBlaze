@@ -1,63 +1,44 @@
-const Career = require("../models/Career");
+const axios = require("axios");
 const User = require("../models/User");
+const Career = require("../models/Career");
 
-// Normalize value 1–10 to 0–1
-const normalize = (num, max = 10) => num / max;
+// URL for FastAPI ML Service
+const ML_URL = "http://127.0.0.1:8000/predict";
 
 async function generateRecommendations(userId) {
-  const user = await User.findById(userId);
-  if (!user) throw new Error("User not found");
+  try {
+    const user = await User.findById(userId);
+    if (!user) throw new Error("User not found");
 
-  const careers = await Career.find();
+    const userSkills = user.skills || [];
+    console.log("🔍 Sending skills to ML model:", userSkills);
 
-  const userSkills = user.skills || [];
-  const userInterests = user.interests || [];
+    // Send skills to FastAPI ML service
+    const mlResponse = await axios.post(ML_URL, { skills: userSkills });
 
-  const scoredCareers = careers.map((career) => {
+    const mlResults = mlResponse.data.results || [];
 
-    // --- Skill Match Scoring ---
-    let skillScore = 0;
-    let maxPossibleSkillScore = 0;
+    // Match ML career names with real database data
+    const careers = await Career.find();
 
-    (career.requiredSkills || []).forEach((req) => {
-      maxPossibleSkillScore += req.weight;
+    const finalOutput = mlResults.map((item) => {
+      const matchedCareer = careers.find((c) =>
+        c.title.toLowerCase() === item.career.toLowerCase()
+      );
 
-      if (userSkills.includes(req.name.toLowerCase())) {
-        skillScore += req.weight;
-      }
+      return {
+        careerId: matchedCareer?._id || null,
+        title: item.career,
+        confidence: item.confidence,
+      };
     });
 
-    const skillMatchScore = maxPossibleSkillScore > 0
-      ? (skillScore / maxPossibleSkillScore) * 100
-      : 0;
+    return finalOutput;
 
-    // --- Interest Match Scoring ---
-    let matchedInterests = (career.interestTags || []).filter(tag =>
-      userInterests.includes(tag)
-    ).length;
-
-    const interestMatchScore = career.interestTags?.length
-      ? (matchedInterests / career.interestTags.length) * 100
-      : 0;
-
-    // --- Industry Score Weight (Normalize 1–10 to %)
-    const industryScore = normalize(career.industryScore || 5) * 100;
-
-    // --- Final Weighted Score ---
-    const finalScore = (skillMatchScore * 0.6) + (interestMatchScore * 0.3) + (industryScore * 0.1);
-
-    return {
-      careerId: career._id,
-      title: career.title,
-      score: Math.round(finalScore),
-      reason: `Skill Alignment: ${skillMatchScore.toFixed(1)}%, Interest Match: ${interestMatchScore.toFixed(1)}%`
-    };
-  });
-
-  // Sort by best match
-  const sorted = scoredCareers.sort((a, b) => b.score - a.score);
-
-  return sorted.slice(0, 5); // return top 5
+  } catch (err) {
+    console.error("❌ ML Recommendation Error:", err.message);
+    return [];
+  }
 }
 
 module.exports = { generateRecommendations };

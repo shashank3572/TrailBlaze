@@ -18,11 +18,15 @@ export default function Profile() {
     setUser({ ...user, skills: res.data.skills });
     setNewSkill("");
   };
+  localStorage.setItem("refreshAI", "true");
+
 
   const removeSkill = async (skill) => {
     const res = await api.post("/user/profile/remove-skill", { skill });
     setUser({ ...user, skills: res.data.skills });
   };
+  localStorage.setItem("refreshAI", "true");
+
 
   if (!user)
     return (

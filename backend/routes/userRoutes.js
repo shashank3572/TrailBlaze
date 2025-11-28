@@ -68,5 +68,26 @@ router.get("/recommend", auth, async (req, res) => {
     res.status(500).json({ message: "AI recommendation failed" });
   }
 });
+// Update user profile (education, interests, goal, experience)
+router.post("/update-profile", auth, async (req, res) => {
+  try {
+    const updates = req.body;
+
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { $set: updates },
+      { new: true }
+    ).select("-password");
+
+    return res.json({
+      message: "Profile updated successfully",
+      user,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Failed to update profile" });
+  }
+});
+
 
 module.exports = router;

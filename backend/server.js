@@ -25,6 +25,12 @@ app.get("/", (req, res) => {
   res.send("TrailBlaze API running...");
 });
 
+app.use("/courses", require("./routes/course"));
+
+app.use("/ml", require("./routes/ml"));
+
+
+
 // --- Start Server ---
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

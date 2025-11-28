@@ -1,21 +1,32 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/client";
-import { Link } from "react-router-dom";
-import { recommendCareer } from "../utils/recommender";
-
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [recommendations, setRecommendations] = useState([]);
 
-  // Fetch user data ONLY
   useEffect(() => {
+    const refresh = localStorage.getItem("refreshAI");
+if (refresh === "true") {
+  setRecommendations([]); // clear old results
+  localStorage.removeItem("refreshAI");
+}
+
     async function fetchData() {
       try {
+        // Fetch user profile
         const profileRes = await api.get("/user/profile");
         setUser(profileRes.data);
+
+        // Fetch AI recommendations
+        const recRes = await api.get("/ai/recommend");
+        setRecommendations(recRes.data.recommendations || []);
+
       } catch (err) {
-        console.error("Error fetching profile:", err);
+        console.error("Dashboard error:", err);
       } finally {
         setLoading(false);
       }
@@ -30,9 +41,6 @@ export default function Dashboard() {
       </div>
     );
 
-  // ✅ AI Recommendation (simple + robust)
-  const aiCareer = recommendCareer(user?.skills || []);
-
   return (
     <div className="min-h-screen bg-neutral-900 text-gray-100 p-8">
       {/* HEADER */}
@@ -44,25 +52,52 @@ export default function Dashboard() {
           Explore your personalized roadmap, insights, and career tools.
         </p>
       </div>
+      {localStorage.getItem("refreshAI") && (
+  <div className="text-yellow-400 mb-4">
+    Updating recommendations based on your new skills... 🔍
+  </div>
+)}
 
-      {/* ✅ AI Recommendation Card */}
+
+      {/* AI RECOMMENDATION CARD */}
       <div className="max-w-4xl mx-auto bg-neutral-800 p-6 rounded-xl shadow-lg mb-8">
         <h2 className="text-xl font-semibold text-blue-400 mb-2">
-          AI-Predicted Career Path
+          🧠 AI Career Recommendation
         </h2>
 
-        {!aiCareer ? (
+        {recommendations.length === 0 ? (
           <p className="text-gray-400">
-            Add skills in your profile to get AI-based predictions.
+            Add skills in your profile to get AI-powered recommendations.
           </p>
         ) : (
-          <p className="text-green-400 text-2xl font-bold mt-2">
-            {aiCareer}
-          </p>
+          <>
+            <p className="text-green-400 text-2xl font-bold mt-2">
+              {recommendations[0].title}
+            </p>
+
+            <p className="text-sm text-gray-400 mt-1">
+              Match Score:{" "}
+              <span className="text-yellow-300">{recommendations[0].score}%</span>
+            </p>
+
+            {recommendations[0].reason && (
+              <p className="text-sm text-gray-500 mt-2 italic">
+                {recommendations[0].reason}
+              </p>
+            )}
+
+            {/* Navigate to dynamic roadmap */}
+            <button
+              className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg"
+              onClick={() => navigate(`/roadmap/${recommendations[0].careerId}`)}
+            >
+              Generate Personalized Roadmap →
+            </button>
+          </>
         )}
       </div>
 
-      {/* GRID SECTIONS */}
+      {/* GRID FEATURES */}
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Card 1 – Roadmap */}
         <div className="bg-neutral-800 p-6 rounded-xl shadow hover:shadow-lg transition">
@@ -135,7 +170,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* ✅ CONTACT SECTION */}
+      {/* CONTACT SECTION */}
       <div className="max-w-5xl mx-auto mt-16 border-t border-gray-800 pt-10">
         <h2 className="text-2xl font-semibold text-blue-400 mb-4">
           Contact Us
@@ -151,7 +186,6 @@ export default function Dashboard() {
             <h3 className="text-lg font-semibold mb-2">Email</h3>
             <p className="text-gray-400">shashank3572@gmail.com</p>
           </div>
-
           <div className="bg-gray-900 p-5 rounded-xl border border-gray-800 hover:border-blue-400 transition-all">
             <h3 className="text-lg font-semibold mb-2">Phone</h3>
             <p className="text-gray-400">+91 83106 22817</p>
