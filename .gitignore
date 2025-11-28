@@ -1,0 +1,18 @@
+# Node stuff
+node_modules/
+.env
+.env.local
+
+# Python env & build files
+__pycache__/
+*.pyc
+ml-service/llm/
+ml-service/model.pkl
+
+# System junk
+.DS_Store
+Thumbs.db
+
+# Dependency folders
+venv/
+env/
