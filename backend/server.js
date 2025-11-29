@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
 app.use("/courses", require("./routes/course"));
 
 app.use("/ml", require("./routes/ml"));
+app.use("/api/progress", require("./routes/progress"));
+app.use("/api/weekly-tasks", require("./routes/weeklyTasks"));
+app.use("/api/career-health", require("./routes/careerHealth"));
+
 
 
 
