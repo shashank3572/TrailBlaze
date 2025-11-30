@@ -1,5 +1,14 @@
+// backend/models/User.js
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+
+const skillLevelSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    level: { type: Number, required: true, min: 1, max: 10 },
+  },
+  { _id: false }
+);
 
 const userSchema = new mongoose.Schema(
   {
@@ -10,11 +19,22 @@ const userSchema = new mongoose.Schema(
     // Existing:
     skills: { type: [String], default: [] },
 
+    // 🔹 New: structured skill levels for adaptive roadmap
+    skillLevels: {
+  type: [
+    {
+      name: String,
+      level: Number,
+    },
+  ],
+  default: [],
+},
+
     // New fields:
     educationLevel: { type: String, default: "" },
     experienceYears: { type: Number, default: 0 },
     interestTags: { type: [String], default: [] },
-    careerGoal: { type: String, default: "" }
+    careerGoal: { type: String, default: "" },
   },
   { timestamps: true }
 );

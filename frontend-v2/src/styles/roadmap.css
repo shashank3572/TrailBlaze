@@ -1,0 +1,90 @@
+/* Outer roadmap container */
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Per-phase graph wrapper */
+.phase-graph {
+  position: relative;
+  width: 100%;
+}
+
+/* Phase header "card" */
+.phase-header-row {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #1f2933;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+/* Vertical line from header to children row */
+.phase-connector-vertical {
+  width: 2px;
+  height: 30px;
+  background: rgba(148, 163, 184, 0.8);
+  margin: 0 auto;
+}
+
+/* Children row (holds all nodes) */
+.phase-children-row {
+  position: relative;
+  margin-top: 6px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Horizontal bar under vertical connector */
+.phase-children-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: rgba(148, 163, 184, 0.8);
+}
+
+/* Each child wrapper: small vertical down from bar into node */
+.phase-child-wrapper {
+  position: relative;
+  padding-top: 12px;
+}
+
+.phase-child-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 12px;
+  background: rgba(148, 163, 184, 0.8);
+}
+
+/* Completed node extra highlight (on top of Chakra styles) */
+.completed-node {
+  box-shadow: 0 0 14px rgba(72, 187, 120, 0.6);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .phase-children-row {
+    gap: 30px;
+  }
+
+  .phase-children-row::before {
+    left: 15%;
+    right: 15%;
+  }
+}

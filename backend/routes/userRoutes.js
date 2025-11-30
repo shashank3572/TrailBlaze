@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const auth = require("../middleware/authMiddleware");
-const recommendCareer = require("../utils/recommender");
+const { recommendCareers } = require("../utils/recommender");
 
 //
 // Get logged-in user profile
@@ -59,15 +59,29 @@ router.post("/profile/remove-skill", auth, async (req, res) => {
 router.get("/recommend", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
-    const skills = user.skills || [];
 
-    const recommended = recommendCareer(skills);
+    if (!user.skills || user.skills.length === 0) {
+      return res.json({
+        recommended: null,
+        message: "Not enough data to recommend a career yet.",
+      });
+    }
 
-    res.json({ recommended });
+    const results = await recommendCareers(user);
+
+    const bestMatch = results?.[0]?.title || null;
+
+    res.json({
+      recommended: bestMatch,
+      score: results?.[0]?.finalScore || 0,
+    });
+
   } catch (err) {
+    console.error("RECOMMENDER ERROR:", err);
     res.status(500).json({ message: "AI recommendation failed" });
   }
 });
+
 // Update user profile (education, interests, goal, experience)
 router.post("/update-profile", auth, async (req, res) => {
   try {
