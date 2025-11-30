@@ -83,169 +83,80 @@ const getSkillGap = async (req, res) => {
 
 
 // -------------------------
-// Chat With AI
+// CHAT WITH AI (WORKING VERSION)
 // -------------------------
+const ML_URL = process.env.ML_URL || "http://localhost:8010/chat";
 
 const chatWithAI = async (req, res) => {
   try {
     const userId = req.user.id;
     const { message } = req.body;
 
-    if (!message) {
-      return res.status(400).json({ success: false, error: "Message is required" });
+    if (!message?.trim()) {
+      return res.status(400).json({ success: false, error: "Message is required." });
     }
 
-    // 1️⃣ Load user profile
-    const user = await User.findById(userId).select("skills careerGoal interests");
+    // Fetch profile for personalization
+    const user = await User.findById(userId).select("skills careerGoal");
     const userSkills = user?.skills || [];
+    const targetCareer = user?.careerGoal || "Not selected";
 
-    // 2️⃣ Load smart memory (long-term)
-    const memoryDoc = await ChatMemory.findOne({ userId });
-    const targetCareerName =
-      memoryDoc?.career ||
-      user?.careerGoal ||
-      null;
+    // Build LLM prompt
+    const prompt = `
+You are TrailBlaze AI mentor. Use a friendly tone.
 
-    // 3️⃣ Load career data if we know the career
-    let careerDoc = null;
-    if (targetCareerName) {
-      careerDoc = await Career.findOne({ title: targetCareerName });
-    }
-
-    // Prepare career-related text blocks
-    const requiredSkillsText = careerDoc
-      ? careerDoc.requiredSkills
-          .map((s) => `${s.name} (importance: ${s.weight}, level: ${s.requiredLevel}/10)`)
-          .join("; ")
-      : "Not decided yet.";
-
-    const roadmapText = careerDoc
-      ? careerDoc.roadmap
-          .map(
-            (phase) =>
-              `Phase ${phase.phaseNumber} – ${phase.title}: ` +
-              (phase.steps || [])
-                .map((step) => step.name)
-                .join(", ")
-          )
-          .join("\n")
-      : "No specific roadmap yet.";
-
-    const coursesText = careerDoc
-      ? careerDoc.courses
-          .slice(0, 5)
-          .map(
-            (c) =>
-              `• ${c.title} (${c.platform || "Resource"}) – ${c.url}`
-          )
-          .join("\n")
-      : "No course list available yet.";
-
-    // 4️⃣ Load short-term chat history (last few exchanges)
-    let historyDoc = await ChatHistory.findOne({ userId });
-    if (!historyDoc) {
-      historyDoc = await ChatHistory.create({ userId, messages: [] });
-    }
-
-    const formattedHistory = historyDoc.messages
-      .slice(-10)
-      .map((msg) =>
-        `${msg.role === "user" ? "User" : "Mentor"}: ${msg.content}`
-      )
-      .join("\n");
-
-    // 5️⃣ Build system prompt (hybrid mentor tone)
-    const systemPrompt = `
-You are TrailBlaze AI Mentor — a friendly, structured career guide.
-
-Tone:
-- Clear, step-by-step
-- Supportive and motivating
-- Not overly formal, not cringe, just human and kind.
-
-ALWAYS TRY TO INCLUDE:
-1) A direct answer to the user's question.
-2) 1–3 NEXT ROADMAP STEPS if a target career is known.
-3) 1–3 COURSE RECOMMENDATIONS from the provided course list (only if relevant).
-4) A short motivational note at the end.
-
-If the user has no target career yet, help them explore options instead of forcing a roadmap.
-Use simple language, as if the user is tired but trying their best.
-`;
-
-    // 6️⃣ Build full context for the LLM
-    const context = `
-User Profile:
-- Skills: ${userSkills.join(", ") || "Not provided yet"}
-- Target career: ${targetCareerName || "Not decided"}
-  
-Career Data:
-Required skills:
-${requiredSkillsText}
-
-Roadmap:
-${roadmapText}
-
-Courses:
-${coursesText}
-
-Recent Conversation:
-${formattedHistory}
-`;
-
-    const finalPrompt = `
-${systemPrompt}
-
-CONTEXT:
-${context}
+User Skills: ${userSkills.join(", ") || "None"}
+Career Focus: ${targetCareer}
 
 User: ${message}
-Mentor:
+Assistant:
 `;
 
-    // 7️⃣ Call Python LLM service (FastAPI)
-    const response = await fetch("http://127.0.0.1:8000/chat", {
+    // ---- CALL ML SERVICE ----
+    let reply = "⚠️ AI service offline";
+
+    const response = await fetch(ML_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: finalPrompt }),
+      body: JSON.stringify({ message: prompt }),
     });
 
     const data = await response.json();
-    const reply = data.reply || "Sorry, I couldn't generate a proper response.";
+    if (data?.reply) reply = data.reply;
 
-    // 8️⃣ Save to ChatHistory
-    historyDoc.messages.push({ role: "user", content: message });
-    historyDoc.messages.push({ role: "assistant", content: reply });
-    historyDoc.updatedAt = new Date();
-    await historyDoc.save();
+    // Cleanup formatting
+    reply = reply
+      .replace(/<\|assistant\|>/g, "")
+      .replace(/<\|user\|>/g, "")
+      .replace(/↵/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
 
-    // (Optional) VERY simple memory update (just store target career once user clearly states it)
-    if (!memoryDoc && targetCareerName) {
-      await ChatMemory.create({
-        userId,
-        career: targetCareerName,
-        knownSkills: userSkills,
-        preferences: { pace: "normal" },
-        updatedAt: new Date(),
-      });
-    }
+    // Keep first clean full sentence
+    reply = reply.split(/(?<=\.)\s+/)[0];
 
-    return res.json({
-      success: true,
-      reply,
-    });
+    // Save to chat history
+    await ChatHistory.updateOne(
+      { userId },
+      { $push: { messages: [
+          { role: "user", content: message },
+          { role: "assistant", content: reply }
+        ]
+      }},
+      { upsert: true }
+    );
+
+    return res.json({ success: true, reply });
+
   } catch (error) {
     console.error("❌ chatWithAI error:", error);
-    return res
-      .status(500)
-      .json({ success: false, error: "Chat service error" });
+    return res.status(500).json({ success: false, error: "Chat service failed" });
   }
 };
-// -------------------------
-// Export all functions
-// -------------------------
+
+
 module.exports = {
+  chatWithAI,
   getRecommendations,
-  getSkillGap,
-  chatWithAI
+  getSkillGap
 };

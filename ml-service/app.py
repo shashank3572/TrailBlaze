@@ -61,7 +61,34 @@ MODEL_FILE = "Phi-3-mini-4k-instruct.Q4_0.gguf"
 MODEL_PATH = "./llm"
 
 print("🧠 Loading LLM model... please wait...")
-llm = GPT4All(model_name=MODEL_FILE, model_path=MODEL_PATH, allow_download=False)
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# allow frontend/backend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Load ONCE globally
+llm = None
+
+@app.on_event("startup")
+def load_model():
+    global llm
+    print("🧠 Loading AI model...")
+    llm = GPT4All(
+    model_name=MODEL_FILE,
+    model_path=MODEL_PATH,
+    allow_download=False,
+    device="cpu"  # ⬅ Force CPU, no GPU attempt
+)
+
+    print("✅ Loaded.")
+
 print("✅ Model Loaded!")
 
 class ChatRequest(BaseModel):
@@ -69,12 +96,13 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat")
 def chat(req: ChatRequest):
+    global llm
     try:
-        prompt = req.message.strip()
+        if llm is None:
+            return {"error": "Model not loaded"}
 
-        # Working generate call (no stop param)
         response = llm.generate(
-            prompt,
+            req.message,
             max_tokens=200,
             temp=0.7,
             top_k=40,
@@ -82,7 +110,6 @@ def chat(req: ChatRequest):
             repeat_penalty=1.2
         )
 
-        # Cleanup — removes repeated prefixes from local models
         cleaned = (
             response.replace("User:", "")
                     .replace("Assistant:", "")
@@ -94,6 +121,7 @@ def chat(req: ChatRequest):
     except Exception as e:
         print("❌ Chat error:", e)
         return {"error": str(e)}
+
 
 
 ##########################################
