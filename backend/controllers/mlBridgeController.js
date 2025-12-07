@@ -14,7 +14,7 @@ const sendToML = async (req, res) => {
     };
 
     // Send data to Python server
-    const response = await axios.post("http://localhost:8000/predict", payload);
+    const response = await axios.post("http://localhost:8010/predict", payload);
 
     return res.json({
       fromML: response.data,

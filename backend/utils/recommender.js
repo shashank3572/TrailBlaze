@@ -1,43 +1,100 @@
 const Career = require("../models/Career");
 const axios = require("axios");
 
-const ML_URL = "http://localhost:8000/predict";
+const ML_URL = "http://localhost:8010/predict";
+
+/* ---------------------------------------------
+   NORMALIZATION + SIMILARITY HELPERS
+--------------------------------------------- */
+
+function normalize(str) {
+  return String(str)
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/g, "")
+    .trim();
+}
+
+function isSimilar(a, b) {
+  const A = normalize(a);
+  const B = normalize(b);
+
+  if (!A || !B) return false;
+  if (A === B) return true;
+
+  // Avoid tiny-word false positives
+  if (A.length > 3 && B.length > 3 && (A.includes(B) || B.includes(A)))
+    return true;
+
+  // Token overlap
+  const tokensA = A.split(" ").filter(t => t.length > 3);
+  const tokensB = B.split(" ").filter(t => t.length > 3);
+
+  return tokensA.some(t => tokensB.includes(t));
+}
+
+/* ---------------------------------------------
+   MAIN RECOMMENDER FUNCTION (FIXED VERSION)
+--------------------------------------------- */
 
 async function recommendCareers(user) {
+  /* ---------------------------------------------
+     1️⃣ MERGE SKILLS FROM BOTH STRUCTURES
+  --------------------------------------------- */
 
-  // normalize user input (safe fallback)
-  const rawSkills = user.skills || [];
-  const interests = user.interests || [];
+  let rawSkills = [];
 
-  // FIX: convert skill objects → plain lowercase strings
-  const skills = rawSkills.map(s =>
-    typeof s === "string" ? s.toLowerCase() : s.name.toLowerCase()
+  // Collect from new system
+  if (Array.isArray(user.skillLevels)) {
+    rawSkills.push(
+      ...user.skillLevels.map(s => (typeof s === "string" ? s : s.name))
+    );
+  }
+
+  // REMOVE LEGACY FIELD COMPLETELY
+// Do NOT push user.skills at all
+
+
+  // Normalize + Dedupe
+  const skills = Array.from(
+    new Set(
+      rawSkills
+        .filter(Boolean)
+        .map(s => normalize(s))
+    )
   );
 
-  // fetch all careers
+  console.log("🔥 recommender using skills:", skills);
+
+  const interests = (user.interests || []).map(normalize);
+
+  // Fetch all careers
   const careers = await Career.find({});
 
-  // basic scoring: proportional to count overlap
-  const ruleScores = careers.map((career) => {
+  /* ---------------------------------------------
+     2️⃣ RULE-BASED OVERLAP SCORING
+  --------------------------------------------- */
+
+  const ruleScores = careers.map(career => {
     let skillScore = 0;
     let interestScore = 0;
 
-    // Skill overlap score
-    if (skills.length > 0 && career.requiredSkills) {
-      const matched = career.requiredSkills.filter(req =>
-        skills.includes(req.name.toLowerCase())
-      ).length;
+    // Skills
+    if (skills.length > 0 && Array.isArray(career.requiredSkills)) {
+      const matched = career.requiredSkills.filter(req => {
+        const reqName = req.name || req;
+        return skills.some(userSkill => isSimilar(userSkill, reqName));
+      }).length;
 
       skillScore = matched / career.requiredSkills.length;
     }
 
-    // Interest overlap score
-    if (interests.length > 0 && career.interestTags) {
-      const matchingTags = career.interestTags.filter(tag =>
-        interests.some(i => tag.toLowerCase().includes(i.toLowerCase()))
+    // Interests
+    if (interests.length > 0 && Array.isArray(career.interestTags)) {
+      const matchedTags = career.interestTags.filter(tag =>
+        interests.some(int => isSimilar(int, tag))
       ).length;
 
-      interestScore = matchingTags / career.interestTags.length;
+      interestScore = matchedTags / (career.interestTags.length || 1);
     }
 
     const ruleBasedScore = (skillScore * 0.7) + (interestScore * 0.3);
@@ -51,35 +108,42 @@ async function recommendCareers(user) {
     };
   });
 
-  // ---- ML Recommendation Layer ----
+  /* ---------------------------------------------
+     3️⃣ MACHINE LEARNING LAYER (OPTIONAL)
+  --------------------------------------------- */
+
   let mlScores = [];
   try {
     const response = await axios.post(ML_URL, { skills });
     mlScores = response.data.results || [];
   } catch (err) {
-    console.log("⚠ ML offline — continuing without it");
+    console.log("⚠ ML offline — continuing without ML layer");
   }
 
-  // Convert ML list into lookup
   const mlMap = {};
   mlScores.forEach(item => {
-    mlMap[item.career.toLowerCase()] = item.confidence;
+    const name = normalize(item.career);
+    mlMap[name] = item.confidence;
   });
 
+  /* ---------------------------------------------
+     4️⃣ HYBRID SCORE COMBINATION
+  --------------------------------------------- */
 
-  // ---- Combine rule-based + ML ----
-  const final = ruleScores.map((career) => {
-    const mlConfidence = mlMap[career.title.toLowerCase()] || 0;
-    const finalScore = (career.ruleBasedScore * 0.6) + (mlConfidence * 0.4);
+  const final = ruleScores.map(career => {
+    const mlConfidence = mlMap[normalize(career.title)] || 0;
+
+    const finalScore =
+      (career.ruleBasedScore * 0.6) +
+      (mlConfidence * 0.4);
 
     return {
       ...career,
       mlConfidence: Number(mlConfidence.toFixed(2)),
-      finalScore: Number(finalScore.toFixed(2))
+      finalScore: Number(finalScore.toFixed(2)),
     };
   });
 
-  // Sort high → low relevance
   final.sort((a, b) => b.finalScore - a.finalScore);
 
   return final;

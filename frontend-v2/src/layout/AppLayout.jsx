@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -22,32 +22,51 @@ import {
 } from "react-icons/md";
 
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { getMe } from "../api/userApi";
 
 export default function AppLayout() {
   const [collapsed, setCollapsed] = useState(true);
   const [hovered, setHovered] = useState(false);
   const sidebarOpen = hovered || !collapsed;
 
+  const [careerGoal, setCareerGoal] = useState(null); // FIXED: store from backend
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Read currently selected career from localStorage
-  const careerGoal = localStorage.getItem("careerGoal");
+  // ------------------------------
+  // LOAD USER PROFILE FOR CAREER
+  // ------------------------------
+  useEffect(() => {
+    async function loadUser() {
+      try {
+        const res = await getMe();
+        setCareerGoal(res.data?.careerGoal || null);
+      } catch (err) {
+        console.log("Failed to load user in sidebar:", err);
+      }
+    }
+
+    loadUser();
+
+    // Listen for dashboard updates
+    window.addEventListener("career-updated", loadUser);
+
+    return () => {
+      window.removeEventListener("career-updated", loadUser);
+    };
+  }, []);
 
   const navItems = [
     { key: "dashboard", label: "Dashboard", icon: MdDashboard, path: "/dashboard" },
     { key: "careers", label: "Explore Careers", icon: MdExplore, path: "/careers" },
-    { key: "roadmap", label: "My Roadmap", icon: MdChecklist, path: "/roadmap" }, // dynamic
+    { key: "roadmap", label: "My Roadmap", icon: MdChecklist, path: "/roadmap" },
     { key: "tasks", label: "Weekly Tasks", icon: MdAssignment, path: "/tasks" },
     { key: "chat", label: "AI Mentor", icon: MdChat, path: "/chat" },
     { key: "profile", label: "Profile", icon: MdPerson, path: "/profile" },
   ];
 
   const handleRoadmapClick = () => {
-    if (!careerGoal) {
-      // no selected career yet → do nothing (or later: show toast)
-      return;
-    }
+    if (!careerGoal) return;
     navigate(`/roadmap/${encodeURIComponent(careerGoal)}`);
   };
 
@@ -74,11 +93,11 @@ export default function AppLayout() {
 
         {navItems.map((item) => {
           const isRoadmap = item.key === "roadmap";
-
           const isActive = isRoadmap
             ? location.pathname.startsWith("/roadmap")
             : location.pathname === item.path;
 
+          // Sidebar styles
           const baseStyles = {
             align: "center",
             gap: sidebarOpen ? 10 : 0,
@@ -92,19 +111,17 @@ export default function AppLayout() {
           };
 
           const content = (
-            <Flex {...baseStyles} onClick={isRoadmap ? handleRoadmapClick : undefined}>
+            <Flex
+              {...baseStyles}
+              onClick={isRoadmap ? handleRoadmapClick : undefined}
+            >
               <item.icon size={22} />
               {sidebarOpen && <Text fontSize="14px">{item.label}</Text>}
             </Flex>
           );
 
           if (isRoadmap) {
-            // No direct Link for roadmap, because it needs dynamic params
-            return (
-              <Box key={item.key}>
-                {content}
-              </Box>
-            );
+            return <Box key={item.key}>{content}</Box>;
           }
 
           return (

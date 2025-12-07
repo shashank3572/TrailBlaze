@@ -21,6 +21,12 @@ const getRecommendations = async (req, res) => {
 
     // Load full user profile (skills + interests)
     const fullUser = await User.findById(userId).lean();
+console.log("🔥 fullUser (from DB):", {
+  id: fullUser._id,
+  skills: fullUser.skills?.slice(0,10),
+  skillLevels: fullUser.skillLevels?.slice(0,10)
+});
+
     if (!fullUser) {
       return res.status(404).json({ message: "User not found in DB" });
     }
@@ -28,9 +34,11 @@ const getRecommendations = async (req, res) => {
     const result = await recommendCareers(fullUser);
 
     return res.status(200).json({
-      success: true,
-      recommendations: result
-    });
+  success: true,
+  recommended: result[0]?.title || null,   // <-- top pick for current user
+  recommendations: result
+});
+
 
   } catch (error) {
     console.error("🔥 Recommendation Error:", error);
@@ -85,7 +93,7 @@ const getSkillGap = async (req, res) => {
 // -------------------------
 // CHAT WITH AI (WORKING VERSION)
 // -------------------------
-const ML_URL = process.env.ML_URL || "http://localhost:8010/chat";
+const ML_URL = process.env.ML_URL || "http://127.0.0.1:8010/chat";
 
 const chatWithAI = async (req, res) => {
   try {

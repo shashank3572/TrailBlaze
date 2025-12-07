@@ -4,9 +4,9 @@ const User = require("../models/User");
 const auth = require("../middleware/authMiddleware");
 const { recommendCareers } = require("../utils/recommender");
 
-//
-// Get logged-in user profile
-//
+// ---------------------------
+// GET USER PROFILE
+// ---------------------------
 router.get("/profile", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
@@ -17,89 +17,73 @@ router.get("/profile", auth, async (req, res) => {
   }
 });
 
-//
-//  Add skill
-//
-router.post("/profile/add-skill", auth, async (req, res) => {
+// ---------------------------
+// UPDATE PROFILE (FIXED)
+// ---------------------------
+router.post("/update-profile", auth, async (req, res) => {
   try {
-    const { skill } = req.body;
-    if (!skill) return res.status(400).json({ message: "Skill is required" });
-
     const user = await User.findById(req.user.id);
-    user.skills.push(skill);
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    const updates = req.body;
+
+    // Update skillLevels
+    if (updates.skillLevels) {
+      user.skillLevels = updates.skillLevels;
+      user.skills = []; // 🔥 clear old legacy skills
+      user.careerGoal = ""; // 🔥 force new recommendation
+    }
+
+    // Normal profile fields
+    if (updates.educationLevel) user.educationLevel = updates.educationLevel;
+    if (updates.interestTags) user.interestTags = updates.interestTags;
+    if (updates.experienceYears !== undefined)
+      user.experienceYears = updates.experienceYears;
+
+    // Manually set career goal
+    if (updates.careerGoal !== undefined)
+      user.careerGoal = updates.careerGoal;
+
     await user.save();
 
-    res.json({ message: "Skill added", skills: user.skills });
+    res.json({ message: "Profile updated successfully", user });
   } catch (err) {
-    res.status(500).json({ message: "Failed to add skill" });
+    console.error(err);
+    res.status(500).json({ message: "Failed to update profile" });
   }
 });
 
-//
-//  Remove skill
-//
-router.post("/profile/remove-skill", auth, async (req, res) => {
-  try {
-    const { skill } = req.body;
-    if (!skill) return res.status(400).json({ message: "Skill is required" });
 
-    const user = await User.findById(req.user.id);
-    user.skills = user.skills.filter((s) => s !== skill);
-    await user.save();
-
-    res.json({ message: "Skill removed", skills: user.skills });
-  } catch (err) {
-    res.status(500).json({ message: "Failed to remove skill" });
-  }
-});
-
-//
-// AI Career Recommendation
-//
+// ---------------------------
+// CAREER RECOMMENDATION
+// ---------------------------
 router.get("/recommend", auth, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(req.user.id).select("-password");
 
-    if (!user.skills || user.skills.length === 0) {
+    // Use BOTH skill systems
+    const hasSkills =
+      (user.skillLevels && user.skillLevels.length > 0) ||
+      (user.skills && user.skills.length > 0);
+
+    if (!hasSkills) {
       return res.json({
         recommended: null,
-        message: "Not enough data to recommend a career yet.",
+        message: "Add some skills to get recommendations."
       });
     }
 
     const results = await recommendCareers(user);
 
-    const bestMatch = results?.[0]?.title || null;
-
     res.json({
-      recommended: bestMatch,
+      recommended: results?.[0]?.title || null,
       score: results?.[0]?.finalScore || 0,
+      recommendations: results
     });
 
   } catch (err) {
     console.error("RECOMMENDER ERROR:", err);
     res.status(500).json({ message: "AI recommendation failed" });
-  }
-});
-
-// Update user profile (education, interests, goal, experience)
-router.post("/update-profile", auth, async (req, res) => {
-  try {
-    const updates = req.body;
-
-    const user = await User.findByIdAndUpdate(
-      req.user.id,
-      { $set: updates },
-      { new: true }
-    ).select("-password");
-
-    return res.json({
-      message: "Profile updated successfully",
-      user,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ message: "Failed to update profile" });
   }
 });
 

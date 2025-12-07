@@ -14,7 +14,7 @@ router.post("/chat", auth, chatWithAI);
 router.get("/ml-test", async (req, res) => {
   try {
     const axios = require("axios");
-    const result = await axios.get("http://localhost:8000/");
+    const result = await axios.get("http://localhost:8010");
     res.json({ reachable: true, data: result.data });
   } catch (err) {
     res.json({ reachable: false, error: err.message });
@@ -24,7 +24,7 @@ router.post("/ml-predict-test", async (req, res) => {
   try {
     const axios = require("axios");
     const body = { skills: ["Python", "Machine Learning"] };
-    const result = await axios.post("http://localhost:8000/predict", body);
+    const result = await axios.post("http://localhost:8010/predict", body);
     res.json({ success: true, result: result.data });
   } catch (err) {
     res.json({ success: false, error: err.message });
