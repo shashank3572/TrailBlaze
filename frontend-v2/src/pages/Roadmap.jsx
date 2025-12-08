@@ -43,12 +43,13 @@ export default function Roadmap() {
         setRoadmap(careerRes.data);
         setCompleted(progressRes.data.completedItemIds || []);
 
-        // Only open suggestion if user hasn’t manually edited roadmap yet
-        if (suggestionRes.data.autoComplete.length && (progressRes.data.completedItemIds || []).length === 0) {
+        if (
+          suggestionRes.data.autoComplete.length &&
+          (progressRes.data.completedItemIds || []).length === 0
+        ) {
           setSuggested(suggestionRes.data.autoComplete);
           autoModal.onOpen();
         }
-
       } catch (err) {
         console.error("⚠ Error fetching roadmap:", err);
       } finally {
@@ -91,11 +92,13 @@ export default function Roadmap() {
         <ModalContent bg="gray.800">
           <ModalHeader>Smart Progress Match</ModalHeader>
           <ModalBody>
-            We detected your skills match <strong>{suggested.length}</strong> roadmap steps.  
+            We detected your skills match <strong>{suggested.length}</strong> roadmap steps.
             Want us to auto mark them as completed?
           </ModalBody>
           <ModalFooter gap={3}>
-            <Button variant="ghost" onClick={autoModal.onClose}>No thanks</Button>
+            <Button variant="ghost" onClick={autoModal.onClose}>
+              No thanks
+            </Button>
             <Button colorScheme="green" onClick={applyAutoComplete}>
               Apply
             </Button>
@@ -110,7 +113,11 @@ export default function Roadmap() {
 
         {totalSteps > 0 && (
           <>
-            <progress value={completed.length} max={totalSteps} style={{ width: "100%" }} />
+            <progress
+              value={completed.length}
+              max={totalSteps}
+              style={{ width: "100%" }}
+            />
             <Text mt="2" fontSize="sm" color="gray.400">
               {completed.length} / {totalSteps} steps completed
             </Text>
@@ -120,9 +127,59 @@ export default function Roadmap() {
 
       <div className="roadmap-container">
         {roadmap.roadmap?.map((phase, i) => (
-          <RoadmapPhase key={i} phase={phase} completedIds={completed} onToggleStep={toggleStep} />
+          <RoadmapPhase
+            key={i}
+            phase={phase}
+            completedIds={completed}
+            onToggleStep={toggleStep}
+          />
         ))}
       </div>
+
+      {/* ✅ NEW COURSE SECTION — DOES NOT AFFECT ANY BACKEND/LOGIC */}
+      {roadmap.courses && roadmap.courses.length > 0 && (
+        <Box mt="50px">
+          <Heading fontSize="xl" mb="4">
+            Recommended Courses
+          </Heading>
+
+          <Box
+            display="grid"
+            gridTemplateColumns="repeat(auto-fill, minmax(260px, 1fr))"
+            gap="20px"
+          >
+            {roadmap.courses.map((course, index) => (
+              <Box
+                key={index}
+                p="5"
+                bg="gray.800"
+                borderRadius="lg"
+                boxShadow="md"
+                border="1px solid rgba(255,255,255,0.1)"
+              >
+                <Text fontSize="sm" color="gray.400" mb="1">
+                  {course.provider}
+                </Text>
+
+                <Heading fontSize="md" mb="3">
+                  {course.title}
+                </Heading>
+
+                <Button
+                  as="a"
+                  href={course.url}
+                  target="_blank"
+                  colorScheme="blue"
+                  size="sm"
+                  width="100%"
+                >
+                  View Course
+                </Button>
+              </Box>
+            ))}
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 }

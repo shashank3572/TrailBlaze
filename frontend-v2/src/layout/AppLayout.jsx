@@ -4,8 +4,6 @@ import {
   Flex,
   IconButton,
   Text,
-  Avatar,
-  Badge,
   Button,
 } from "@chakra-ui/react";
 
@@ -13,12 +11,10 @@ import {
   MdMenu,
   MdClose,
   MdDashboard,
-  MdExplore,
   MdChat,
   MdAssignment,
   MdChecklist,
   MdPerson,
-  MdNotifications,
 } from "react-icons/md";
 
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
@@ -29,13 +25,11 @@ export default function AppLayout() {
   const [hovered, setHovered] = useState(false);
   const sidebarOpen = hovered || !collapsed;
 
-  const [careerGoal, setCareerGoal] = useState(null); // FIXED: store from backend
+  const [careerGoal, setCareerGoal] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
 
-  // ------------------------------
-  // LOAD USER PROFILE FOR CAREER
-  // ------------------------------
+  // Load user careerGoal
   useEffect(() => {
     async function loadUser() {
       try {
@@ -47,8 +41,6 @@ export default function AppLayout() {
     }
 
     loadUser();
-
-    // Listen for dashboard updates
     window.addEventListener("career-updated", loadUser);
 
     return () => {
@@ -58,13 +50,13 @@ export default function AppLayout() {
 
   const navItems = [
     { key: "dashboard", label: "Dashboard", icon: MdDashboard, path: "/dashboard" },
-    { key: "careers", label: "Explore Careers", icon: MdExplore, path: "/careers" },
-    { key: "roadmap", label: "My Roadmap", icon: MdChecklist, path: "/roadmap" },
+    { key: "roadmap", label: "My Roadmap", icon: MdChecklist },
     { key: "tasks", label: "Weekly Tasks", icon: MdAssignment, path: "/tasks" },
     { key: "chat", label: "AI Mentor", icon: MdChat, path: "/chat" },
     { key: "profile", label: "Profile", icon: MdPerson, path: "/profile" },
   ];
 
+  // FIXED — use string template instead of RegExp
   const handleRoadmapClick = () => {
     if (!careerGoal) return;
     navigate(`/roadmap/${encodeURIComponent(careerGoal)}`);
@@ -72,6 +64,7 @@ export default function AppLayout() {
 
   return (
     <Flex h="100vh" bg="gray.900" color="white">
+
       {/* Sidebar */}
       <Box
         w={sidebarOpen ? "220px" : "60px"}
@@ -97,22 +90,17 @@ export default function AppLayout() {
             ? location.pathname.startsWith("/roadmap")
             : location.pathname === item.path;
 
-          // Sidebar styles
-          const baseStyles = {
-            align: "center",
-            gap: sidebarOpen ? 10 : 0,
-            p: "10px",
-            rounded: "md",
-            cursor: isRoadmap && !careerGoal ? "not-allowed" : "pointer",
-            bg: isActive ? "blue.600" : "transparent",
-            _hover: { bg: isActive ? "blue.600" : "gray.700" },
-            justify: sidebarOpen ? "flex-start" : "center",
-            opacity: isRoadmap && !careerGoal ? 0.4 : 1,
-          };
-
           const content = (
             <Flex
-              {...baseStyles}
+              align="center"
+              gap={sidebarOpen ? 10 : 0}
+              p="10px"
+              rounded="md"
+              cursor={isRoadmap && !careerGoal ? "not-allowed" : "pointer"}
+              bg={isActive ? "blue.600" : "transparent"}
+              _hover={{ bg: isActive ? "blue.600" : "gray.700" }}
+              justify={sidebarOpen ? "flex-start" : "center"}
+              opacity={isRoadmap && !careerGoal ? 0.4 : 1}
               onClick={isRoadmap ? handleRoadmapClick : undefined}
             >
               <item.icon size={22} />
@@ -120,9 +108,8 @@ export default function AppLayout() {
             </Flex>
           );
 
-          if (isRoadmap) {
-            return <Box key={item.key}>{content}</Box>;
-          }
+          // Roadmap is not a <Link> because it depends on state
+          if (isRoadmap) return <Box key={item.key}>{content}</Box>;
 
           return (
             <Link key={item.key} to={item.path}>
@@ -132,44 +119,28 @@ export default function AppLayout() {
         })}
       </Box>
 
-      {/* Right Side */}
+      {/* Main Area */}
       <Flex flex="1" direction="column">
+
         {/* Top Bar */}
         <Flex
           p="16px"
           justify="flex-end"
           align="center"
-          gap="18px"
           borderBottom="1px solid rgba(255,255,255,0.1)"
         >
-          <Badge colorScheme="green" px="10px" py="6px" rounded="md">
-            87 🏆
-          </Badge>
-
           <Button size="sm" colorScheme="blue" as={Link} to="/chat">
             Ask AI
           </Button>
-
-          <IconButton
-            icon={<MdNotifications size={22} />}
-            variant="ghost"
-            aria-label="Notifications"
-          />
-          <Avatar size="sm" name="User" />
         </Flex>
 
         {/* Page Content */}
-        <Box
-          flex="1"
-          p="24px"
-          overflowY="auto"
-          display="flex"
-          justifyContent="center"
-        >
+        <Box flex="1" p="24px" overflowY="auto" display="flex" justifyContent="center">
           <Box width="100%" maxW="1200px">
             <Outlet />
           </Box>
         </Box>
+
       </Flex>
     </Flex>
   );

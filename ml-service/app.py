@@ -66,7 +66,7 @@ You are TrailBlaze AI — a personal career mentor.
 Reply clearly, step-by-step.
 """
 
-MODEL_FILE = "Phi-3-mini-4k-instruct.Q4_0.gguf"
+MODEL_FILE = "Phi-3-mini-4k-instruct-q4.gguf"
 MODEL_PATH = "./llm"
 
 llm = None
